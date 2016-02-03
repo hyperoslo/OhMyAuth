@@ -31,7 +31,7 @@ struct RefreshTokenRequest: Requestable {
   let URL: NSURL
   let parameters: [String: AnyObject]
 
-  init(code: String) throws {
+  init() throws {
     do {
       let config = try Authenticator.config()
       URL = config.token.URL
