@@ -6,7 +6,9 @@ public protocol Lockable {
   var accessToken: String? { get set }
   var refreshToken: String? { get set }
   var tokenType: String? { get set }
-  var expirationTimestamp: NSTimeInterval? { get set }
+  var expiryDate: NSDate? { get set }
+  var userName: String? { get set }
+  var userUPN: String? { get set }
 
   func clear()
 }
@@ -23,7 +25,9 @@ public class Locker: Lockable {
   }
 
   public struct UserDefaultsKeys {
-    public static let expirationTimestamp = "\(prefix)\(Application.name)-ExpirationTimestamp"
+    public static let expiryDate = "\(prefix)\(Application.name)-ExpiryDate"
+    public static let userName = "\(prefix)\(Application.name)-UserName"
+    public static let userUPN = "\(prefix)\(Application.name)-UserUPN"
   }
 
   let userDefaults = NSUserDefaults.standardUserDefaults()
@@ -59,19 +63,30 @@ public class Locker: Lockable {
 
   // MARK: - UserDefaults
 
-  public var expirationTimestamp: NSTimeInterval? {
+  public var expiryDate: NSDate? {
     get {
-      let value = userDefaults.doubleForKey(UserDefaultsKeys.expirationTimestamp)
-      return value == 0 ? nil : value
+      return getFromDefaults(UserDefaultsKeys.expiryDate) as NSDate?
     }
     set {
-      if let value = newValue {
-        userDefaults.setDouble(value, forKey: UserDefaultsKeys.expirationTimestamp)
-      } else {
-        userDefaults.removeObjectForKey(UserDefaultsKeys.expirationTimestamp)
-      }
+      saveInDefaults(UserDefaultsKeys.expiryDate, newValue)
+    }
+  }
 
-      userDefaults.synchronize()
+  public var userName: String? {
+    get {
+      return getFromDefaults(UserDefaultsKeys.userName) as String?
+    }
+    set {
+      saveInDefaults(UserDefaultsKeys.userName, newValue)
+    }
+  }
+
+  public var userUPN: String? {
+    get {
+      return getFromDefaults(UserDefaultsKeys.userUPN) as String?
+    }
+    set {
+      saveInDefaults(UserDefaultsKeys.userUPN, newValue)
     }
   }
 
@@ -89,10 +104,24 @@ public class Locker: Lockable {
     }
   }
 
+  func getFromDefaults<T>(key: String) -> T? {
+    return userDefaults.objectForKey(key) as? T
+  }
+
+  func saveInDefaults(key: String, _ value: AnyObject?) {
+    if let value = value {
+      userDefaults.setObject(value, forKey: key)
+    } else {
+      userDefaults.removeObjectForKey(key)
+    }
+
+    userDefaults.synchronize()
+  }
+
   public func clear() {
     accessToken = nil
     refreshToken = nil
     tokenType = nil
-    expirationTimestamp = nil
+    expiryDate = nil
   }
 }

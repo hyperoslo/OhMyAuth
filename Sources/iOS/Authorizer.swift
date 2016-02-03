@@ -3,10 +3,13 @@ import JWTDecode
 import UIKit
 import SafariServices
 
-@objc public class Authorizer: NSObject {
+@objc public class Authorizer: NSObject, ErrorThrowable {
 
-  enum Error: Int {
-    case CodeParameterNotFound = -1
+  let errorDomain = "AzureOAuth.Authorizer"
+
+  enum Error: Int, ErrorType {
+    case InvalidRedirectURI = -1
+    case CodeParameterNotFound = -2
   }
 
   private var webViewController: UIViewController?
@@ -14,9 +17,9 @@ import SafariServices
   // MARK: - Login
 
   @available(iOS 9, *)
-  public func login(parentController: UIViewController, forceLogout: Bool = false) {
+  public func login(parentController: UIViewController, forceLogout: Bool = false) -> Bool {
     guard let loginConfig = AzureOAuthConfig.loginConfig else {
-      return
+      return false
     }
 
     if forceLogout {
@@ -25,11 +28,13 @@ import SafariServices
 
     webViewController = SFSafariViewController(URL: loginConfig.loginURL)
     parentController.presentViewController(webViewController!, animated: true, completion: nil)
+
+    return true
   }
 
-  public func login(forceLogout: Bool = false) {
+  public func login(forceLogout: Bool = false) -> Bool {
     guard let loginConfig = AzureOAuthConfig.loginConfig else {
-      return
+      return false
     }
 
     if forceLogout {
@@ -37,6 +42,8 @@ import SafariServices
     }
 
     UIApplication.sharedApplication().openURL(loginConfig.loginURL)
+
+    return true
   }
 
   public func logout() {
@@ -59,21 +66,26 @@ import SafariServices
 
   // MARK: - URL handling
 
-  public func processUrl(url: NSURL, completion: NSError? -> Void) throws -> Bool {
+  public func processUrl(url: NSURL, completion: NSError? -> Void) {
     guard let redirectURI = AzureOAuthConfig.loginConfig?.redirectURI
       where url.absoluteString.hasPrefix(redirectURI)
-      else { return false }
+      else {
+        completion(NSError(domain: errorDomain,
+          code: Error.InvalidRedirectURI.rawValue,
+          userInfo: [NSLocalizedDescriptionKey: "Invalid redirect URI"]))
+        return
+    }
 
     let urlComponents = NSURLComponents(URL: url, resolvingAgainstBaseURL: false)
 
     if let code = urlComponents?.queryItems?.filter({ $0.name == "code" }).first?.value {
-      //requestAccessToken(code, completion: { error in
-      //  completion(error)
-      //})
+      AzureOAuthConfig.tokenProvider.acquireAccessToken(code) { error in
+        completion(error)
+      }
     } else {
-      //completion(NSError(domain: ErrorDomain, code: Error.CodeParameterNotFound.rawValue, userInfo: [NSLocalizedDescriptionKey: "code parameter not found"]))
+      completion(NSError(domain: errorDomain,
+        code: Error.CodeParameterNotFound.rawValue,
+        userInfo: [NSLocalizedDescriptionKey: "Code parameter not found"]))
     }
-
-    return true
   }
 }
