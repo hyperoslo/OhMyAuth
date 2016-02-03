@@ -13,7 +13,7 @@ public protocol Lockable {
 
 public class Locker: Lockable {
 
-  public let prefix = "AzureOAuth-"
+  public static let prefix = "AzureOAuth-"
 
   public struct KeychainKeys {
     public static let service = "\(prefix)\(Application.name)"
