@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D51D954B1C620C7000D78EF3 /* AzureOAuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D954A1C620C7000D78EF3 /* AzureOAuthConfig.swift */; };
-		D51D954D1C621EC900D78EF3 /* Authorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D954C1C621EC900D78EF3 /* Authorizer.swift */; };
-		D51D95511C622CD600D78EF3 /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95501C622CD600D78EF3 /* TokenProvider.swift */; };
-		D51D95531C62350A00D78EF3 /* ErrorThrowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95521C62350A00D78EF3 /* ErrorThrowable.swift */; };
+		D51D95511C622CD600D78EF3 /* Authorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95501C622CD600D78EF3 /* Authorizer.swift */; };
+		D51D955D1C6252DD00D78EF3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* Config.swift */; };
+		D51D95601C62535200D78EF3 /* Locker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* Locker.swift */; };
+		D51D95621C62536E00D78EF3 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* Authenticator.swift */; };
+		D51D95651C6253B200D78EF3 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* Requests.swift */; };
+		D51D95691C6253E100D78EF3 /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95681C6253E100D78EF3 /* TokenProvider.swift */; };
+		D51D956B1C6253FC00D78EF3 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D956A1C6253FC00D78EF3 /* Error.swift */; };
+		D51D956E1C62B82400D78EF3 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* Requests.swift */; };
+		D51D956F1C62B82400D78EF3 /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95681C6253E100D78EF3 /* TokenProvider.swift */; };
+		D51D95701C62B82400D78EF3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* Config.swift */; };
+		D51D95711C62B82400D78EF3 /* Locker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* Locker.swift */; };
+		D51D95721C62B82400D78EF3 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* Authenticator.swift */; };
+		D51D95731C62B82400D78EF3 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D956A1C6253FC00D78EF3 /* Error.swift */; };
 		D529C2CC1C620B1900B6FA6B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C81C620B1900B6FA6B /* Alamofire.framework */; };
 		D529C2CD1C620B1900B6FA6B /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C91C620B1900B6FA6B /* JWTDecode.framework */; };
 		D529C2CE1C620B1900B6FA6B /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CA1C620B1900B6FA6B /* Keychain.framework */; };
@@ -19,10 +28,7 @@
 		D5C6294A1C3A7FAA007F7B7C /* AzureOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* AzureOAuth.framework */; };
 		D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629751C3A878E007F7B7C /* Quick.framework */; };
 		D5C629781C3A878E007F7B7C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629761C3A878E007F7B7C /* Nimble.framework */; };
-		D5C629831C3A892A007F7B7C /* Locker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629821C3A892A007F7B7C /* Locker.swift */; };
 		D5C629851C3A893F007F7B7C /* Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629841C3A893F007F7B7C /* Mac.swift */; };
-		D5C629871C3A89A8007F7B7C /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629861C3A89A8007F7B7C /* Shared.swift */; };
-		D5C629881C3A89A8007F7B7C /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629861C3A89A8007F7B7C /* Shared.swift */; };
 		D5C6299B1C3A8BDA007F7B7C /* MacSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629951C3A8BDA007F7B7C /* MacSpec.swift */; };
 		D5C6299C1C3A8BDA007F7B7C /* SharedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629971C3A8BDA007F7B7C /* SharedSpec.swift */; };
 		D5C6299D1C3A8C6B007F7B7C /* iOSSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629931C3A8BDA007F7B7C /* iOSSpec.swift */; };
@@ -47,10 +53,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D51D954A1C620C7000D78EF3 /* AzureOAuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzureOAuthConfig.swift; sourceTree = "<group>"; };
-		D51D954C1C621EC900D78EF3 /* Authorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorizer.swift; sourceTree = "<group>"; };
-		D51D95501C622CD600D78EF3 /* TokenProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
-		D51D95521C62350A00D78EF3 /* ErrorThrowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorThrowable.swift; sourceTree = "<group>"; };
+		D51D95501C622CD600D78EF3 /* Authorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorizer.swift; sourceTree = "<group>"; };
+		D51D955C1C6252DD00D78EF3 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		D51D955F1C62535200D78EF3 /* Locker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locker.swift; sourceTree = "<group>"; };
+		D51D95611C62536E00D78EF3 /* Authenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
+		D51D95641C6253B200D78EF3 /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		D51D95681C6253E100D78EF3 /* TokenProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
+		D51D956A1C6253FC00D78EF3 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		D529C2C81C620B1900B6FA6B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		D529C2C91C620B1900B6FA6B /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Carthage/Build/iOS/JWTDecode.framework; sourceTree = "<group>"; };
 		D529C2CA1C620B1900B6FA6B /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = Carthage/Build/iOS/Keychain.framework; sourceTree = "<group>"; };
@@ -61,9 +70,7 @@
 		D5C629491C3A7FAA007F7B7C /* AzureOAuth-Mac-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AzureOAuth-Mac-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629751C3A878E007F7B7C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		D5C629761C3A878E007F7B7C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		D5C629821C3A892A007F7B7C /* Locker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locker.swift; sourceTree = "<group>"; };
 		D5C629841C3A893F007F7B7C /* Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mac.swift; sourceTree = "<group>"; };
-		D5C629861C3A89A8007F7B7C /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		D5C6298B1C3A8BBD007F7B7C /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		D5C6298C1C3A8BBD007F7B7C /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
 		D5C629901C3A8BDA007F7B7C /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
@@ -113,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D51D95631C62539C00D78EF3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D51D95641C6253B200D78EF3 /* Requests.swift */,
+				D51D95681C6253E100D78EF3 /* TokenProvider.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		D529C2D01C620B2E00B6FA6B /* Frameworks-iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,11 +186,7 @@
 		D5C6296A1C3A809D007F7B7C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D5C629821C3A892A007F7B7C /* Locker.swift */,
-				D51D954A1C620C7000D78EF3 /* AzureOAuthConfig.swift */,
-				D51D954C1C621EC900D78EF3 /* Authorizer.swift */,
-				D51D95501C622CD600D78EF3 /* TokenProvider.swift */,
-				D51D95521C62350A00D78EF3 /* ErrorThrowable.swift */,
+				D51D95501C622CD600D78EF3 /* Authorizer.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -190,7 +202,11 @@
 		D5C6296E1C3A809D007F7B7C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				D5C629861C3A89A8007F7B7C /* Shared.swift */,
+				D51D95631C62539C00D78EF3 /* Networking */,
+				D51D955C1C6252DD00D78EF3 /* Config.swift */,
+				D51D955F1C62535200D78EF3 /* Locker.swift */,
+				D51D95611C62536E00D78EF3 /* Authenticator.swift */,
+				D51D956A1C6253FC00D78EF3 /* Error.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -459,12 +475,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D51D954D1C621EC900D78EF3 /* Authorizer.swift in Sources */,
-				D51D954B1C620C7000D78EF3 /* AzureOAuthConfig.swift in Sources */,
-				D5C629831C3A892A007F7B7C /* Locker.swift in Sources */,
-				D51D95511C622CD600D78EF3 /* TokenProvider.swift in Sources */,
-				D5C629871C3A89A8007F7B7C /* Shared.swift in Sources */,
-				D51D95531C62350A00D78EF3 /* ErrorThrowable.swift in Sources */,
+				D51D95601C62535200D78EF3 /* Locker.swift in Sources */,
+				D51D95651C6253B200D78EF3 /* Requests.swift in Sources */,
+				D51D95691C6253E100D78EF3 /* TokenProvider.swift in Sources */,
+				D51D95511C622CD600D78EF3 /* Authorizer.swift in Sources */,
+				D51D955D1C6252DD00D78EF3 /* Config.swift in Sources */,
+				D51D956B1C6253FC00D78EF3 /* Error.swift in Sources */,
+				D51D95621C62536E00D78EF3 /* Authenticator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +499,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5C629851C3A893F007F7B7C /* Mac.swift in Sources */,
-				D5C629881C3A89A8007F7B7C /* Shared.swift in Sources */,
+				D51D95711C62B82400D78EF3 /* Locker.swift in Sources */,
+				D51D95701C62B82400D78EF3 /* Config.swift in Sources */,
+				D51D956F1C62B82400D78EF3 /* TokenProvider.swift in Sources */,
+				D51D956E1C62B82400D78EF3 /* Requests.swift in Sources */,
+				D51D95731C62B82400D78EF3 /* Error.swift in Sources */,
+				D51D95721C62B82400D78EF3 /* Authenticator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
