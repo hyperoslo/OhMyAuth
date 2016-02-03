@@ -10,6 +10,7 @@
 		D51D954B1C620C7000D78EF3 /* AzureOAuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D954A1C620C7000D78EF3 /* AzureOAuthConfig.swift */; };
 		D51D954D1C621EC900D78EF3 /* Authorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D954C1C621EC900D78EF3 /* Authorizer.swift */; };
 		D51D95511C622CD600D78EF3 /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95501C622CD600D78EF3 /* TokenProvider.swift */; };
+		D51D95531C62350A00D78EF3 /* ErrorThrowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95521C62350A00D78EF3 /* ErrorThrowable.swift */; };
 		D529C2CC1C620B1900B6FA6B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C81C620B1900B6FA6B /* Alamofire.framework */; };
 		D529C2CD1C620B1900B6FA6B /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C91C620B1900B6FA6B /* JWTDecode.framework */; };
 		D529C2CE1C620B1900B6FA6B /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CA1C620B1900B6FA6B /* Keychain.framework */; };
@@ -49,6 +50,7 @@
 		D51D954A1C620C7000D78EF3 /* AzureOAuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzureOAuthConfig.swift; sourceTree = "<group>"; };
 		D51D954C1C621EC900D78EF3 /* Authorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorizer.swift; sourceTree = "<group>"; };
 		D51D95501C622CD600D78EF3 /* TokenProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
+		D51D95521C62350A00D78EF3 /* ErrorThrowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorThrowable.swift; sourceTree = "<group>"; };
 		D529C2C81C620B1900B6FA6B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		D529C2C91C620B1900B6FA6B /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Carthage/Build/iOS/JWTDecode.framework; sourceTree = "<group>"; };
 		D529C2CA1C620B1900B6FA6B /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = Carthage/Build/iOS/Keychain.framework; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				D51D954A1C620C7000D78EF3 /* AzureOAuthConfig.swift */,
 				D51D954C1C621EC900D78EF3 /* Authorizer.swift */,
 				D51D95501C622CD600D78EF3 /* TokenProvider.swift */,
+				D51D95521C62350A00D78EF3 /* ErrorThrowable.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				D5C629831C3A892A007F7B7C /* Locker.swift in Sources */,
 				D51D95511C622CD600D78EF3 /* TokenProvider.swift in Sources */,
 				D5C629871C3A89A8007F7B7C /* Shared.swift in Sources */,
+				D51D95531C62350A00D78EF3 /* ErrorThrowable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
