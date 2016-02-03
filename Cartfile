@@ -1,0 +1,4 @@
+github "hyperoslo/Sugar"
+github "hyperoslo/Keychain" "master"
+github "Alamofire/Alamofire"
+github "auth0/JWTDecode.swift" "master"
