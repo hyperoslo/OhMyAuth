@@ -16,8 +16,8 @@ struct TokenProvider {
 
   // MARK: - Networking
 
-  func request(URL: NSURL, parameters: [String: AnyObject], completion: (result: TokenResult) -> Void) {
-    Alamofire.request(.POST, URL, parameters: parameters, encoding: .URL).responseJSON {
+  func request(request: Requestable, completion: (result: TokenResult) -> Void) {
+    Alamofire.request(.POST, request.URL, parameters: request.parameters, encoding: .URL).responseJSON {
       response in
 
       guard response.result.isSuccess else {
