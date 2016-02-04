@@ -1,14 +1,13 @@
 import Foundation
 
 @objc enum Error: Int, ErrorType {
-  case InvalidRedirectURI = -1
-  case CodeParameterNotFound = -2
-  case ExpirationDateNotFound = -3
-  case NoConfigFound = -4
-  case NoDataInResponse = -5
-  case TokenRequestFailed = -6
-  case NoAccessTokenFound = -7
-  case NoRefreshTokenFound = -8
+  case CodeParameterNotFound = -1
+  case ExpirationDateNotFound = -2
+  case NoConfigFound = -3
+  case NoDataInResponse = -4
+  case TokenRequestFailed = -5
+  case NoAccessTokenFound = -6
+  case NoRefreshTokenFound = -7
 
   // MARK: - Helpers
 
@@ -16,8 +15,6 @@ import Foundation
     var message: String
 
     switch self {
-    case InvalidRedirectURI:
-      message = "Invalid redirect URI"
     case CodeParameterNotFound:
       message = "Code parameter not found"
     case ExpirationDateNotFound:
