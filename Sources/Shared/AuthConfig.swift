@@ -14,6 +14,7 @@ import Foundation
   public var extraRefreshTokenParameters = [String: String]()
 
   let refreshGrantType = "refresh_token"
+  var name = "OhMyAuth"
 
   var sharedParameters: [String: String] {
     var parameters = ["client_id" : clientId]

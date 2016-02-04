@@ -37,7 +37,7 @@ import Foundation
 
   func toNSError(message: String? = nil) -> NSError {
     let text = message ?? defaultMessage
-    let domain = "OhMyAuth-"
+    let domain = "OhMyAuth"
 
     print("\(domain): \(text)")
 

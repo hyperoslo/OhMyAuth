@@ -66,11 +66,11 @@ import SafariServices
 
   // MARK: - URL handling
 
-  public func acquireTokenWithCode(url: NSURL, completion: NSError? -> Void) {
+  public func acquireTokenWithCode(URL: NSURL, completion: NSError? -> Void) {
     guard let redirectURI = config.redirectURI,
-      urlComponents = NSURLComponents(URL: url, resolvingAgainstBaseURL: false),
-      code = urlComponents.queryItems?.filter({ $0.name == "code" }).first?.value
-      where url.absoluteString.hasPrefix(redirectURI)
+      URLComponents = NSURLComponents(URL: URL, resolvingAgainstBaseURL: false),
+      code = URLComponents.queryItems?.filter({ $0.name == "code" }).first?.value
+      where URL.absoluteString.hasPrefix(redirectURI)
       else {
         completion(Error.CodeParameterNotFound.toNSError())
         return
