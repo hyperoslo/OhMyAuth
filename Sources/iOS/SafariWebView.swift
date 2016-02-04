@@ -8,7 +8,7 @@ import SafariServices
   let viewController: UIViewController
   var dismissWebController: (Void -> Void)?
 
-  init(viewController: UIViewController, animated: Bool = true) {
+  public init(viewController: UIViewController, animated: Bool = true) {
     self.viewController = viewController
     self.animated = animated
   }
