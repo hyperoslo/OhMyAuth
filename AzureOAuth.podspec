@@ -25,5 +25,5 @@ Pod::Spec.new do |s|
   s.dependency 'Sugar'
   s.dependency 'Keychain'
   s.dependency 'Alamofire'
-  s.dependency 'JWTDecode.swift'
+  s.dependency 'JWTDecode'
 end
