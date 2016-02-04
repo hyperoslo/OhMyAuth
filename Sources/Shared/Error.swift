@@ -41,6 +41,8 @@ import Foundation
   func toNSError(message: String? = nil) -> NSError {
     let text = message ?? defaultMessage
 
+    print("\(AuthConfig.errorDomain): \(text)")
+
     return NSError(domain: AuthConfig.errorDomain,
       code: rawValue,
       userInfo: [NSLocalizedDescriptionKey: text])
