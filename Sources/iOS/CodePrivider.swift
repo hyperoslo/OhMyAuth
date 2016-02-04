@@ -2,38 +2,48 @@ import Foundation
 import UIKit
 import SafariServices
 
-@objc public class Authenticator: NSObject {
+@objc public class CodePrivider: NSObject {
 
   private var webViewController: UIViewController?
+
+  let config: AuthConfig
+  let locker: Lockable
+
+  // MARK: - Initialization
+
+  public init(config: AuthConfig, locker: Lockable) {
+    self.config = config
+    self.locker = locker
+  }
 
   // MARK: - Login
 
   @available(iOS 9, *)
   public func authorize(parentController: UIViewController, forceLogout: Bool = false) -> Bool {
-    guard let loginConfig = AuthConfig.loginConfig else {
+    guard let authorizeURL = config.authorizeURL else {
       return false
     }
 
     if forceLogout {
-      AuthContainer.locker.clear()
+      locker.clear()
     }
 
-    webViewController = SFSafariViewController(URL: loginConfig.loginURL)
+    webViewController = SFSafariViewController(URL: authorizeURL)
     parentController.presentViewController(webViewController!, animated: true, completion: nil)
 
     return true
   }
 
   public func authorize(forceLogout: Bool = false) -> Bool {
-    guard let loginConfig = AuthConfig.loginConfig else {
+    guard let authorizeURL = config.authorizeURL else {
       return false
     }
 
     if forceLogout {
-      AuthContainer.locker.clear()
+      locker.clear()
     }
 
-    UIApplication.sharedApplication().openURL(loginConfig.loginURL)
+    UIApplication.sharedApplication().openURL(authorizeURL)
 
     return true
   }
@@ -42,11 +52,11 @@ import SafariServices
 
   @available(iOS 9, *)
   public func changeUser(parentController: UIViewController) {
-    guard let changeUserURL = AuthConfig.loginConfig?.loginURL else {
+    guard let changeUserURL = config.changeUserURL else {
       return
     }
 
-    AuthContainer.locker.clear()
+    locker.clear()
 
     webViewController = SFSafariViewController(URL: changeUserURL)
     parentController.presentViewController(webViewController!, animated: true, completion: nil)
@@ -54,8 +64,8 @@ import SafariServices
 
   // MARK: - URL handling
 
-  public func processUrl(url: NSURL, completion: NSError? -> Void) {
-    guard let redirectURI = AuthConfig.loginConfig?.redirectURI
+  public func acquireTokenWithCode(url: NSURL, completion: NSError? -> Void) {
+    guard let redirectURI = config.redirectURI
       where url.absoluteString.hasPrefix(redirectURI)
       else {
         completion(Error.InvalidRedirectURI.toNSError())
@@ -65,19 +75,15 @@ import SafariServices
     let urlComponents = NSURLComponents(URL: url, resolvingAgainstBaseURL: false)
 
     if let code = urlComponents?.queryItems?.filter({ $0.name == "code" }).first?.value {
-      do {
-        let request = try AccessTokenRequest(code: code)
+      let request = AccessTokenRequest(config: config, parameters: ["code" : code])
 
-        TokenNetworkTask().execute(request) { result in
-          switch result {
-          case .Failure(let error):
-            completion(error as? NSError)
-          default:
-            completion(nil)
-          }
+      TokenNetworkTask(locker: locker).execute(request) { result in
+        switch result {
+        case .Failure(let error):
+          completion(error as? NSError)
+        default:
+          completion(nil)
         }
-      } catch {
-        completion(error as NSError)
       }
     } else {
       completion(Error.CodeParameterNotFound.toNSError())

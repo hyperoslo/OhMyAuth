@@ -2,46 +2,60 @@ import Foundation
 
 @objc public class AuthConfig: NSObject {
 
-  public static var errorDomain = "AzureOAuth"
-  public static var minimumValidity: NSTimeInterval = 5 * 60
-  public static var loginConfig: LoginConfig?
-  public static var tokenConfig: TokenConfig?
-
-  static func config() throws -> (login: LoginConfig, token: TokenConfig) {
-    guard let tokenConfig = tokenConfig, loginConfig = loginConfig
-      else { throw Error.NoConfigFound.toNSError() }
-
-    return (login: loginConfig, token: tokenConfig)
-  }
-}
-
-@objc public class LoginConfig: NSObject {
-
-  public var loginURL: NSURL
+  public var clientId: String
+  public var accessGrantType: String
+  public var accessTokenUrl: NSURL
+  public var authorizeURL: NSURL?
   public var changeUserURL: NSURL?
-  public let redirectURI: String
+  public var redirectURI: String?
+  public var minimumValidity: NSTimeInterval = 5 * 60
 
-  public init(loginURL: NSURL, redirectURI: String, changeUserURL: NSURL? = nil) {
-    self.loginURL = loginURL
-    self.changeUserURL = changeUserURL
-    self.redirectURI = redirectURI
+  public var extraAccessTokenParameters = [String: String]()
+  public var extraRefreshTokenParameters = [String: String]()
+
+  let refreshGrantType = "refresh_token"
+
+  var sharedParameters: [String: String] {
+    var parameters = ["client_id" : clientId]
+
+    if let redirectURI = redirectURI {
+      parameters["redirect_uri"] = redirectURI
+    }
+
+    return parameters
   }
-}
 
-@objc public class TokenConfig: NSObject {
+  var accessTokenParameters: [String: String] {
+    var parameters = sharedParameters
+    parameters["grant_type"] = accessGrantType
 
-  public let accessGrantType = "authorization_code"
-  public let refreshGrantType = "refresh_token"
+    extraAccessTokenParameters.forEach { key, value in
+      parameters[key] = value
+    }
 
-  public var URL: NSURL
-  public var resource: String
-  public let clientId: String
-  public let clientSecret: String
+    return parameters
+  }
 
-  public init(URL: NSURL, resource: String, clientId: String, clientSecret: String) {
-    self.URL = URL
-    self.resource = resource
-    self.clientId = clientId
-    self.clientSecret = clientSecret
+  var refreshTokenParameters: [String: String] {
+    var parameters = sharedParameters
+    parameters["grant_type"] = refreshGrantType
+
+    extraRefreshTokenParameters.forEach { key, value in
+      parameters[key] = value
+    }
+
+    return parameters
+  }
+
+  // MARK: - Initialization
+
+  public init(clientId: String, accessTokenUrl: NSURL, accessGrantType: String = "authorization_code",
+    authorizeURL: NSURL? = nil, changeUserURL: NSURL? = nil, redirectURI: String? = nil) {
+      self.clientId = clientId
+      self.accessGrantType = accessGrantType
+      self.accessTokenUrl = accessTokenUrl
+      self.authorizeURL = authorizeURL
+      self.changeUserURL = changeUserURL
+      self.redirectURI = redirectURI
   }
 }
