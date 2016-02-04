@@ -2,15 +2,15 @@ import Foundation
 import UIKit
 import SafariServices
 
-@objc public class Authorizer: NSObject {
+@objc public class Authenticator: NSObject {
 
   private var webViewController: UIViewController?
 
   // MARK: - Login
 
   @available(iOS 9, *)
-  public func login(parentController: UIViewController, forceLogout: Bool = false) -> Bool {
-    guard let loginConfig = Authenticator.loginConfig else {
+  public func authorize(parentController: UIViewController, forceLogout: Bool = false) -> Bool {
+    guard let loginConfig = AuthConfig.loginConfig else {
       return false
     }
 
@@ -24,8 +24,8 @@ import SafariServices
     return true
   }
 
-  public func login(forceLogout: Bool = false) -> Bool {
-    guard let loginConfig = Authenticator.loginConfig else {
+  public func authorize(forceLogout: Bool = false) -> Bool {
+    guard let loginConfig = AuthConfig.loginConfig else {
       return false
     }
 
@@ -38,11 +38,15 @@ import SafariServices
     return true
   }
 
+  public static func logout() {
+    AuthContainer.locker.clear()
+  }
+
   // MARK: - Change user
 
   @available(iOS 9, *)
   public func changeUser(parentController: UIViewController) {
-    guard let changeUserURL = Authenticator.loginConfig?.loginURL else {
+    guard let changeUserURL = AuthConfig.loginConfig?.loginURL else {
       return
     }
 
@@ -55,14 +59,10 @@ import SafariServices
   // MARK: - URL handling
 
   public func processUrl(url: NSURL, completion: NSError? -> Void) {
-    let errorDomain = Authenticator.errorDomain
-
-    guard let redirectURI = Authenticator.loginConfig?.redirectURI
+    guard let redirectURI = AuthConfig.loginConfig?.redirectURI
       where url.absoluteString.hasPrefix(redirectURI)
       else {
-        completion(NSError(domain: errorDomain,
-          code: Error.InvalidRedirectURI.rawValue,
-          userInfo: [NSLocalizedDescriptionKey: "Invalid redirect URI"]))
+        completion(Error.InvalidRedirectURI.toNSError())
         return
     }
 
@@ -84,9 +84,7 @@ import SafariServices
         completion(error as NSError)
       }
     } else {
-      completion(NSError(domain: errorDomain,
-        code: Error.CodeParameterNotFound.rawValue,
-        userInfo: [NSLocalizedDescriptionKey: "Code parameter not found"]))
+      completion(Error.CodeParameterNotFound.toNSError())
     }
   }
 }

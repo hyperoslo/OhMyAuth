@@ -28,7 +28,7 @@ struct AccessTokenRequest: Requestable {
 
   init(code: String) throws {
     do {
-      let config = try Authenticator.config()
+      let config = try AuthConfig.config()
       URL = config.token.URL
 
       parameters = [
@@ -50,14 +50,11 @@ struct RefreshTokenRequest: Requestable {
 
   init() throws {
     do {
-      let config = try Authenticator.config()
+      let config = try AuthConfig.config()
       URL = config.token.URL
 
-      guard let refreshToken = Authenticator.locker.refreshToken else {
-        throw NSError(
-          domain: Authenticator.errorDomain,
-          code: Error.NoRefreshTokenFound.rawValue,
-          userInfo: [NSLocalizedDescriptionKey: "No refresh token found"])
+      guard let refreshToken = AuthContainer.locker.refreshToken else {
+        throw Error.NoRefreshTokenFound.toNSError()
       }
 
       parameters = [

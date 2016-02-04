@@ -25,10 +25,7 @@ extension NetworkTaskable {
         completion(.Failure(error))
       case .Success(let data):
         guard let data = data as? Input else {
-          let error = NSError(domain: Authenticator.errorDomain,
-            code: Error.NoDataInResponse.rawValue,
-            userInfo: [NSLocalizedDescriptionKey: "No data in response"])
-          completion(.Failure(error))
+          completion(.Failure(Error.NoDataInResponse.toNSError()))
           return
         }
 
@@ -45,46 +42,28 @@ extension NetworkTaskable {
 
 struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
 
-  var errorDomain: String {
-    return Authenticator.errorDomain
-  }
-
   func process(data: JSONDictionary) throws -> String {
     guard data["error"] == nil else {
-      let error: NSError
-
-      if let errorDescription = data["error_description"] as? String {
-        error = NSError(domain: errorDomain, code: Error.AuthenticationFailed.rawValue,
-          userInfo: [NSLocalizedDescriptionKey: errorDescription])
-      } else {
-        error = NSError(domain: errorDomain, code: Error.AuthenticationFailed.rawValue,
-          userInfo: [:])
-      }
-
-      throw error
+      throw Error.TokenRequestFailed.toNSError(data["error_description"] as? String)
     }
 
     guard let accessToken = data["access_token"] as? String else {
-      Authenticator.locker.clear()
-
-      throw NSError(domain: errorDomain, code: Error.NoAccessTokenFound.rawValue,
-        userInfo: [NSLocalizedDescriptionKey: "No access token found"])
+      AuthContainer.locker.clear()
+      throw Error.NoAccessTokenFound.toNSError()
     }
 
     guard let refreshToken = data["refresh_token"] as? String else {
-      Authenticator.locker.clear()
-
-      throw NSError(domain: errorDomain, code: Error.NoAccessTokenFound.rawValue,
-        userInfo: [NSLocalizedDescriptionKey: "No refresh token found"])
+      AuthContainer.locker.clear()
+      throw Error.NoAccessTokenFound.toNSError()
     }
 
-    Authenticator.locker.accessToken = accessToken
-    Authenticator.locker.refreshToken = refreshToken
+    AuthContainer.locker.accessToken = accessToken
+    AuthContainer.locker.refreshToken = refreshToken
 
     if let expiresOn = data["expires_on"] {
-      Authenticator.locker.expiryDate = NSDate(timeIntervalSince1970: expiresOn.doubleValue)
+      AuthContainer.locker.expiryDate = NSDate(timeIntervalSince1970: expiresOn.doubleValue)
     } else {
-      Authenticator.locker.expiryDate = nil
+      AuthContainer.locker.expiryDate = nil
     }
 
     if let jwtString = data["id_token"] as? String {
@@ -92,10 +71,10 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
         let payload = try decode(jwtString)
 
         if let name = payload.body["name"] as? String {
-          Authenticator.locker.userName = name
+          AuthContainer.locker.userName = name
         }
         if let upn = payload.body["upn"] as? String {
-          Authenticator.locker.userUPN = upn
+          AuthContainer.locker.userUPN = upn
         }
       } catch {}
     }

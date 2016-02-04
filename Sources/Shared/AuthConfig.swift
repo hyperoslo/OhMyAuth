@@ -1,5 +1,20 @@
 import Foundation
 
+@objc public class AuthConfig: NSObject {
+
+  public static var errorDomain = "AzureOAuth"
+  public static var minimumValidity: NSTimeInterval = 5 * 60
+  public static var loginConfig: LoginConfig?
+  public static var tokenConfig: TokenConfig?
+
+  static func config() throws -> (login: LoginConfig, token: TokenConfig) {
+    guard let tokenConfig = tokenConfig, loginConfig = loginConfig
+      else { throw Error.NoConfigFound.toNSError() }
+
+    return (login: loginConfig, token: tokenConfig)
+  }
+}
+
 @objc public class LoginConfig: NSObject {
 
   public var loginURL: NSURL
