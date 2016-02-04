@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name             = "AzureOAuth"
-  s.summary          = "A short description of AzureOAuth."
+  s.name             = "OhMyAuth"
+  s.summary          = "A short description of OhMyAuth."
   s.version          = "0.1.0"
   s.homepage         = "https://github.com/hyperoslo/AzureOAuth"
   s.license          = 'MIT'
