@@ -15,7 +15,7 @@ import SafariServices
     }
 
     if forceLogout {
-      Authenticator.logout()
+      AuthContainer.locker.clear()
     }
 
     webViewController = SFSafariViewController(URL: loginConfig.loginURL)
@@ -30,16 +30,12 @@ import SafariServices
     }
 
     if forceLogout {
-      Authenticator.logout()
+      AuthContainer.locker.clear()
     }
 
     UIApplication.sharedApplication().openURL(loginConfig.loginURL)
 
     return true
-  }
-
-  public static func logout() {
-    AuthContainer.locker.clear()
   }
 
   // MARK: - Change user
@@ -50,7 +46,7 @@ import SafariServices
       return
     }
 
-    Authenticator.logout()
+    AuthContainer.locker.clear()
 
     webViewController = SFSafariViewController(URL: changeUserURL)
     parentController.presentViewController(webViewController!, animated: true, completion: nil)
