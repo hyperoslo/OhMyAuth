@@ -1,6 +1,13 @@
 import Foundation
-import UIKit
 import SafariServices
+
+#if os(iOS) || os(tvOS)
+  import UIKit
+#elseif os(OSX)
+  import AppKit
+#endif
+
+
 
 @objc public class CodePrivider: NSObject {
 

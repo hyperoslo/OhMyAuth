@@ -13,6 +13,8 @@ import Foundation
   public var extraAccessTokenParameters = [String: String]()
   public var extraRefreshTokenParameters = [String: String]()
 
+  public var webView: WebViewable = BrowserWebView()
+
   let refreshGrantType = "refresh_token"
   var name = "OhMyAuth"
 
