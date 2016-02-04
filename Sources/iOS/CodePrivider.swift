@@ -8,12 +8,14 @@ import SafariServices
 
   let config: AuthConfig
   let locker: Lockable
+  let tokenProvider: TokenProvider
 
   // MARK: - Initialization
 
-  public init(config: AuthConfig, locker: Lockable) {
+  public init(config: AuthConfig, locker: Lockable, tokenProvider: TokenProvider) {
     self.config = config
     self.locker = locker
+    self.tokenProvider = tokenProvider
   }
 
   // MARK: - Login
@@ -65,28 +67,17 @@ import SafariServices
   // MARK: - URL handling
 
   public func acquireTokenWithCode(url: NSURL, completion: NSError? -> Void) {
-    guard let redirectURI = config.redirectURI
+    guard let redirectURI = config.redirectURI,
+      urlComponents = NSURLComponents(URL: url, resolvingAgainstBaseURL: false),
+      code = urlComponents.queryItems?.filter({ $0.name == "code" }).first?.value
       where url.absoluteString.hasPrefix(redirectURI)
       else {
-        completion(Error.InvalidRedirectURI.toNSError())
+        completion(Error.CodeParameterNotFound.toNSError())
         return
     }
 
-    let urlComponents = NSURLComponents(URL: url, resolvingAgainstBaseURL: false)
-
-    if let code = urlComponents?.queryItems?.filter({ $0.name == "code" }).first?.value {
-      let request = AccessTokenRequest(config: config, parameters: ["code" : code])
-
-      TokenNetworkTask(locker: locker).execute(request) { result in
-        switch result {
-        case .Failure(let error):
-          completion(error as? NSError)
-        default:
-          completion(nil)
-        }
-      }
-    } else {
-      completion(Error.CodeParameterNotFound.toNSError())
+    tokenProvider.acquireAccessToken(["code" : code]) { accessToken, error in
+      completion(error)
     }
   }
 }
