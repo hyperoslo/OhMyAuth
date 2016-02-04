@@ -36,7 +36,24 @@ import Foundation
 
   // MARK: - Networking
 
-  public func acquireAccessToken(parameters: [String: AnyObject], completion: Completion) {
+  public func accessToken(URL URL: NSURL, completion: Completion) -> Bool {
+    guard let redirectURI = config.redirectURI,
+      URLComponents = NSURLComponents(URL: URL, resolvingAgainstBaseURL: false),
+      code = URLComponents.queryItems?.filter({ $0.name == "code" }).first?.value
+      where URL.absoluteString.hasPrefix(redirectURI)
+      else {
+        completion(nil, Error.CodeParameterNotFound.toNSError())
+        return false
+    }
+
+    accessToken(parameters: ["code" : code]) { accessToken, error in
+      completion(accessToken, error)
+    }
+
+    return true
+  }
+
+  public func accessToken(parameters parameters: [String: AnyObject], completion: Completion) {
     let request = AccessTokenRequest(config: config, parameters: parameters)
     executeRequest(request, completion: completion)
   }
