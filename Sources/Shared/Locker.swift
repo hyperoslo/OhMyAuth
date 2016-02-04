@@ -101,7 +101,9 @@ import Sugar
 
   func getFromKeychain(key: String) -> String? {
     let namedKey = generateKey(key)
-    return Keychain.password(forAccount: namedKey, service: KeychainKeys.service)
+    let password = Keychain.password(forAccount: namedKey, service: KeychainKeys.service)
+
+    return !password.isEmpty ? password : nil
   }
 
   func saveInKeychain(key: String, _ value: String?) {

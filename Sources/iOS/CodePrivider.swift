@@ -21,9 +21,9 @@ import SafariServices
   // MARK: - Login
 
   @available(iOS 9, *)
-  public func authorize(parentController: UIViewController, forceLogout: Bool = false) -> Bool {
+  public func authorize(parentController: UIViewController, forceLogout: Bool = false) -> UIViewController? {
     guard let authorizeURL = config.authorizeURL else {
-      return false
+      return nil
     }
 
     if forceLogout {
@@ -33,7 +33,7 @@ import SafariServices
     webViewController = SFSafariViewController(URL: authorizeURL)
     parentController.presentViewController(webViewController!, animated: true, completion: nil)
 
-    return true
+    return webViewController
   }
 
   public func authorize(forceLogout: Bool = false) -> Bool {
@@ -53,20 +53,22 @@ import SafariServices
   // MARK: - Change user
 
   @available(iOS 9, *)
-  public func changeUser(parentController: UIViewController) {
+  public func changeUser(parentController: UIViewController) -> UIViewController? {
     guard let changeUserURL = config.changeUserURL else {
-      return
+      return nil
     }
 
     locker.clear()
 
     webViewController = SFSafariViewController(URL: changeUserURL)
     parentController.presentViewController(webViewController!, animated: true, completion: nil)
+
+    return webViewController
   }
 
   // MARK: - URL handling
 
-  public func acquireTokenWithCode(URL: NSURL, completion: NSError? -> Void) {
+  public func acquireTokenFrom(URL: NSURL, completion: NSError? -> Void) {
     guard let redirectURI = config.redirectURI,
       URLComponents = NSURLComponents(URL: URL, resolvingAgainstBaseURL: false),
       code = URLComponents.queryItems?.filter({ $0.name == "code" }).first?.value
