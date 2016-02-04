@@ -23,11 +23,10 @@ import Foundation
 
   // MARK: - Authorization
 
-  public func authorize(forceLogout: Bool = false) -> Bool {
+  public func authorize() -> Bool {
     guard let URL = config.authorizeURL else { return false }
 
-    if forceLogout { locker.clear() }
-
+    locker.clear()
     config.webView.open(URL)
 
     return true
