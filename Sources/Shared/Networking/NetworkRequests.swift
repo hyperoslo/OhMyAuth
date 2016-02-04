@@ -7,7 +7,7 @@ struct AccessTokenRequest: NetworkRequestable {
   init(config: AuthConfig, parameters: [String: AnyObject]) {
     URL = config.accessTokenUrl
 
-    self.parameters = config.extraAccessTokenParameters
+    self.parameters = config.accessTokenParameters
 
     parameters.forEach { key, value in
       self.parameters[key] = value
@@ -17,10 +17,11 @@ struct AccessTokenRequest: NetworkRequestable {
 
 struct RefreshTokenRequest: NetworkRequestable {
   let URL: NSURL
-  let parameters: [String: AnyObject]
+  var parameters: [String: AnyObject]
 
-  init(config: AuthConfig) {
+  init(config: AuthConfig, refreshToken: String) {
     URL = config.accessTokenUrl
-    parameters = config.extraRefreshTokenParameters
+    parameters = config.refreshTokenParameters
+    parameters["refresh_token"] = refreshToken
   }
 }

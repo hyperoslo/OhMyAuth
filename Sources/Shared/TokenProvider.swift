@@ -59,7 +59,12 @@ import Foundation
   }
 
   public func refreshToken(completion: Completion) {
-    let request = RefreshTokenRequest(config: config)
+    guard let token = locker.refreshToken else {
+      completion(nil, Error.NoRefreshTokenFound.toNSError())
+      return
+    }
+
+    let request = RefreshTokenRequest(config: config, refreshToken: token)
     executeRequest(request, completion: completion)
   }
 
