@@ -10,27 +10,34 @@ import Sugar
   var userName: String? { get set }
   var userUPN: String? { get set }
 
+  init(name: String)
   func clear()
 }
 
 @objc public class Locker: NSObject, Lockable {
 
-  public static let prefix = "AzureOAuth-"
-
   public struct KeychainKeys {
-    public static let service = "\(prefix)\(Application.name)"
-    public static let accessToken = "\(prefix)\(Application.name)-AccessToken"
-    public static let refreshToken = "\(prefix)\(Application.name)-RefreshToken"
-    public static let tokenType = "\(prefix)\(Application.name)-TokenType"
+    public static let service = "\(Application.name)"
+    public static let accessToken = "\(Application.name)-AccessToken"
+    public static let refreshToken = "\(Application.name)-RefreshToken"
+    public static let tokenType = "\(Application.name)-TokenType"
   }
 
   public struct UserDefaultsKeys {
-    public static let expiryDate = "\(prefix)\(Application.name)-ExpiryDate"
-    public static let userName = "\(prefix)\(Application.name)-UserName"
-    public static let userUPN = "\(prefix)\(Application.name)-UserUPN"
+    public static let expiryDate = "\(Application.name)-ExpiryDate"
+    public static let userName = "\(Application.name)-UserName"
+    public static let userUPN = "\(Application.name)-UserUPN"
   }
 
+  let name: String
   let userDefaults = NSUserDefaults.standardUserDefaults()
+
+
+  // MARK: - Initialization
+
+  public required init(name: String) {
+    self.name = name
+  }
 
   // MARK: - Keychain
 
@@ -93,30 +100,42 @@ import Sugar
   // MARK: - Helpers
 
   func getFromKeychain(key: String) -> String? {
-    return Keychain.password(forAccount: key, service: KeychainKeys.service)
+    let namedKey = generateKey(key)
+    return Keychain.password(forAccount: namedKey, service: KeychainKeys.service)
   }
 
   func saveInKeychain(key: String, _ value: String?) {
+    let namedKey = generateKey(key)
+
     if let value = value {
-      Keychain.setPassword(value, forAccount: key, service: KeychainKeys.service)
+      Keychain.setPassword(value, forAccount: namedKey, service: KeychainKeys.service)
     } else {
-      Keychain.deletePassword(forAccount: key, service: KeychainKeys.service)
+      Keychain.deletePassword(forAccount: namedKey, service: KeychainKeys.service)
     }
   }
 
   func getFromDefaults<T>(key: String) -> T? {
-    return userDefaults.objectForKey(key) as? T
+    let namedKey = generateKey(key)
+    return userDefaults.objectForKey(namedKey) as? T
   }
 
   func saveInDefaults(key: String, _ value: AnyObject?) {
+    let namedKey = generateKey(key)
+
     if let value = value {
-      userDefaults.setObject(value, forKey: key)
+      userDefaults.setObject(value, forKey: namedKey)
     } else {
-      userDefaults.removeObjectForKey(key)
+      userDefaults.removeObjectForKey(namedKey)
     }
 
     userDefaults.synchronize()
   }
+
+  func generateKey(key: String) -> String {
+    return "\(name)-\(key)"
+  }
+
+  // MARK: - Clear
 
   public func clear() {
     accessToken = nil
