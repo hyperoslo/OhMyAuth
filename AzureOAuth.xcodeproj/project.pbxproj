@@ -11,21 +11,25 @@
 		D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */; };
 		D51D95601C62535200D78EF3 /* Locker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* Locker.swift */; };
 		D51D95621C62536E00D78EF3 /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* AuthContainer.swift */; };
-		D51D95651C6253B200D78EF3 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* Requests.swift */; };
-		D51D95691C6253E100D78EF3 /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95681C6253E100D78EF3 /* TokenProvider.swift */; };
-		D51D956B1C6253FC00D78EF3 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D956A1C6253FC00D78EF3 /* Error.swift */; };
-		D51D956E1C62B82400D78EF3 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* Requests.swift */; };
-		D51D956F1C62B82400D78EF3 /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95681C6253E100D78EF3 /* TokenProvider.swift */; };
+		D51D95651C6253B200D78EF3 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* NetworkRequests.swift */; };
+		D51D956E1C62B82400D78EF3 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* NetworkRequests.swift */; };
 		D51D95701C62B82400D78EF3 /* AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */; };
 		D51D95711C62B82400D78EF3 /* Locker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* Locker.swift */; };
 		D51D95721C62B82400D78EF3 /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* AuthContainer.swift */; };
-		D51D95731C62B82400D78EF3 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D956A1C6253FC00D78EF3 /* Error.swift */; };
-		D51D95751C62BAF000D78EF3 /* Processors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* Processors.swift */; };
-		D51D95761C62BAF000D78EF3 /* Processors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* Processors.swift */; };
+		D51D95751C62BAF000D78EF3 /* NetworkTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */; };
+		D51D95761C62BAF000D78EF3 /* NetworkTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */; };
 		D529C2CC1C620B1900B6FA6B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C81C620B1900B6FA6B /* Alamofire.framework */; };
 		D529C2CD1C620B1900B6FA6B /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C91C620B1900B6FA6B /* JWTDecode.framework */; };
 		D529C2CE1C620B1900B6FA6B /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CA1C620B1900B6FA6B /* Keychain.framework */; };
 		D529C2CF1C620B1900B6FA6B /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CB1C620B1900B6FA6B /* Sugar.framework */; };
+		D595759C1C6352C5000CD22B /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595759B1C6352C5000CD22B /* TokenProvider.swift */; };
+		D595759F1C63538B000CD22B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595759E1C63538B000CD22B /* Result.swift */; };
+		D59575A11C6354B2000CD22B /* NetworkTaskable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A01C6354B2000CD22B /* NetworkTaskable.swift */; };
+		D59575A21C6354B2000CD22B /* NetworkTaskable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A01C6354B2000CD22B /* NetworkTaskable.swift */; };
+		D59575A41C6354D4000CD22B /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A31C6354D4000CD22B /* NetworkRequestable.swift */; };
+		D59575A51C6354D4000CD22B /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A31C6354D4000CD22B /* NetworkRequestable.swift */; };
+		D59575A71C63558D000CD22B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A61C63558D000CD22B /* Error.swift */; };
+		D59575A81C63558D000CD22B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A61C63558D000CD22B /* Error.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* AzureOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* AzureOAuth.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* AzureOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* AzureOAuth.framework */; };
 		D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629751C3A878E007F7B7C /* Quick.framework */; };
@@ -59,14 +63,17 @@
 		D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthConfig.swift; sourceTree = "<group>"; };
 		D51D955F1C62535200D78EF3 /* Locker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locker.swift; sourceTree = "<group>"; };
 		D51D95611C62536E00D78EF3 /* AuthContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthContainer.swift; sourceTree = "<group>"; };
-		D51D95641C6253B200D78EF3 /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
-		D51D95681C6253E100D78EF3 /* TokenProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
-		D51D956A1C6253FC00D78EF3 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		D51D95741C62BAF000D78EF3 /* Processors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Processors.swift; sourceTree = "<group>"; };
+		D51D95641C6253B200D78EF3 /* NetworkRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
+		D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTasks.swift; sourceTree = "<group>"; };
 		D529C2C81C620B1900B6FA6B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		D529C2C91C620B1900B6FA6B /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Carthage/Build/iOS/JWTDecode.framework; sourceTree = "<group>"; };
 		D529C2CA1C620B1900B6FA6B /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = Carthage/Build/iOS/Keychain.framework; sourceTree = "<group>"; };
 		D529C2CB1C620B1900B6FA6B /* Sugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sugar.framework; path = Carthage/Build/iOS/Sugar.framework; sourceTree = "<group>"; };
+		D595759B1C6352C5000CD22B /* TokenProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
+		D595759E1C63538B000CD22B /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D59575A01C6354B2000CD22B /* NetworkTaskable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTaskable.swift; sourceTree = "<group>"; };
+		D59575A31C6354D4000CD22B /* NetworkRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
+		D59575A61C63558D000CD22B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* AzureOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AzureOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B2E8A91C3A780C00C0327D /* AzureOAuth-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AzureOAuth-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629401C3A7FAA007F7B7C /* AzureOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AzureOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,9 +133,8 @@
 		D51D95631C62539C00D78EF3 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				D51D95641C6253B200D78EF3 /* Requests.swift */,
-				D51D95741C62BAF000D78EF3 /* Processors.swift */,
-				D51D95681C6253E100D78EF3 /* TokenProvider.swift */,
+				D51D95641C6253B200D78EF3 /* NetworkRequests.swift */,
+				D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -144,6 +150,17 @@
 				D5C629761C3A878E007F7B7C /* Nimble.framework */,
 			);
 			name = "Frameworks-iOS";
+			sourceTree = "<group>";
+		};
+		D595759D1C635384000CD22B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				D59575A61C63558D000CD22B /* Error.swift */,
+				D595759E1C63538B000CD22B /* Result.swift */,
+				D59575A01C6354B2000CD22B /* NetworkTaskable.swift */,
+				D59575A31C6354D4000CD22B /* NetworkRequestable.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 		D5B2E8951C3A780C00C0327D = {
@@ -206,11 +223,12 @@
 		D5C6296E1C3A809D007F7B7C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				D595759D1C635384000CD22B /* Library */,
 				D51D95631C62539C00D78EF3 /* Networking */,
 				D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */,
 				D51D95611C62536E00D78EF3 /* AuthContainer.swift */,
 				D51D955F1C62535200D78EF3 /* Locker.swift */,
-				D51D956A1C6253FC00D78EF3 /* Error.swift */,
+				D595759B1C6352C5000CD22B /* TokenProvider.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -479,14 +497,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D59575A41C6354D4000CD22B /* NetworkRequestable.swift in Sources */,
+				D595759F1C63538B000CD22B /* Result.swift in Sources */,
 				D51D95601C62535200D78EF3 /* Locker.swift in Sources */,
-				D51D95651C6253B200D78EF3 /* Requests.swift in Sources */,
-				D51D95691C6253E100D78EF3 /* TokenProvider.swift in Sources */,
+				D51D95651C6253B200D78EF3 /* NetworkRequests.swift in Sources */,
+				D59575A71C63558D000CD22B /* Error.swift in Sources */,
 				D51D95511C622CD600D78EF3 /* Authenticator.swift in Sources */,
+				D595759C1C6352C5000CD22B /* TokenProvider.swift in Sources */,
+				D59575A11C6354B2000CD22B /* NetworkTaskable.swift in Sources */,
 				D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */,
-				D51D956B1C6253FC00D78EF3 /* Error.swift in Sources */,
 				D51D95621C62536E00D78EF3 /* AuthContainer.swift in Sources */,
-				D51D95751C62BAF000D78EF3 /* Processors.swift in Sources */,
+				D51D95751C62BAF000D78EF3 /* NetworkTasks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,13 +525,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5C629851C3A893F007F7B7C /* Mac.swift in Sources */,
+				D59575A21C6354B2000CD22B /* NetworkTaskable.swift in Sources */,
 				D51D95711C62B82400D78EF3 /* Locker.swift in Sources */,
 				D51D95701C62B82400D78EF3 /* AuthConfig.swift in Sources */,
-				D51D956F1C62B82400D78EF3 /* TokenProvider.swift in Sources */,
-				D51D956E1C62B82400D78EF3 /* Requests.swift in Sources */,
-				D51D95731C62B82400D78EF3 /* Error.swift in Sources */,
+				D59575A51C6354D4000CD22B /* NetworkRequestable.swift in Sources */,
+				D51D956E1C62B82400D78EF3 /* NetworkRequests.swift in Sources */,
 				D51D95721C62B82400D78EF3 /* AuthContainer.swift in Sources */,
-				D51D95761C62BAF000D78EF3 /* Processors.swift in Sources */,
+				D59575A81C63558D000CD22B /* Error.swift in Sources */,
+				D51D95761C62BAF000D78EF3 /* NetworkTasks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

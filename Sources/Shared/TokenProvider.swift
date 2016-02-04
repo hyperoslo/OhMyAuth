@@ -1,13 +1,8 @@
 import Foundation
-import Sugar
-import JWTDecode
-import Alamofire
 
+@objc public class TokenProvider: NSObject {
 
-
-struct TokenProvider {
-
-  static func accessToken(completion: (String?, NSError?) -> Void) {
+  public func accessToken(completion: (String?, NSError?) -> Void) {
     guard let expiryDate = AuthContainer.locker.expiryDate else {
       completion(nil, Error.ExpirationDateNotFound.toNSError())
       return

@@ -2,7 +2,7 @@ import UIKit
 import Keychain
 import Sugar
 
-public protocol Lockable {
+@objc public protocol Lockable {
   var accessToken: String? { get set }
   var refreshToken: String? { get set }
   var tokenType: String? { get set }
@@ -13,7 +13,7 @@ public protocol Lockable {
   func clear()
 }
 
-public class Locker: Lockable {
+@objc public class Locker: NSObject, Lockable {
 
   public static let prefix = "AzureOAuth-"
 
