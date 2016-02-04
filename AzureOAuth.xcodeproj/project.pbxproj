@@ -20,6 +20,8 @@
 		D51D95711C62B82400D78EF3 /* Locker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* Locker.swift */; };
 		D51D95721C62B82400D78EF3 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* Authenticator.swift */; };
 		D51D95731C62B82400D78EF3 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D956A1C6253FC00D78EF3 /* Error.swift */; };
+		D51D95751C62BAF000D78EF3 /* Processors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* Processors.swift */; };
+		D51D95761C62BAF000D78EF3 /* Processors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* Processors.swift */; };
 		D529C2CC1C620B1900B6FA6B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C81C620B1900B6FA6B /* Alamofire.framework */; };
 		D529C2CD1C620B1900B6FA6B /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C91C620B1900B6FA6B /* JWTDecode.framework */; };
 		D529C2CE1C620B1900B6FA6B /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CA1C620B1900B6FA6B /* Keychain.framework */; };
@@ -60,6 +62,7 @@
 		D51D95641C6253B200D78EF3 /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		D51D95681C6253E100D78EF3 /* TokenProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
 		D51D956A1C6253FC00D78EF3 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		D51D95741C62BAF000D78EF3 /* Processors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Processors.swift; sourceTree = "<group>"; };
 		D529C2C81C620B1900B6FA6B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		D529C2C91C620B1900B6FA6B /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Carthage/Build/iOS/JWTDecode.framework; sourceTree = "<group>"; };
 		D529C2CA1C620B1900B6FA6B /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = Carthage/Build/iOS/Keychain.framework; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				D51D95641C6253B200D78EF3 /* Requests.swift */,
+				D51D95741C62BAF000D78EF3 /* Processors.swift */,
 				D51D95681C6253E100D78EF3 /* TokenProvider.swift */,
 			);
 			path = Networking;
@@ -482,6 +486,7 @@
 				D51D955D1C6252DD00D78EF3 /* Config.swift in Sources */,
 				D51D956B1C6253FC00D78EF3 /* Error.swift in Sources */,
 				D51D95621C62536E00D78EF3 /* Authenticator.swift in Sources */,
+				D51D95751C62BAF000D78EF3 /* Processors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +510,7 @@
 				D51D956E1C62B82400D78EF3 /* Requests.swift in Sources */,
 				D51D95731C62B82400D78EF3 /* Error.swift in Sources */,
 				D51D95721C62B82400D78EF3 /* Authenticator.swift in Sources */,
+				D51D95761C62BAF000D78EF3 /* Processors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

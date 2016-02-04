@@ -46,7 +46,7 @@ import SafariServices
       return
     }
 
-    Authenticator.locker.clear()
+    Authenticator.logout()
 
     webViewController = SFSafariViewController(URL: changeUserURL)
     parentController.presentViewController(webViewController!, animated: true, completion: nil)
@@ -72,7 +72,7 @@ import SafariServices
       do {
         let request = try AccessTokenRequest(code: code)
 
-        TokenProvider().request(request) { result in
+        TokenNetworkTask().execute(request) { result in
           switch result {
           case .Failure(let error):
             completion(error as? NSError)

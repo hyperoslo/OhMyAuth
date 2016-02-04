@@ -40,7 +40,7 @@ import Foundation
     do {
       let request = try RefreshTokenRequest()
 
-      TokenProvider().request(request) { result in
+      TokenNetworkTask().execute(request) { result in
         switch result {
         case .Failure(let error):
           completion(nil, error as? NSError)
