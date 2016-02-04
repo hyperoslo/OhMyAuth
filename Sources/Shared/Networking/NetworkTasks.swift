@@ -32,7 +32,7 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
     locker.accessToken = accessToken
     locker.refreshToken = refreshToken
 
-    if let expiresOn = data["expires_on"] {
+    if let expiresOn = data["expires_on"] ?? data["expires_in"] {
       locker.expiryDate = NSDate(timeIntervalSince1970: expiresOn.doubleValue)
     } else {
       locker.expiryDate = nil
