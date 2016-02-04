@@ -42,59 +42,35 @@ import Sugar
   // MARK: - Keychain
 
   public var accessToken: String? {
-    get {
-      return getFromKeychain(KeychainKeys.accessToken)
-    }
-    set {
-      saveInKeychain(KeychainKeys.accessToken, newValue)
-    }
+    get { return getFromKeychain(KeychainKeys.accessToken) }
+    set { saveInKeychain(KeychainKeys.accessToken, newValue) }
   }
 
   public var refreshToken: String? {
-    get {
-      return getFromKeychain(KeychainKeys.refreshToken)
-    }
-    set {
-      saveInKeychain(KeychainKeys.refreshToken, newValue)
-    }
+    get { return getFromKeychain(KeychainKeys.refreshToken) }
+    set { saveInKeychain(KeychainKeys.refreshToken, newValue) }
   }
 
   public var tokenType: String? {
-    get {
-      return getFromKeychain(KeychainKeys.tokenType)
-    }
-    set {
-      saveInKeychain(KeychainKeys.tokenType, newValue)
-    }
+    get { return getFromKeychain(KeychainKeys.tokenType) }
+    set { saveInKeychain(KeychainKeys.tokenType, newValue) }
   }
 
   // MARK: - UserDefaults
 
   public var expiryDate: NSDate? {
-    get {
-      return getFromDefaults(UserDefaultsKeys.expiryDate) as NSDate?
-    }
-    set {
-      saveInDefaults(UserDefaultsKeys.expiryDate, newValue)
-    }
+    get { return getFromDefaults(UserDefaultsKeys.expiryDate) as NSDate? }
+    set { saveInDefaults(UserDefaultsKeys.expiryDate, newValue) }
   }
 
   public var userName: String? {
-    get {
-      return getFromDefaults(UserDefaultsKeys.userName) as String?
-    }
-    set {
-      saveInDefaults(UserDefaultsKeys.userName, newValue)
-    }
+    get { return getFromDefaults(UserDefaultsKeys.userName) as String? }
+    set { saveInDefaults(UserDefaultsKeys.userName, newValue) }
   }
 
   public var userUPN: String? {
-    get {
-      return getFromDefaults(UserDefaultsKeys.userUPN) as String?
-    }
-    set {
-      saveInDefaults(UserDefaultsKeys.userUPN, newValue)
-    }
+    get { return getFromDefaults(UserDefaultsKeys.userUPN) as String? }
+    set { saveInDefaults(UserDefaultsKeys.userUPN, newValue) }
   }
 
   // MARK: - Helpers

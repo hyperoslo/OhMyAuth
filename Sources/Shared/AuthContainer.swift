@@ -14,17 +14,9 @@ import Foundation
     return services[name]
   }
 
-  // MARK: - Helper
+  // MARK: - Helpers
 
   public static func locker(serviceName: String) -> Lockable? {
     return serviceNamed(serviceName)?.locker
-  }
-
-  public static func tokenProvider(serviceName: String) -> TokenProvider? {
-    return serviceNamed(serviceName)?.tokenProvider
-  }
-
-  public static func codePrivider(serviceName: String) -> CodePrivider? {
-    return serviceNamed(serviceName)?.codeProvider
   }
 }

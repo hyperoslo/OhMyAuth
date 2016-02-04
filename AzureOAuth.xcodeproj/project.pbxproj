@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D51D95511C622CD600D78EF3 /* CodePrivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95501C622CD600D78EF3 /* CodePrivider.swift */; };
 		D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */; };
 		D51D95601C62535200D78EF3 /* Locker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* Locker.swift */; };
 		D51D95621C62536E00D78EF3 /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* AuthContainer.swift */; };
@@ -22,7 +21,6 @@
 		D529C2CD1C620B1900B6FA6B /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C91C620B1900B6FA6B /* JWTDecode.framework */; };
 		D529C2CE1C620B1900B6FA6B /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CA1C620B1900B6FA6B /* Keychain.framework */; };
 		D529C2CF1C620B1900B6FA6B /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CB1C620B1900B6FA6B /* Sugar.framework */; };
-		D595759C1C6352C5000CD22B /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595759B1C6352C5000CD22B /* TokenProvider.swift */; };
 		D595759F1C63538B000CD22B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595759E1C63538B000CD22B /* Result.swift */; };
 		D59575A11C6354B2000CD22B /* NetworkTaskable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A01C6354B2000CD22B /* NetworkTaskable.swift */; };
 		D59575A21C6354B2000CD22B /* NetworkTaskable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A01C6354B2000CD22B /* NetworkTaskable.swift */; };
@@ -30,7 +28,6 @@
 		D59575A51C6354D4000CD22B /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A31C6354D4000CD22B /* NetworkRequestable.swift */; };
 		D59575A71C63558D000CD22B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A61C63558D000CD22B /* Error.swift */; };
 		D59575A81C63558D000CD22B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A61C63558D000CD22B /* Error.swift */; };
-		D59575A91C63CF2C000CD22B /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595759B1C6352C5000CD22B /* TokenProvider.swift */; };
 		D59575AB1C63CF3C000CD22B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575AA1C63CF3C000CD22B /* AuthService.swift */; };
 		D59575AC1C63CF3C000CD22B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575AA1C63CF3C000CD22B /* AuthService.swift */; };
 		D59575CA1C640BDB000CD22B /* WebViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575C91C640BDB000CD22B /* WebViewable.swift */; };
@@ -67,7 +64,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D51D95501C622CD600D78EF3 /* CodePrivider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodePrivider.swift; sourceTree = "<group>"; };
 		D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthConfig.swift; sourceTree = "<group>"; };
 		D51D955F1C62535200D78EF3 /* Locker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locker.swift; sourceTree = "<group>"; };
 		D51D95611C62536E00D78EF3 /* AuthContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthContainer.swift; sourceTree = "<group>"; };
@@ -77,7 +73,6 @@
 		D529C2C91C620B1900B6FA6B /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Carthage/Build/iOS/JWTDecode.framework; sourceTree = "<group>"; };
 		D529C2CA1C620B1900B6FA6B /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = Carthage/Build/iOS/Keychain.framework; sourceTree = "<group>"; };
 		D529C2CB1C620B1900B6FA6B /* Sugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sugar.framework; path = Carthage/Build/iOS/Sugar.framework; sourceTree = "<group>"; };
-		D595759B1C6352C5000CD22B /* TokenProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
 		D595759E1C63538B000CD22B /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		D59575A01C6354B2000CD22B /* NetworkTaskable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTaskable.swift; sourceTree = "<group>"; };
 		D59575A31C6354D4000CD22B /* NetworkRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
@@ -221,7 +216,6 @@
 		D5C6296A1C3A809D007F7B7C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D51D95501C622CD600D78EF3 /* CodePrivider.swift */,
 				D59575CC1C640C0A000CD22B /* SafariWebView.swift */,
 			);
 			path = iOS;
@@ -243,7 +237,6 @@
 				D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */,
 				D51D95611C62536E00D78EF3 /* AuthContainer.swift */,
 				D51D955F1C62535200D78EF3 /* Locker.swift */,
-				D595759B1C6352C5000CD22B /* TokenProvider.swift */,
 				D59575AA1C63CF3C000CD22B /* AuthService.swift */,
 			);
 			path = Shared;
@@ -520,8 +513,6 @@
 				D59575AB1C63CF3C000CD22B /* AuthService.swift in Sources */,
 				D51D95651C6253B200D78EF3 /* NetworkRequests.swift in Sources */,
 				D59575A71C63558D000CD22B /* Error.swift in Sources */,
-				D51D95511C622CD600D78EF3 /* CodePrivider.swift in Sources */,
-				D595759C1C6352C5000CD22B /* TokenProvider.swift in Sources */,
 				D59575A11C6354B2000CD22B /* NetworkTaskable.swift in Sources */,
 				D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */,
 				D59575D21C640E4C000CD22B /* BrowserWebView.swift in Sources */,
@@ -546,7 +537,6 @@
 			files = (
 				D5C629851C3A893F007F7B7C /* Mac.swift in Sources */,
 				D59575A21C6354B2000CD22B /* NetworkTaskable.swift in Sources */,
-				D59575A91C63CF2C000CD22B /* TokenProvider.swift in Sources */,
 				D59575D31C640E50000CD22B /* BrowserWebView.swift in Sources */,
 				D51D95711C62B82400D78EF3 /* Locker.swift in Sources */,
 				D51D95701C62B82400D78EF3 /* AuthConfig.swift in Sources */,
