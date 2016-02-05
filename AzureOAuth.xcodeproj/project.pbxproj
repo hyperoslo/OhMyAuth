@@ -22,19 +22,21 @@
 		D529C2CE1C620B1900B6FA6B /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CA1C620B1900B6FA6B /* Keychain.framework */; };
 		D529C2CF1C620B1900B6FA6B /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CB1C620B1900B6FA6B /* Sugar.framework */; };
 		D595759F1C63538B000CD22B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595759E1C63538B000CD22B /* Result.swift */; };
-		D59575A11C6354B2000CD22B /* NetworkTaskable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A01C6354B2000CD22B /* NetworkTaskable.swift */; };
-		D59575A21C6354B2000CD22B /* NetworkTaskable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A01C6354B2000CD22B /* NetworkTaskable.swift */; };
-		D59575A41C6354D4000CD22B /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A31C6354D4000CD22B /* NetworkRequestable.swift */; };
-		D59575A51C6354D4000CD22B /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A31C6354D4000CD22B /* NetworkRequestable.swift */; };
 		D59575A71C63558D000CD22B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A61C63558D000CD22B /* Error.swift */; };
 		D59575A81C63558D000CD22B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A61C63558D000CD22B /* Error.swift */; };
 		D59575AB1C63CF3C000CD22B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575AA1C63CF3C000CD22B /* AuthService.swift */; };
 		D59575AC1C63CF3C000CD22B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575AA1C63CF3C000CD22B /* AuthService.swift */; };
-		D59575CA1C640BDB000CD22B /* WebViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575C91C640BDB000CD22B /* WebViewable.swift */; };
-		D59575CB1C640BDB000CD22B /* WebViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575C91C640BDB000CD22B /* WebViewable.swift */; };
 		D59575CD1C640C0A000CD22B /* SafariWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575CC1C640C0A000CD22B /* SafariWebView.swift */; };
 		D59575D21C640E4C000CD22B /* BrowserWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575D11C640E4C000CD22B /* BrowserWebView.swift */; };
 		D59575D31C640E50000CD22B /* BrowserWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575D11C640E4C000CD22B /* BrowserWebView.swift */; };
+		D59575DB1C641DBF000CD22B /* UIApplication+OhMyAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575DA1C641DBF000CD22B /* UIApplication+OhMyAuth.swift */; };
+		D59575E11C641E3D000CD22B /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575DE1C641E3D000CD22B /* NetworkRequestable.swift */; };
+		D59575E21C641E3D000CD22B /* NetworkTaskable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575DF1C641E3D000CD22B /* NetworkTaskable.swift */; };
+		D59575E31C641E3D000CD22B /* WebViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575E01C641E3D000CD22B /* WebViewable.swift */; };
+		D59575E41C641E4C000CD22B /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575DE1C641E3D000CD22B /* NetworkRequestable.swift */; };
+		D59575E51C641E4C000CD22B /* NetworkTaskable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575DF1C641E3D000CD22B /* NetworkTaskable.swift */; };
+		D59575E61C641E4C000CD22B /* WebViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575E01C641E3D000CD22B /* WebViewable.swift */; };
+		D59575E71C641E4C000CD22B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595759E1C63538B000CD22B /* Result.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* AzureOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* AzureOAuth.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* AzureOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* AzureOAuth.framework */; };
 		D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629751C3A878E007F7B7C /* Quick.framework */; };
@@ -74,13 +76,14 @@
 		D529C2CA1C620B1900B6FA6B /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = Carthage/Build/iOS/Keychain.framework; sourceTree = "<group>"; };
 		D529C2CB1C620B1900B6FA6B /* Sugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sugar.framework; path = Carthage/Build/iOS/Sugar.framework; sourceTree = "<group>"; };
 		D595759E1C63538B000CD22B /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		D59575A01C6354B2000CD22B /* NetworkTaskable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTaskable.swift; sourceTree = "<group>"; };
-		D59575A31C6354D4000CD22B /* NetworkRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
 		D59575A61C63558D000CD22B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		D59575AA1C63CF3C000CD22B /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		D59575C91C640BDB000CD22B /* WebViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewable.swift; sourceTree = "<group>"; };
 		D59575CC1C640C0A000CD22B /* SafariWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariWebView.swift; sourceTree = "<group>"; };
 		D59575D11C640E4C000CD22B /* BrowserWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowserWebView.swift; sourceTree = "<group>"; };
+		D59575DA1C641DBF000CD22B /* UIApplication+OhMyAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+OhMyAuth.swift"; sourceTree = "<group>"; };
+		D59575DE1C641E3D000CD22B /* NetworkRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
+		D59575DF1C641E3D000CD22B /* NetworkTaskable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTaskable.swift; sourceTree = "<group>"; };
+		D59575E01C641E3D000CD22B /* WebViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewable.swift; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* AzureOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AzureOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B2E8A91C3A780C00C0327D /* AzureOAuth-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AzureOAuth-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629401C3A7FAA007F7B7C /* AzureOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AzureOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,12 +167,19 @@
 			children = (
 				D59575A61C63558D000CD22B /* Error.swift */,
 				D595759E1C63538B000CD22B /* Result.swift */,
-				D59575A01C6354B2000CD22B /* NetworkTaskable.swift */,
-				D59575A31C6354D4000CD22B /* NetworkRequestable.swift */,
-				D59575C91C640BDB000CD22B /* WebViewable.swift */,
 				D59575D11C640E4C000CD22B /* BrowserWebView.swift */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		D59575DD1C641E3D000CD22B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D59575DE1C641E3D000CD22B /* NetworkRequestable.swift */,
+				D59575DF1C641E3D000CD22B /* NetworkTaskable.swift */,
+				D59575E01C641E3D000CD22B /* WebViewable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		D5B2E8951C3A780C00C0327D = {
@@ -217,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				D59575CC1C640C0A000CD22B /* SafariWebView.swift */,
+				D59575DA1C641DBF000CD22B /* UIApplication+OhMyAuth.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -232,6 +243,7 @@
 		D5C6296E1C3A809D007F7B7C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				D59575DD1C641E3D000CD22B /* Protocols */,
 				D595759D1C635384000CD22B /* Library */,
 				D51D95631C62539C00D78EF3 /* Networking */,
 				D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */,
@@ -506,18 +518,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D59575A41C6354D4000CD22B /* NetworkRequestable.swift in Sources */,
 				D595759F1C63538B000CD22B /* Result.swift in Sources */,
 				D51D95601C62535200D78EF3 /* Locker.swift in Sources */,
 				D59575CD1C640C0A000CD22B /* SafariWebView.swift in Sources */,
 				D59575AB1C63CF3C000CD22B /* AuthService.swift in Sources */,
 				D51D95651C6253B200D78EF3 /* NetworkRequests.swift in Sources */,
+				D59575E31C641E3D000CD22B /* WebViewable.swift in Sources */,
 				D59575A71C63558D000CD22B /* Error.swift in Sources */,
-				D59575A11C6354B2000CD22B /* NetworkTaskable.swift in Sources */,
+				D59575E21C641E3D000CD22B /* NetworkTaskable.swift in Sources */,
 				D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */,
 				D59575D21C640E4C000CD22B /* BrowserWebView.swift in Sources */,
-				D59575CA1C640BDB000CD22B /* WebViewable.swift in Sources */,
+				D59575DB1C641DBF000CD22B /* UIApplication+OhMyAuth.swift in Sources */,
 				D51D95621C62536E00D78EF3 /* AuthContainer.swift in Sources */,
+				D59575E11C641E3D000CD22B /* NetworkRequestable.swift in Sources */,
 				D51D95751C62BAF000D78EF3 /* NetworkTasks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,16 +549,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5C629851C3A893F007F7B7C /* Mac.swift in Sources */,
-				D59575A21C6354B2000CD22B /* NetworkTaskable.swift in Sources */,
+				D59575E71C641E4C000CD22B /* Result.swift in Sources */,
 				D59575D31C640E50000CD22B /* BrowserWebView.swift in Sources */,
 				D51D95711C62B82400D78EF3 /* Locker.swift in Sources */,
 				D51D95701C62B82400D78EF3 /* AuthConfig.swift in Sources */,
 				D59575AC1C63CF3C000CD22B /* AuthService.swift in Sources */,
-				D59575A51C6354D4000CD22B /* NetworkRequestable.swift in Sources */,
 				D51D956E1C62B82400D78EF3 /* NetworkRequests.swift in Sources */,
 				D51D95721C62B82400D78EF3 /* AuthContainer.swift in Sources */,
-				D59575CB1C640BDB000CD22B /* WebViewable.swift in Sources */,
+				D59575E51C641E4C000CD22B /* NetworkTaskable.swift in Sources */,
 				D59575A81C63558D000CD22B /* Error.swift in Sources */,
+				D59575E61C641E4C000CD22B /* WebViewable.swift in Sources */,
+				D59575E41C641E4C000CD22B /* NetworkRequestable.swift in Sources */,
 				D51D95761C62BAF000D78EF3 /* NetworkTasks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
