@@ -58,14 +58,14 @@
 			containerPortal = D5B2E8961C3A780C00C0327D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D5B2E89E1C3A780C00C0327D;
-			remoteInfo = AzureOAuth;
+			remoteInfo = OhMyAuth;
 		};
 		D5C6294B1C3A7FAA007F7B7C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5B2E8961C3A780C00C0327D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D5C6293F1C3A7FAA007F7B7C;
-			remoteInfo = "AzureOAuth-Mac";
+			remoteInfo = "OhMyAuth-Mac";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -349,7 +349,7 @@
 			dependencies = (
 			);
 			name = "OhMyAuth-iOS";
-			productName = AzureOAuth;
+			productName = OhMyAuth;
 			productReference = D5B2E89F1C3A780C00C0327D /* OhMyAuth.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -368,7 +368,7 @@
 				D5B2E8AC1C3A780C00C0327D /* PBXTargetDependency */,
 			);
 			name = "OhMyAuth-iOS-Tests";
-			productName = AzureOAuthTests;
+			productName = OhMyAuthTests;
 			productReference = D5B2E8A91C3A780C00C0327D /* OhMyAuth.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -387,7 +387,7 @@
 			dependencies = (
 			);
 			name = "OhMyAuth-Mac";
-			productName = "AzureOAuth-Mac";
+			productName = "OhMyAuth-Mac";
 			productReference = D5C629401C3A7FAA007F7B7C /* OhMyAuth.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -406,7 +406,7 @@
 				D5C6294C1C3A7FAA007F7B7C /* PBXTargetDependency */,
 			);
 			name = "OhMyAuth-Mac-Tests";
-			productName = "AzureOAuth-MacTests";
+			productName = "OhMyAuth-MacTests";
 			productReference = D5C629491C3A7FAA007F7B7C /* OhMyAuth.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};

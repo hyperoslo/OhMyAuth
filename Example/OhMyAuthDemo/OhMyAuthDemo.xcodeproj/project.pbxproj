@@ -120,7 +120,7 @@
 			dependencies = (
 			);
 			name = OhMyAuthDemo;
-			productName = AzureOAuthDemo;
+			productName = OhMyAuthDemo;
 			productReference = D5C7F7401C3BC9CE008CDDBA /* OhMyAuthDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
