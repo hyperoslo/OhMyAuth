@@ -31,6 +31,7 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
 
     locker.accessToken = accessToken
     locker.refreshToken = refreshToken
+    locker.tokenType = data["token_type"] as? String
 
     if let expiresOn = data["expires_on"] ?? data["expires_in"] {
       locker.expiryDate = NSDate(timeIntervalSince1970: expiresOn.doubleValue)
