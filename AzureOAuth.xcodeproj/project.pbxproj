@@ -7,18 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */; };
+		D51D95601C62535200D78EF3 /* Locker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* Locker.swift */; };
+		D51D95621C62536E00D78EF3 /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* AuthContainer.swift */; };
+		D51D95651C6253B200D78EF3 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* NetworkRequests.swift */; };
+		D51D956E1C62B82400D78EF3 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* NetworkRequests.swift */; };
+		D51D95701C62B82400D78EF3 /* AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */; };
+		D51D95711C62B82400D78EF3 /* Locker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* Locker.swift */; };
+		D51D95721C62B82400D78EF3 /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* AuthContainer.swift */; };
+		D51D95751C62BAF000D78EF3 /* NetworkTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */; };
+		D51D95761C62BAF000D78EF3 /* NetworkTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */; };
 		D529C2CC1C620B1900B6FA6B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C81C620B1900B6FA6B /* Alamofire.framework */; };
 		D529C2CD1C620B1900B6FA6B /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C91C620B1900B6FA6B /* JWTDecode.framework */; };
 		D529C2CE1C620B1900B6FA6B /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CA1C620B1900B6FA6B /* Keychain.framework */; };
 		D529C2CF1C620B1900B6FA6B /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CB1C620B1900B6FA6B /* Sugar.framework */; };
+		D595759F1C63538B000CD22B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595759E1C63538B000CD22B /* Result.swift */; };
+		D59575A71C63558D000CD22B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A61C63558D000CD22B /* Error.swift */; };
+		D59575A81C63558D000CD22B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A61C63558D000CD22B /* Error.swift */; };
+		D59575AB1C63CF3C000CD22B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575AA1C63CF3C000CD22B /* AuthService.swift */; };
+		D59575AC1C63CF3C000CD22B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575AA1C63CF3C000CD22B /* AuthService.swift */; };
+		D59575CD1C640C0A000CD22B /* SafariWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575CC1C640C0A000CD22B /* SafariWebView.swift */; };
+		D59575D21C640E4C000CD22B /* BrowserWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575D11C640E4C000CD22B /* BrowserWebView.swift */; };
+		D59575D31C640E50000CD22B /* BrowserWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575D11C640E4C000CD22B /* BrowserWebView.swift */; };
+		D59575DB1C641DBF000CD22B /* UIApplication+OhMyAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575DA1C641DBF000CD22B /* UIApplication+OhMyAuth.swift */; };
+		D59575E11C641E3D000CD22B /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575DE1C641E3D000CD22B /* NetworkRequestable.swift */; };
+		D59575E21C641E3D000CD22B /* NetworkTaskable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575DF1C641E3D000CD22B /* NetworkTaskable.swift */; };
+		D59575E31C641E3D000CD22B /* WebViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575E01C641E3D000CD22B /* WebViewable.swift */; };
+		D59575E41C641E4C000CD22B /* NetworkRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575DE1C641E3D000CD22B /* NetworkRequestable.swift */; };
+		D59575E51C641E4C000CD22B /* NetworkTaskable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575DF1C641E3D000CD22B /* NetworkTaskable.swift */; };
+		D59575E61C641E4C000CD22B /* WebViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575E01C641E3D000CD22B /* WebViewable.swift */; };
+		D59575E71C641E4C000CD22B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595759E1C63538B000CD22B /* Result.swift */; };
+		D59575ED1C641F14000CD22B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575E91C641F14000CD22B /* Alamofire.framework */; };
+		D59575EE1C641F14000CD22B /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575EA1C641F14000CD22B /* JWTDecode.framework */; };
+		D59575EF1C641F14000CD22B /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575EB1C641F14000CD22B /* Keychain.framework */; };
+		D59575F01C641F14000CD22B /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575EC1C641F14000CD22B /* Sugar.framework */; };
 		D5B2E8AA1C3A780C00C0327D /* AzureOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* AzureOAuth.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* AzureOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* AzureOAuth.framework */; };
 		D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629751C3A878E007F7B7C /* Quick.framework */; };
 		D5C629781C3A878E007F7B7C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629761C3A878E007F7B7C /* Nimble.framework */; };
-		D5C629831C3A892A007F7B7C /* iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629821C3A892A007F7B7C /* iOS.swift */; };
 		D5C629851C3A893F007F7B7C /* Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629841C3A893F007F7B7C /* Mac.swift */; };
-		D5C629871C3A89A8007F7B7C /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629861C3A89A8007F7B7C /* Shared.swift */; };
-		D5C629881C3A89A8007F7B7C /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629861C3A89A8007F7B7C /* Shared.swift */; };
 		D5C6299B1C3A8BDA007F7B7C /* MacSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629951C3A8BDA007F7B7C /* MacSpec.swift */; };
 		D5C6299C1C3A8BDA007F7B7C /* SharedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629971C3A8BDA007F7B7C /* SharedSpec.swift */; };
 		D5C6299D1C3A8C6B007F7B7C /* iOSSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629931C3A8BDA007F7B7C /* iOSSpec.swift */; };
@@ -43,19 +70,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthConfig.swift; sourceTree = "<group>"; };
+		D51D955F1C62535200D78EF3 /* Locker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locker.swift; sourceTree = "<group>"; };
+		D51D95611C62536E00D78EF3 /* AuthContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthContainer.swift; sourceTree = "<group>"; };
+		D51D95641C6253B200D78EF3 /* NetworkRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
+		D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTasks.swift; sourceTree = "<group>"; };
 		D529C2C81C620B1900B6FA6B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		D529C2C91C620B1900B6FA6B /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Carthage/Build/iOS/JWTDecode.framework; sourceTree = "<group>"; };
 		D529C2CA1C620B1900B6FA6B /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = Carthage/Build/iOS/Keychain.framework; sourceTree = "<group>"; };
 		D529C2CB1C620B1900B6FA6B /* Sugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sugar.framework; path = Carthage/Build/iOS/Sugar.framework; sourceTree = "<group>"; };
+		D595759E1C63538B000CD22B /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D59575A61C63558D000CD22B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		D59575AA1C63CF3C000CD22B /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		D59575CC1C640C0A000CD22B /* SafariWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariWebView.swift; sourceTree = "<group>"; };
+		D59575D11C640E4C000CD22B /* BrowserWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowserWebView.swift; sourceTree = "<group>"; };
+		D59575DA1C641DBF000CD22B /* UIApplication+OhMyAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+OhMyAuth.swift"; sourceTree = "<group>"; };
+		D59575DE1C641E3D000CD22B /* NetworkRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestable.swift; sourceTree = "<group>"; };
+		D59575DF1C641E3D000CD22B /* NetworkTaskable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTaskable.swift; sourceTree = "<group>"; };
+		D59575E01C641E3D000CD22B /* WebViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewable.swift; sourceTree = "<group>"; };
+		D59575E91C641F14000CD22B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		D59575EA1C641F14000CD22B /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Carthage/Build/Mac/JWTDecode.framework; sourceTree = "<group>"; };
+		D59575EB1C641F14000CD22B /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = Carthage/Build/Mac/Keychain.framework; sourceTree = "<group>"; };
+		D59575EC1C641F14000CD22B /* Sugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sugar.framework; path = Carthage/Build/Mac/Sugar.framework; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* AzureOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AzureOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B2E8A91C3A780C00C0327D /* AzureOAuth-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AzureOAuth-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629401C3A7FAA007F7B7C /* AzureOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AzureOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629491C3A7FAA007F7B7C /* AzureOAuth-Mac-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AzureOAuth-Mac-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629751C3A878E007F7B7C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		D5C629761C3A878E007F7B7C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		D5C629821C3A892A007F7B7C /* iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOS.swift; sourceTree = "<group>"; };
 		D5C629841C3A893F007F7B7C /* Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mac.swift; sourceTree = "<group>"; };
-		D5C629861C3A89A8007F7B7C /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		D5C6298B1C3A8BBD007F7B7C /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		D5C6298C1C3A8BBD007F7B7C /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
 		D5C629901C3A8BDA007F7B7C /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
@@ -91,6 +134,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D59575ED1C641F14000CD22B /* Alamofire.framework in Frameworks */,
+				D59575EE1C641F14000CD22B /* JWTDecode.framework in Frameworks */,
+				D59575EF1C641F14000CD22B /* Keychain.framework in Frameworks */,
+				D59575F01C641F14000CD22B /* Sugar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +152,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D51D95631C62539C00D78EF3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D51D95641C6253B200D78EF3 /* NetworkRequests.swift */,
+				D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		D529C2D01C620B2E00B6FA6B /* Frameworks-iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +174,37 @@
 			name = "Frameworks-iOS";
 			sourceTree = "<group>";
 		};
+		D595759D1C635384000CD22B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				D59575A61C63558D000CD22B /* Error.swift */,
+				D595759E1C63538B000CD22B /* Result.swift */,
+				D59575D11C640E4C000CD22B /* BrowserWebView.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		D59575DD1C641E3D000CD22B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D59575DE1C641E3D000CD22B /* NetworkRequestable.swift */,
+				D59575DF1C641E3D000CD22B /* NetworkTaskable.swift */,
+				D59575E01C641E3D000CD22B /* WebViewable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D59575F11C641F1E000CD22B /* Frameworks-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				D59575E91C641F14000CD22B /* Alamofire.framework */,
+				D59575EA1C641F14000CD22B /* JWTDecode.framework */,
+				D59575EB1C641F14000CD22B /* Keychain.framework */,
+				D59575EC1C641F14000CD22B /* Sugar.framework */,
+			);
+			name = "Frameworks-Mac";
+			sourceTree = "<group>";
+		};
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +213,7 @@
 				D5C6298F1C3A8BDA007F7B7C /* AzureOAuthTests */,
 				D5B2E8A01C3A780C00C0327D /* Products */,
 				D529C2D01C620B2E00B6FA6B /* Frameworks-iOS */,
+				D59575F11C641F1E000CD22B /* Frameworks-Mac */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,7 +250,8 @@
 		D5C6296A1C3A809D007F7B7C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D5C629821C3A892A007F7B7C /* iOS.swift */,
+				D59575CC1C640C0A000CD22B /* SafariWebView.swift */,
+				D59575DA1C641DBF000CD22B /* UIApplication+OhMyAuth.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -178,7 +267,13 @@
 		D5C6296E1C3A809D007F7B7C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				D5C629861C3A89A8007F7B7C /* Shared.swift */,
+				D59575DD1C641E3D000CD22B /* Protocols */,
+				D595759D1C635384000CD22B /* Library */,
+				D51D95631C62539C00D78EF3 /* Networking */,
+				D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */,
+				D51D95611C62536E00D78EF3 /* AuthContainer.swift */,
+				D51D955F1C62535200D78EF3 /* Locker.swift */,
+				D59575AA1C63CF3C000CD22B /* AuthService.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -285,6 +380,7 @@
 				D5C6293C1C3A7FAA007F7B7C /* Frameworks */,
 				D5C6293D1C3A7FAA007F7B7C /* Headers */,
 				D5C6293E1C3A7FAA007F7B7C /* Resources */,
+				D59575E81C641ED4000CD22B /* Copy frameworks with Carthage */,
 			);
 			buildRules = (
 			);
@@ -408,6 +504,24 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
+		D59575E81C641ED4000CD22B /* Copy frameworks with Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Sugar.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Keychain.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/JWTDecode.framework",
+			);
+			name = "Copy frameworks with Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		D5C629731C3A86E3007F7B7C /* Copy frameworks with Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -447,8 +561,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C629831C3A892A007F7B7C /* iOS.swift in Sources */,
-				D5C629871C3A89A8007F7B7C /* Shared.swift in Sources */,
+				D595759F1C63538B000CD22B /* Result.swift in Sources */,
+				D51D95601C62535200D78EF3 /* Locker.swift in Sources */,
+				D59575CD1C640C0A000CD22B /* SafariWebView.swift in Sources */,
+				D59575AB1C63CF3C000CD22B /* AuthService.swift in Sources */,
+				D51D95651C6253B200D78EF3 /* NetworkRequests.swift in Sources */,
+				D59575E31C641E3D000CD22B /* WebViewable.swift in Sources */,
+				D59575A71C63558D000CD22B /* Error.swift in Sources */,
+				D59575E21C641E3D000CD22B /* NetworkTaskable.swift in Sources */,
+				D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */,
+				D59575D21C640E4C000CD22B /* BrowserWebView.swift in Sources */,
+				D59575DB1C641DBF000CD22B /* UIApplication+OhMyAuth.swift in Sources */,
+				D51D95621C62536E00D78EF3 /* AuthContainer.swift in Sources */,
+				D59575E11C641E3D000CD22B /* NetworkRequestable.swift in Sources */,
+				D51D95751C62BAF000D78EF3 /* NetworkTasks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +592,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5C629851C3A893F007F7B7C /* Mac.swift in Sources */,
-				D5C629881C3A89A8007F7B7C /* Shared.swift in Sources */,
+				D59575E71C641E4C000CD22B /* Result.swift in Sources */,
+				D59575D31C640E50000CD22B /* BrowserWebView.swift in Sources */,
+				D51D95711C62B82400D78EF3 /* Locker.swift in Sources */,
+				D51D95701C62B82400D78EF3 /* AuthConfig.swift in Sources */,
+				D59575AC1C63CF3C000CD22B /* AuthService.swift in Sources */,
+				D51D956E1C62B82400D78EF3 /* NetworkRequests.swift in Sources */,
+				D51D95721C62B82400D78EF3 /* AuthContainer.swift in Sources */,
+				D59575E51C641E4C000CD22B /* NetworkTaskable.swift in Sources */,
+				D59575A81C63558D000CD22B /* Error.swift in Sources */,
+				D59575E61C641E4C000CD22B /* WebViewable.swift in Sources */,
+				D59575E41C641E4C000CD22B /* NetworkRequestable.swift in Sources */,
+				D51D95761C62BAF000D78EF3 /* NetworkTasks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,11 +807,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/AzureOAuth/Info-Mac.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.AzureOAuth-Mac";
 				PRODUCT_NAME = AzureOAuth;
 				SDKROOT = macosx;
@@ -693,11 +834,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/AzureOAuth/Info-Mac.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.AzureOAuth-Mac";
 				PRODUCT_NAME = AzureOAuth;
 				SDKROOT = macosx;
