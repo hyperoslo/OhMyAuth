@@ -1,5 +1,5 @@
 import UIKit
-import AzureOAuth
+import OhMyAuth
 
 class ViewController: UIViewController {
 

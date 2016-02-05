@@ -1,5 +1,5 @@
 import UIKit
-import AzureOAuth
+import OhMyAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

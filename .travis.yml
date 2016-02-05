@@ -8,7 +8,7 @@ before_install:
 - carthage update --platform iOS,Mac
 
 script:
-- xctool clean build -project AzureOAuth.xcodeproj -scheme AzureOAuth-iOS -sdk iphonesimulator
-- xctool test -project AzureOAuth.xcodeproj -scheme AzureOAuth-iOS -sdk iphonesimulator
-- xctool clean build -project AzureOAuth.xcodeproj -scheme AzureOAuth-Mac -sdk macosx
-- xctool test -project AzureOAuth.xcodeproj -scheme AzureOAuth-Mac -sdk macosx
+- xctool clean build -project OhMyAuth.xcodeproj -scheme OhMyAuth-iOS -sdk iphonesimulator
+- xctool test -project OhMyAuth.xcodeproj -scheme OhMyAuth-iOS -sdk iphonesimulator
+- xctool clean build -project OhMyAuth.xcodeproj -scheme OhMyAuth-Mac -sdk macosx
+- xctool test -project OhMyAuth.xcodeproj -scheme OhMyAuth-Mac -sdk macosx

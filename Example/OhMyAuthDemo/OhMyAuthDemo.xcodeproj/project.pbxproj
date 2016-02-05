@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		C52C4450F89B6D7C2BB0E8C4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FD06562CFE3A8EE67E8372 /* Pods.framework */; };
-		D5C7F74E1C3BC9CE008CDDBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F74C1C3BC9CE008CDDBA /* LaunchScreen.storyboard */; };
-		D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F7571C3BCA1E008CDDBA /* Assets.xcassets */; };
-		D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7F7591C3BCA1E008CDDBA /* AppDelegate.swift */; };
-		D5C7F75D1C3BCA1E008CDDBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7F75A1C3BCA1E008CDDBA /* ViewController.swift */; };
+		D5ED739B1C64B82B003772EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5ED73931C64B82B003772EF /* LaunchScreen.storyboard */; };
+		D5ED739D1C64B82B003772EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5ED73971C64B82B003772EF /* Assets.xcassets */; };
+		D5ED739E1C64B82B003772EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED73991C64B82B003772EF /* AppDelegate.swift */; };
+		D5ED739F1C64B82B003772EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED739A1C64B82B003772EF /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		26FEE489C2DA3009A07CE997 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D0FD06562CFE3A8EE67E8372 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C7F7401C3BC9CE008CDDBA /* AzureOAuthDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AzureOAuthDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C7F74D1C3BC9CE008CDDBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D5C7F74F1C3BC9CE008CDDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5C7F7571C3BCA1E008CDDBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D5C7F7591C3BCA1E008CDDBA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D5C7F75A1C3BCA1E008CDDBA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5C7F7401C3BC9CE008CDDBA /* OhMyAuthDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OhMyAuthDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5ED73941C64B82B003772EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D5ED73951C64B82B003772EF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5ED73971C64B82B003772EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D5ED73991C64B82B003772EF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D5ED739A1C64B82B003772EF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FEF8360606AA9A085B1FF7A3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +58,7 @@
 		D5C7F7371C3BC9CE008CDDBA = {
 			isa = PBXGroup;
 			children = (
-				D5C7F7421C3BC9CE008CDDBA /* AzureOAuthDemo */,
+				D5ED73921C64B82B003772EF /* OhMyAuthDemo */,
 				D5C7F7411C3BC9CE008CDDBA /* Products */,
 				94D64F6D6B1BB0FB4769EF0B /* Pods */,
 				A20DF62A54EB3D2C4543E8F2 /* Frameworks */,
@@ -68,43 +68,35 @@
 		D5C7F7411C3BC9CE008CDDBA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5C7F7401C3BC9CE008CDDBA /* AzureOAuthDemo.app */,
+				D5C7F7401C3BC9CE008CDDBA /* OhMyAuthDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D5C7F7421C3BC9CE008CDDBA /* AzureOAuthDemo */ = {
+		D5ED73921C64B82B003772EF /* OhMyAuthDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D5C7F7561C3BCA1E008CDDBA /* Resources */,
-				D5C7F7581C3BCA1E008CDDBA /* Sources */,
-				D5C7F7551C3BC9EA008CDDBA /* Supporting Files */,
+				D5ED73931C64B82B003772EF /* LaunchScreen.storyboard */,
+				D5ED73951C64B82B003772EF /* Info.plist */,
+				D5ED73961C64B82B003772EF /* Resources */,
+				D5ED73981C64B82B003772EF /* Sources */,
 			);
-			path = AzureOAuthDemo;
+			path = OhMyAuthDemo;
 			sourceTree = "<group>";
 		};
-		D5C7F7551C3BC9EA008CDDBA /* Supporting Files */ = {
+		D5ED73961C64B82B003772EF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D5C7F74C1C3BC9CE008CDDBA /* LaunchScreen.storyboard */,
-				D5C7F74F1C3BC9CE008CDDBA /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D5C7F7561C3BCA1E008CDDBA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D5C7F7571C3BCA1E008CDDBA /* Assets.xcassets */,
+				D5ED73971C64B82B003772EF /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D5C7F7581C3BCA1E008CDDBA /* Sources */ = {
+		D5ED73981C64B82B003772EF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				D5C7F7591C3BCA1E008CDDBA /* AppDelegate.swift */,
-				D5C7F75A1C3BCA1E008CDDBA /* ViewController.swift */,
+				D5ED73991C64B82B003772EF /* AppDelegate.swift */,
+				D5ED739A1C64B82B003772EF /* ViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -112,9 +104,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D5C7F73F1C3BC9CE008CDDBA /* AzureOAuthDemo */ = {
+		D5C7F73F1C3BC9CE008CDDBA /* OhMyAuthDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5C7F7521C3BC9CE008CDDBA /* Build configuration list for PBXNativeTarget "AzureOAuthDemo" */;
+			buildConfigurationList = D5C7F7521C3BC9CE008CDDBA /* Build configuration list for PBXNativeTarget "OhMyAuthDemo" */;
 			buildPhases = (
 				FB45C2BB1C5D2B5E1FAC7BD9 /* Check Pods Manifest.lock */,
 				D5C7F73C1C3BC9CE008CDDBA /* Sources */,
@@ -127,9 +119,9 @@
 			);
 			dependencies = (
 			);
-			name = AzureOAuthDemo;
-			productName = AzureOAuthDemo;
-			productReference = D5C7F7401C3BC9CE008CDDBA /* AzureOAuthDemo.app */;
+			name = OhMyAuthDemo;
+			productName = OhMyAuthDemo;
+			productReference = D5C7F7401C3BC9CE008CDDBA /* OhMyAuthDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -147,7 +139,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D5C7F73B1C3BC9CE008CDDBA /* Build configuration list for PBXProject "AzureOAuthDemo" */;
+			buildConfigurationList = D5C7F73B1C3BC9CE008CDDBA /* Build configuration list for PBXProject "OhMyAuthDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -160,7 +152,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5C7F73F1C3BC9CE008CDDBA /* AzureOAuthDemo */,
+				D5C7F73F1C3BC9CE008CDDBA /* OhMyAuthDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -170,8 +162,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */,
-				D5C7F74E1C3BC9CE008CDDBA /* LaunchScreen.storyboard in Resources */,
+				D5ED739D1C64B82B003772EF /* Assets.xcassets in Resources */,
+				D5ED739B1C64B82B003772EF /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,18 +222,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C7F75D1C3BCA1E008CDDBA /* ViewController.swift in Sources */,
-				D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */,
+				D5ED739F1C64B82B003772EF /* ViewController.swift in Sources */,
+				D5ED739E1C64B82B003772EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D5C7F74C1C3BC9CE008CDDBA /* LaunchScreen.storyboard */ = {
+		D5ED73931C64B82B003772EF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D5C7F74D1C3BC9CE008CDDBA /* Base */,
+				D5ED73941C64B82B003772EF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -335,10 +327,10 @@
 			baseConfigurationReference = FEF8360606AA9A085B1FF7A3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = AzureOAuthDemo/Info.plist;
+				INFOPLIST_FILE = OhMyAuthDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.AzureOAuthDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.OhMyAuthDemo;
+				PRODUCT_NAME = OhMyAuthDemo;
 			};
 			name = Debug;
 		};
@@ -347,17 +339,17 @@
 			baseConfigurationReference = 26FEE489C2DA3009A07CE997 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = AzureOAuthDemo/Info.plist;
+				INFOPLIST_FILE = OhMyAuthDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.AzureOAuthDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.OhMyAuthDemo;
+				PRODUCT_NAME = OhMyAuthDemo;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D5C7F73B1C3BC9CE008CDDBA /* Build configuration list for PBXProject "AzureOAuthDemo" */ = {
+		D5C7F73B1C3BC9CE008CDDBA /* Build configuration list for PBXProject "OhMyAuthDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5C7F7501C3BC9CE008CDDBA /* Debug */,
@@ -366,7 +358,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5C7F7521C3BC9CE008CDDBA /* Build configuration list for PBXNativeTarget "AzureOAuthDemo" */ = {
+		D5C7F7521C3BC9CE008CDDBA /* Build configuration list for PBXNativeTarget "OhMyAuthDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5C7F7531C3BC9CE008CDDBA /* Debug */,

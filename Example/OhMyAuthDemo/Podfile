@@ -1,0 +1,6 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+pod 'OhMyAuth', path: '../../'
+pod 'Keychain', git: 'https://github.com/hyperoslo/Keychain'

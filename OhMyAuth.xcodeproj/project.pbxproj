@@ -41,15 +41,15 @@
 		D59575EE1C641F14000CD22B /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575EA1C641F14000CD22B /* JWTDecode.framework */; };
 		D59575EF1C641F14000CD22B /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575EB1C641F14000CD22B /* Keychain.framework */; };
 		D59575F01C641F14000CD22B /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575EC1C641F14000CD22B /* Sugar.framework */; };
-		D5B2E8AA1C3A780C00C0327D /* AzureOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* AzureOAuth.framework */; };
-		D5C6294A1C3A7FAA007F7B7C /* AzureOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* AzureOAuth.framework */; };
+		D5B2E8AA1C3A780C00C0327D /* OhMyAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* OhMyAuth.framework */; };
+		D5C6294A1C3A7FAA007F7B7C /* OhMyAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* OhMyAuth.framework */; };
 		D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629751C3A878E007F7B7C /* Quick.framework */; };
 		D5C629781C3A878E007F7B7C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629761C3A878E007F7B7C /* Nimble.framework */; };
 		D5C629851C3A893F007F7B7C /* Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629841C3A893F007F7B7C /* Mac.swift */; };
-		D5C6299B1C3A8BDA007F7B7C /* MacSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629951C3A8BDA007F7B7C /* MacSpec.swift */; };
-		D5C6299C1C3A8BDA007F7B7C /* SharedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629971C3A8BDA007F7B7C /* SharedSpec.swift */; };
-		D5C6299D1C3A8C6B007F7B7C /* iOSSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629931C3A8BDA007F7B7C /* iOSSpec.swift */; };
-		D5C6299E1C3A8C75007F7B7C /* SharedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629971C3A8BDA007F7B7C /* SharedSpec.swift */; };
+		D5ED738E1C64B206003772EF /* SharedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED73831C64B1E4003772EF /* SharedSpec.swift */; };
+		D5ED738F1C64B206003772EF /* SharedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED73831C64B1E4003772EF /* SharedSpec.swift */; };
+		D5ED73901C64B20C003772EF /* MacSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED73811C64B1E4003772EF /* MacSpec.swift */; };
+		D5ED73911C64B210003772EF /* iOSSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED737F1C64B1E4003772EF /* iOSSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,14 +58,14 @@
 			containerPortal = D5B2E8961C3A780C00C0327D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D5B2E89E1C3A780C00C0327D;
-			remoteInfo = AzureOAuth;
+			remoteInfo = OhMyAuth;
 		};
 		D5C6294B1C3A7FAA007F7B7C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5B2E8961C3A780C00C0327D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D5C6293F1C3A7FAA007F7B7C;
-			remoteInfo = "AzureOAuth-Mac";
+			remoteInfo = "OhMyAuth-Mac";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -92,20 +92,20 @@
 		D59575EA1C641F14000CD22B /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Carthage/Build/Mac/JWTDecode.framework; sourceTree = "<group>"; };
 		D59575EB1C641F14000CD22B /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = Carthage/Build/Mac/Keychain.framework; sourceTree = "<group>"; };
 		D59575EC1C641F14000CD22B /* Sugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sugar.framework; path = Carthage/Build/Mac/Sugar.framework; sourceTree = "<group>"; };
-		D5B2E89F1C3A780C00C0327D /* AzureOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AzureOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5B2E8A91C3A780C00C0327D /* AzureOAuth-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AzureOAuth-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C629401C3A7FAA007F7B7C /* AzureOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AzureOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C629491C3A7FAA007F7B7C /* AzureOAuth-Mac-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AzureOAuth-Mac-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B2E89F1C3A780C00C0327D /* OhMyAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OhMyAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B2E8A91C3A780C00C0327D /* OhMyAuth.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OhMyAuth.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5C629401C3A7FAA007F7B7C /* OhMyAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OhMyAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5C629491C3A7FAA007F7B7C /* OhMyAuth.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OhMyAuth.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629751C3A878E007F7B7C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		D5C629761C3A878E007F7B7C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		D5C629841C3A893F007F7B7C /* Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mac.swift; sourceTree = "<group>"; };
-		D5C6298B1C3A8BBD007F7B7C /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
-		D5C6298C1C3A8BBD007F7B7C /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
-		D5C629901C3A8BDA007F7B7C /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
-		D5C629911C3A8BDA007F7B7C /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
-		D5C629931C3A8BDA007F7B7C /* iOSSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSSpec.swift; sourceTree = "<group>"; };
-		D5C629951C3A8BDA007F7B7C /* MacSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacSpec.swift; sourceTree = "<group>"; };
-		D5C629971C3A8BDA007F7B7C /* SharedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedSpec.swift; sourceTree = "<group>"; };
+		D5ED73791C64B1E4003772EF /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		D5ED737A1C64B1E4003772EF /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
+		D5ED737C1C64B1E4003772EF /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		D5ED737D1C64B1E4003772EF /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
+		D5ED737F1C64B1E4003772EF /* iOSSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSSpec.swift; sourceTree = "<group>"; };
+		D5ED73811C64B1E4003772EF /* MacSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacSpec.swift; sourceTree = "<group>"; };
+		D5ED73831C64B1E4003772EF /* SharedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +126,7 @@
 			files = (
 				D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */,
 				D5C629781C3A878E007F7B7C /* Nimble.framework in Frameworks */,
-				D5B2E8AA1C3A780C00C0327D /* AzureOAuth.framework in Frameworks */,
+				D5B2E8AA1C3A780C00C0327D /* OhMyAuth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C6294A1C3A7FAA007F7B7C /* AzureOAuth.framework in Frameworks */,
+				D5C6294A1C3A7FAA007F7B7C /* OhMyAuth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,8 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				D5C629691C3A809D007F7B7C /* Sources */,
-				D5C6295C1C3A800E007F7B7C /* AzureOAuth */,
-				D5C6298F1C3A8BDA007F7B7C /* AzureOAuthTests */,
+				D5ED73781C64B1E4003772EF /* OhMyAuth */,
+				D5ED737B1C64B1E4003772EF /* OhMyAuthTests */,
 				D5B2E8A01C3A780C00C0327D /* Products */,
 				D529C2D01C620B2E00B6FA6B /* Frameworks-iOS */,
 				D59575F11C641F1E000CD22B /* Frameworks-Mac */,
@@ -220,21 +220,12 @@
 		D5B2E8A01C3A780C00C0327D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5B2E89F1C3A780C00C0327D /* AzureOAuth.framework */,
-				D5B2E8A91C3A780C00C0327D /* AzureOAuth-iOS-Tests.xctest */,
-				D5C629401C3A7FAA007F7B7C /* AzureOAuth.framework */,
-				D5C629491C3A7FAA007F7B7C /* AzureOAuth-Mac-Tests.xctest */,
+				D5B2E89F1C3A780C00C0327D /* OhMyAuth.framework */,
+				D5B2E8A91C3A780C00C0327D /* OhMyAuth.xctest */,
+				D5C629401C3A7FAA007F7B7C /* OhMyAuth.framework */,
+				D5C629491C3A7FAA007F7B7C /* OhMyAuth.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D5C6295C1C3A800E007F7B7C /* AzureOAuth */ = {
-			isa = PBXGroup;
-			children = (
-				D5C6298B1C3A8BBD007F7B7C /* Info-iOS.plist */,
-				D5C6298C1C3A8BBD007F7B7C /* Info-Mac.plist */,
-			);
-			path = AzureOAuth;
 			sourceTree = "<group>";
 		};
 		D5C629691C3A809D007F7B7C /* Sources */ = {
@@ -278,38 +269,47 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		D5C6298F1C3A8BDA007F7B7C /* AzureOAuthTests */ = {
+		D5ED73781C64B1E4003772EF /* OhMyAuth */ = {
 			isa = PBXGroup;
 			children = (
-				D5C629901C3A8BDA007F7B7C /* Info-iOS.plist */,
-				D5C629911C3A8BDA007F7B7C /* Info-Mac.plist */,
-				D5C629921C3A8BDA007F7B7C /* iOS */,
-				D5C629941C3A8BDA007F7B7C /* Mac */,
-				D5C629961C3A8BDA007F7B7C /* Shared */,
+				D5ED73791C64B1E4003772EF /* Info-iOS.plist */,
+				D5ED737A1C64B1E4003772EF /* Info-Mac.plist */,
 			);
-			path = AzureOAuthTests;
+			path = OhMyAuth;
 			sourceTree = "<group>";
 		};
-		D5C629921C3A8BDA007F7B7C /* iOS */ = {
+		D5ED737B1C64B1E4003772EF /* OhMyAuthTests */ = {
 			isa = PBXGroup;
 			children = (
-				D5C629931C3A8BDA007F7B7C /* iOSSpec.swift */,
+				D5ED737C1C64B1E4003772EF /* Info-iOS.plist */,
+				D5ED737D1C64B1E4003772EF /* Info-Mac.plist */,
+				D5ED737E1C64B1E4003772EF /* iOS */,
+				D5ED73801C64B1E4003772EF /* Mac */,
+				D5ED73821C64B1E4003772EF /* Shared */,
+			);
+			path = OhMyAuthTests;
+			sourceTree = "<group>";
+		};
+		D5ED737E1C64B1E4003772EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D5ED737F1C64B1E4003772EF /* iOSSpec.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		D5C629941C3A8BDA007F7B7C /* Mac */ = {
+		D5ED73801C64B1E4003772EF /* Mac */ = {
 			isa = PBXGroup;
 			children = (
-				D5C629951C3A8BDA007F7B7C /* MacSpec.swift */,
+				D5ED73811C64B1E4003772EF /* MacSpec.swift */,
 			);
 			path = Mac;
 			sourceTree = "<group>";
 		};
-		D5C629961C3A8BDA007F7B7C /* Shared */ = {
+		D5ED73821C64B1E4003772EF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				D5C629971C3A8BDA007F7B7C /* SharedSpec.swift */,
+				D5ED73831C64B1E4003772EF /* SharedSpec.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -334,9 +334,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D5B2E89E1C3A780C00C0327D /* AzureOAuth-iOS */ = {
+		D5B2E89E1C3A780C00C0327D /* OhMyAuth-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "AzureOAuth-iOS" */;
+			buildConfigurationList = D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "OhMyAuth-iOS" */;
 			buildPhases = (
 				D5B2E89A1C3A780C00C0327D /* Sources */,
 				D5B2E89B1C3A780C00C0327D /* Frameworks */,
@@ -348,14 +348,14 @@
 			);
 			dependencies = (
 			);
-			name = "AzureOAuth-iOS";
-			productName = AzureOAuth;
-			productReference = D5B2E89F1C3A780C00C0327D /* AzureOAuth.framework */;
+			name = "OhMyAuth-iOS";
+			productName = OhMyAuth;
+			productReference = D5B2E89F1C3A780C00C0327D /* OhMyAuth.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D5B2E8A81C3A780C00C0327D /* AzureOAuth-iOS-Tests */ = {
+		D5B2E8A81C3A780C00C0327D /* OhMyAuth-iOS-Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5B2E8B61C3A780C00C0327D /* Build configuration list for PBXNativeTarget "AzureOAuth-iOS-Tests" */;
+			buildConfigurationList = D5B2E8B61C3A780C00C0327D /* Build configuration list for PBXNativeTarget "OhMyAuth-iOS-Tests" */;
 			buildPhases = (
 				D5B2E8A51C3A780C00C0327D /* Sources */,
 				D5B2E8A61C3A780C00C0327D /* Frameworks */,
@@ -367,14 +367,14 @@
 			dependencies = (
 				D5B2E8AC1C3A780C00C0327D /* PBXTargetDependency */,
 			);
-			name = "AzureOAuth-iOS-Tests";
-			productName = AzureOAuthTests;
-			productReference = D5B2E8A91C3A780C00C0327D /* AzureOAuth-iOS-Tests.xctest */;
+			name = "OhMyAuth-iOS-Tests";
+			productName = OhMyAuthTests;
+			productReference = D5B2E8A91C3A780C00C0327D /* OhMyAuth.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D5C6293F1C3A7FAA007F7B7C /* AzureOAuth-Mac */ = {
+		D5C6293F1C3A7FAA007F7B7C /* OhMyAuth-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5C629511C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "AzureOAuth-Mac" */;
+			buildConfigurationList = D5C629511C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "OhMyAuth-Mac" */;
 			buildPhases = (
 				D5C6293B1C3A7FAA007F7B7C /* Sources */,
 				D5C6293C1C3A7FAA007F7B7C /* Frameworks */,
@@ -386,14 +386,14 @@
 			);
 			dependencies = (
 			);
-			name = "AzureOAuth-Mac";
-			productName = "AzureOAuth-Mac";
-			productReference = D5C629401C3A7FAA007F7B7C /* AzureOAuth.framework */;
+			name = "OhMyAuth-Mac";
+			productName = "OhMyAuth-Mac";
+			productReference = D5C629401C3A7FAA007F7B7C /* OhMyAuth.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D5C629481C3A7FAA007F7B7C /* AzureOAuth-Mac-Tests */ = {
+		D5C629481C3A7FAA007F7B7C /* OhMyAuth-Mac-Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5C629541C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "AzureOAuth-Mac-Tests" */;
+			buildConfigurationList = D5C629541C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "OhMyAuth-Mac-Tests" */;
 			buildPhases = (
 				D5C629451C3A7FAA007F7B7C /* Sources */,
 				D5C629461C3A7FAA007F7B7C /* Frameworks */,
@@ -405,9 +405,9 @@
 			dependencies = (
 				D5C6294C1C3A7FAA007F7B7C /* PBXTargetDependency */,
 			);
-			name = "AzureOAuth-Mac-Tests";
-			productName = "AzureOAuth-MacTests";
-			productReference = D5C629491C3A7FAA007F7B7C /* AzureOAuth-Mac-Tests.xctest */;
+			name = "OhMyAuth-Mac-Tests";
+			productName = "OhMyAuth-MacTests";
+			productReference = D5C629491C3A7FAA007F7B7C /* OhMyAuth.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -434,7 +434,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D5B2E8991C3A780C00C0327D /* Build configuration list for PBXProject "AzureOAuth" */;
+			buildConfigurationList = D5B2E8991C3A780C00C0327D /* Build configuration list for PBXProject "OhMyAuth" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -446,10 +446,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5B2E89E1C3A780C00C0327D /* AzureOAuth-iOS */,
-				D5C6293F1C3A7FAA007F7B7C /* AzureOAuth-Mac */,
-				D5B2E8A81C3A780C00C0327D /* AzureOAuth-iOS-Tests */,
-				D5C629481C3A7FAA007F7B7C /* AzureOAuth-Mac-Tests */,
+				D5B2E89E1C3A780C00C0327D /* OhMyAuth-iOS */,
+				D5C6293F1C3A7FAA007F7B7C /* OhMyAuth-Mac */,
+				D5B2E8A81C3A780C00C0327D /* OhMyAuth-iOS-Tests */,
+				D5C629481C3A7FAA007F7B7C /* OhMyAuth-Mac-Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -582,8 +582,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C6299E1C3A8C75007F7B7C /* SharedSpec.swift in Sources */,
-				D5C6299D1C3A8C6B007F7B7C /* iOSSpec.swift in Sources */,
+				D5ED73911C64B210003772EF /* iOSSpec.swift in Sources */,
+				D5ED738E1C64B206003772EF /* SharedSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,8 +611,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C6299C1C3A8BDA007F7B7C /* SharedSpec.swift in Sources */,
-				D5C6299B1C3A8BDA007F7B7C /* MacSpec.swift in Sources */,
+				D5ED73901C64B20C003772EF /* MacSpec.swift in Sources */,
+				D5ED738F1C64B206003772EF /* SharedSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,12 +621,12 @@
 /* Begin PBXTargetDependency section */
 		D5B2E8AC1C3A780C00C0327D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D5B2E89E1C3A780C00C0327D /* AzureOAuth-iOS */;
+			target = D5B2E89E1C3A780C00C0327D /* OhMyAuth-iOS */;
 			targetProxy = D5B2E8AB1C3A780C00C0327D /* PBXContainerItemProxy */;
 		};
 		D5C6294C1C3A7FAA007F7B7C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D5C6293F1C3A7FAA007F7B7C /* AzureOAuth-Mac */;
+			target = D5C6293F1C3A7FAA007F7B7C /* OhMyAuth-Mac */;
 			targetProxy = D5C6294B1C3A7FAA007F7B7C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -733,12 +733,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/AzureOAuth/Info-iOS.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuth/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.AzureOAuth-iOS";
-				PRODUCT_NAME = AzureOAuth;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.OhMyAuth-iOS";
+				PRODUCT_NAME = OhMyAuth;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -756,12 +756,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/AzureOAuth/Info-iOS.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuth/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.AzureOAuth-iOS";
-				PRODUCT_NAME = AzureOAuth;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.OhMyAuth-iOS";
+				PRODUCT_NAME = OhMyAuth;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -774,10 +774,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/AzureOAuthTests/Info-iOS.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuthTests/Info-iOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.AzureOAuthTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.OhMyAuthTests;
+				PRODUCT_NAME = OhMyAuth;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -790,10 +790,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/AzureOAuthTests/Info-iOS.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuthTests/Info-iOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.AzureOAuthTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.OhMyAuthTests;
+				PRODUCT_NAME = OhMyAuth;
 			};
 			name = Release;
 		};
@@ -812,12 +812,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/AzureOAuth/Info-Mac.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuth/Info-Mac.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.AzureOAuth-Mac";
-				PRODUCT_NAME = AzureOAuth;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.OhMyAuth-Mac";
+				PRODUCT_NAME = OhMyAuth;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -839,12 +839,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/AzureOAuth/Info-Mac.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuth/Info-Mac.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.AzureOAuth-Mac";
-				PRODUCT_NAME = AzureOAuth;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.OhMyAuth-Mac";
+				PRODUCT_NAME = OhMyAuth;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -859,11 +859,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/AzureOAuthTests/Info-Mac.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuthTests/Info-Mac.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.AzureOAuth-MacTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.OhMyAuth-MacTests";
+				PRODUCT_NAME = OhMyAuth;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -877,11 +877,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/AzureOAuthTests/Info-Mac.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuthTests/Info-Mac.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.AzureOAuth-MacTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.OhMyAuth-MacTests";
+				PRODUCT_NAME = OhMyAuth;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -889,7 +889,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D5B2E8991C3A780C00C0327D /* Build configuration list for PBXProject "AzureOAuth" */ = {
+		D5B2E8991C3A780C00C0327D /* Build configuration list for PBXProject "OhMyAuth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5B2E8B11C3A780C00C0327D /* Debug */,
@@ -898,7 +898,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "AzureOAuth-iOS" */ = {
+		D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "OhMyAuth-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5B2E8B41C3A780C00C0327D /* Debug */,
@@ -907,7 +907,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5B2E8B61C3A780C00C0327D /* Build configuration list for PBXNativeTarget "AzureOAuth-iOS-Tests" */ = {
+		D5B2E8B61C3A780C00C0327D /* Build configuration list for PBXNativeTarget "OhMyAuth-iOS-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5B2E8B71C3A780C00C0327D /* Debug */,
@@ -916,7 +916,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5C629511C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "AzureOAuth-Mac" */ = {
+		D5C629511C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "OhMyAuth-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5C629521C3A7FAA007F7B7C /* Debug */,
@@ -925,7 +925,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5C629541C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "AzureOAuth-Mac-Tests" */ = {
+		D5C629541C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "OhMyAuth-Mac-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5C629551C3A7FAA007F7B7C /* Debug */,

@@ -1,11 +1,11 @@
-@testable import AzureOAuth
+@testable import OhMyAuth
 import Quick
 import Nimble
 
-class SharedSpec: QuickSpec {
+class iOSSpec: QuickSpec {
 
   override func spec() {
-    describe("Shared") {
+    describe("iOS") {
       describe("test") {
         it("passes") {
           expect(true).to(beTrue())

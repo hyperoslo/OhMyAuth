@@ -1,4 +1,4 @@
-@testable import AzureOAuth
+@testable import OhMyAuth
 import Quick
 import Nimble
 

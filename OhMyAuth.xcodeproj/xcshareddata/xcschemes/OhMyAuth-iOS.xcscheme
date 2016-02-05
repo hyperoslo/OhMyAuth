@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D5C7F73F1C3BC9CE008CDDBA"
-               BuildableName = "AzureOAuthDemo.app"
-               BlueprintName = "AzureOAuthDemo"
-               ReferencedContainer = "container:AzureOAuthDemo.xcodeproj">
+               BlueprintIdentifier = "D5B2E89E1C3A780C00C0327D"
+               BuildableName = "OhMyAuth.framework"
+               BlueprintName = "OhMyAuth-iOS"
+               ReferencedContainer = "container:OhMyAuth.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D5C7F73F1C3BC9CE008CDDBA"
-            BuildableName = "AzureOAuthDemo.app"
-            BlueprintName = "AzureOAuthDemo"
-            ReferencedContainer = "container:AzureOAuthDemo.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D5C7F73F1C3BC9CE008CDDBA"
-            BuildableName = "AzureOAuthDemo.app"
-            BlueprintName = "AzureOAuthDemo"
-            ReferencedContainer = "container:AzureOAuthDemo.xcodeproj">
+            BlueprintIdentifier = "D5B2E89E1C3A780C00C0327D"
+            BuildableName = "OhMyAuth.framework"
+            BlueprintName = "OhMyAuth-iOS"
+            ReferencedContainer = "container:OhMyAuth.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D5C7F73F1C3BC9CE008CDDBA"
-            BuildableName = "AzureOAuthDemo.app"
-            BlueprintName = "AzureOAuthDemo"
-            ReferencedContainer = "container:AzureOAuthDemo.xcodeproj">
+            BlueprintIdentifier = "D5B2E89E1C3A780C00C0327D"
+            BuildableName = "OhMyAuth.framework"
+            BlueprintName = "OhMyAuth-iOS"
+            ReferencedContainer = "container:OhMyAuth.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
