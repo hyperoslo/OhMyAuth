@@ -39,7 +39,7 @@ import Foundation
     let text = message ?? defaultMessage
     let domain = "OhMyAuth"
 
-    print("\(domain): \(text)")
+    NSLog("\(domain): \(text)")
 
     return NSError(domain: domain,
       code: rawValue,
