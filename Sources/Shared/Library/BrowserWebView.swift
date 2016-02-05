@@ -3,7 +3,7 @@ import Foundation
 #if os(iOS) || os(tvOS)
   import UIKit
 #elseif os(OSX)
-  import AppKit
+  import Cocoa
 #endif
 
 @objc public class BrowserWebView: NSObject, WebViewable {
