@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (3.1.5)
+  - JWTDecode (1.0.0)
+  - Keychain (1.0.0)
+  - OhMyAuth (0.1.0):
+    - Alamofire
+    - JWTDecode
+    - Keychain
+    - Sugar
+  - Sugar (1.0.3)
+
+DEPENDENCIES:
+  - Keychain (from `https://github.com/hyperoslo/Keychain`)
+  - OhMyAuth (from `../../`)
+
+EXTERNAL SOURCES:
+  Keychain:
+    :git: https://github.com/hyperoslo/Keychain
+  OhMyAuth:
+    :path: ../../
+
+CHECKOUT OPTIONS:
+  Keychain:
+    :commit: 21e6f607394e112229a7f30bebe2f832a4d43c48
+    :git: https://github.com/hyperoslo/Keychain
+
+SPEC CHECKSUMS:
+  Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
+  JWTDecode: d172edcb1607cc15aed85d58eceedcbb675a4534
+  Keychain: 50cb247cab32e774422741b118af9b598a3fb5b2
+  OhMyAuth: 213738cb5c056b458fd52937b2bff30d12d86f10
+  Sugar: 0dec8fa53840c88c01579e61bcff8edbe468cb41
+
+COCOAPODS: 0.39.0
