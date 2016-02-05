@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D5C6293F1C3A7FAA007F7B7C"
-               BuildableName = "AzureOAuth.framework"
-               BlueprintName = "AzureOAuth-Mac"
-               ReferencedContainer = "container:AzureOAuth.xcodeproj">
+               BuildableName = "OhMyAuth.framework"
+               BlueprintName = "OhMyAuth-Mac"
+               ReferencedContainer = "container:OhMyAuth.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D5C629481C3A7FAA007F7B7C"
-               BuildableName = "AzureOAuth-Mac-Tests.xctest"
-               BlueprintName = "AzureOAuth-Mac-Tests"
-               ReferencedContainer = "container:AzureOAuth.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D5C6293F1C3A7FAA007F7B7C"
-            BuildableName = "AzureOAuth.framework"
-            BlueprintName = "AzureOAuth-Mac"
-            ReferencedContainer = "container:AzureOAuth.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -65,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D5C6293F1C3A7FAA007F7B7C"
-            BuildableName = "AzureOAuth.framework"
-            BlueprintName = "AzureOAuth-Mac"
-            ReferencedContainer = "container:AzureOAuth.xcodeproj">
+            BuildableName = "OhMyAuth.framework"
+            BlueprintName = "OhMyAuth-Mac"
+            ReferencedContainer = "container:OhMyAuth.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +64,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D5C6293F1C3A7FAA007F7B7C"
-            BuildableName = "AzureOAuth.framework"
-            BlueprintName = "AzureOAuth-Mac"
-            ReferencedContainer = "container:AzureOAuth.xcodeproj">
+            BuildableName = "OhMyAuth.framework"
+            BlueprintName = "OhMyAuth-Mac"
+            ReferencedContainer = "container:OhMyAuth.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
