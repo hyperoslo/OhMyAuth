@@ -35,14 +35,17 @@ import Foundation
     return message
   }
 
-  func toNSError(message: String? = nil) -> NSError {
+  func toNSError(message: String? = nil, userInfo: [String: AnyObject] = [:]) -> NSError {
     let text = message ?? defaultMessage
     let domain = "OhMyAuth"
 
     NSLog("\(domain): \(text)")
 
+    var dictionary = userInfo
+    dictionary[NSLocalizedDescriptionKey] = text
+
     return NSError(domain: domain,
       code: rawValue,
-      userInfo: [NSLocalizedDescriptionKey: text])
+      userInfo: dictionary)
   }
 }
