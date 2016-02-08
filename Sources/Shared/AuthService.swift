@@ -8,6 +8,7 @@ import Foundation
   public let config: AuthConfig
   public var locker: Lockable
   private var pendingTokenCompletions = [Completion]()
+  private var pendingToken = false
 
   public var tokenIsExpired: Bool {
     return locker.expiryDate?.timeIntervalSinceNow < config.minimumValidity
@@ -57,6 +58,10 @@ import Foundation
 
     pendingTokenCompletions.append(completion)
 
+    guard !pendingToken else { return }
+
+    pendingToken = true
+
     refreshToken() { [weak self] accessToken, error in
       guard let weakSelf = self else { return }
 
@@ -65,6 +70,7 @@ import Foundation
       }
 
       weakSelf.pendingTokenCompletions = []
+      weakSelf.pendingToken = false
     }
   }
 
