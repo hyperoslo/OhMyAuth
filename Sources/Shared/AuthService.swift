@@ -65,7 +65,7 @@ import Foundation
     refreshToken() { [weak self] accessToken, error in
       guard let weakSelf = self else { return }
 
-      for completion in weakSelf.pendingTokenCompletions {
+      weakSelf.pendingTokenCompletions.forEach { completion in
         completion(accessToken, error)
       }
 
