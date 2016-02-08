@@ -2,15 +2,16 @@ import Foundation
 
 @objc public class AuthService: NSObject {
 
+  public typealias Completion = (String?, NSError?) -> Void
+
   public let name: String
   public let config: AuthConfig
   public var locker: Lockable
+  private var pendingTokenCompletions = [Completion]()
 
   public var tokenIsExpired: Bool {
     return locker.expiryDate?.timeIntervalSinceNow < config.minimumValidity
   }
-
-  public typealias Completion = (String?, NSError?) -> Void
 
   // MARK: - Initialization
 
@@ -54,7 +55,17 @@ import Foundation
       return
     }
 
-    refreshToken(completion)
+    pendingTokenCompletions.append(completion)
+
+    refreshToken() { [weak self] accessToken, error in
+      guard let weakSelf = self else { return }
+
+      for completion in weakSelf.pendingTokenCompletions {
+        completion(accessToken, error)
+      }
+
+      weakSelf.pendingTokenCompletions = []
+    }
   }
 
   public func accessToken(URL URL: NSURL, completion: Completion) -> Bool {
