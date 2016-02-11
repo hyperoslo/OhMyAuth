@@ -116,14 +116,14 @@ import Foundation
     executing = true
 
     TokenNetworkTask(locker: locker).execute(request) { [weak self] result in
+      self?.executing = false
+
       switch result {
       case .Failure(let error):
         completion(nil, error as? NSError)
       case .Success(let accessToken):
         completion(accessToken, nil)
       }
-
-      self?.executing = false
     }
   }
 }
