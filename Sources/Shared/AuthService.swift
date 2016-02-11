@@ -7,8 +7,9 @@ import Foundation
   public let name: String
   public let config: AuthConfig
   public var locker: Lockable
+
   private var pendingTokenCompletions = [Completion]()
-  private var pendingToken = false
+  private var executing = false
 
   public var tokenIsExpired: Bool {
     return locker.expiryDate?.timeIntervalSinceNow < config.minimumValidity
@@ -58,9 +59,7 @@ import Foundation
 
     pendingTokenCompletions.append(completion)
 
-    guard !pendingToken else { return }
-
-    pendingToken = true
+    guard !executing else { return }
 
     refreshToken() { [weak self] accessToken, error in
       guard let weakSelf = self else { return }
@@ -70,7 +69,6 @@ import Foundation
       }
 
       weakSelf.pendingTokenCompletions = []
-      weakSelf.pendingToken = false
     }
   }
 
@@ -110,13 +108,22 @@ import Foundation
   // MARK: - Helpers
 
   func executeRequest(request: NetworkRequestable, completion: Completion) {
-    TokenNetworkTask(locker: locker).execute(request) { result in
+    guard !executing else {
+      completion(nil, Error.TokenRequestAlreadyStarted.toNSError())
+      return
+    }
+
+    executing = true
+
+    TokenNetworkTask(locker: locker).execute(request) { [weak self] result in
       switch result {
       case .Failure(let error):
         completion(nil, error as? NSError)
       case .Success(let accessToken):
         completion(accessToken, nil)
       }
+
+      self?.executing = false
     }
   }
 }
