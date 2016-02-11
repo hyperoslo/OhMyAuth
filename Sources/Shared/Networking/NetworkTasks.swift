@@ -26,7 +26,7 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
 
     guard let refreshToken = data["refresh_token"] as? String else {
       locker.clear()
-      throw Error.NoAccessTokenFound.toNSError()
+      throw Error.NoRefreshTokenFound.toNSError()
     }
 
     locker.accessToken = accessToken

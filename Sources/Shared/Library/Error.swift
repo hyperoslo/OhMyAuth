@@ -29,7 +29,7 @@ import Foundation
     case NoAccessTokenFound:
       message = "No access token found"
     case NoRefreshTokenFound:
-      message = "No access token found"
+      message = "No refresh token found"
       break
     case TokenRequestAlreadyStarted:
       message = "Token request has already been started"
