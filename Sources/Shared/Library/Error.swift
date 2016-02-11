@@ -8,6 +8,7 @@ import Foundation
   case TokenRequestFailed = -5
   case NoAccessTokenFound = -6
   case NoRefreshTokenFound = -7
+  case TokenRequestAlreadyStarted = -8
 
   // MARK: - Helpers
 
@@ -29,6 +30,9 @@ import Foundation
       message = "No access token found"
     case NoRefreshTokenFound:
       message = "No access token found"
+      break
+    case TokenRequestAlreadyStarted:
+      message = "Token request has already been started"
       break
     }
 
