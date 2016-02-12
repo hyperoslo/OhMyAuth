@@ -10,6 +10,16 @@ import Foundation
   public var redirectURI: String?
   public var minimumValidity: NSTimeInterval = 5 * 60
 
+  public var expiryDate: (data: [String : AnyObject]) -> NSDate? = { data -> NSDate? in
+    var date: NSDate?
+
+    if let expiresIn = data["expires_in"] as? Double {
+      date = NSDate(timeIntervalSinceNow: expiresIn)
+    }
+
+    return date
+  }
+
   public var extraAccessTokenParameters = [String: String]()
   public var extraRefreshTokenParameters = [String: String]()
 

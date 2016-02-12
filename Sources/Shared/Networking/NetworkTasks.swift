@@ -5,11 +5,13 @@ import JWTDecode
 struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
 
   let locker: Lockable
+  let config: AuthConfig
 
   // MARK: - Initialization
 
-  init(locker: Lockable) {
+  init(locker: Lockable, config: AuthConfig) {
     self.locker = locker
+    self.config = config
   }
 
   // MARK: - Processing
@@ -22,24 +24,25 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
     guard let accessToken = data["access_token"] as? String else {
       locker.clear()
       NSLog("\(data)")
-      throw Error.NoAccessTokenFound.toNSError()
+      throw Error.NoAccessTokenInResponse.toNSError()
     }
 
     guard let refreshToken = data["refresh_token"] as? String else {
       locker.clear()
       NSLog("\(data)")
-      throw Error.NoRefreshTokenFound.toNSError()
+      throw Error.NoRefreshTokenInResponse.toNSError()
+    }
+
+    guard let expiryDate = config.expiryDate(data: data) else {
+      locker.clear()
+      NSLog("\(data)")
+      throw Error.NoExpiryDateInResponse.toNSError()
     }
 
     locker.accessToken = accessToken
     locker.refreshToken = refreshToken
+    locker.expiryDate = expiryDate
     locker.tokenType = data["token_type"] as? String
-
-    if let expiresOn = data["expires_on"] ?? data["expires_in"] {
-      locker.expiryDate = NSDate(timeIntervalSince1970: expiresOn.doubleValue)
-    } else {
-      locker.expiryDate = nil
-    }
 
     if let jwtString = data["id_token"] as? String {
       do {
