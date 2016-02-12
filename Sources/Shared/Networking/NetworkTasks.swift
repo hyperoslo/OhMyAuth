@@ -22,13 +22,13 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
     guard let accessToken = data["access_token"] as? String else {
       locker.clear()
       NSLog("\(data)")
-      throw Error.NoAccessTokenFound.toNSError()
+      throw Error.NoAccessTokenInResponse.toNSError()
     }
 
     guard let refreshToken = data["refresh_token"] as? String else {
       locker.clear()
       NSLog("\(data)")
-      throw Error.NoRefreshTokenFound.toNSError()
+      throw Error.NoRefreshTokenInResponse.toNSError()
     }
 
     locker.accessToken = accessToken
