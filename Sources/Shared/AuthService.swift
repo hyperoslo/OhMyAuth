@@ -13,7 +13,7 @@ import Foundation
 
   public var tokenIsExpired: Bool {
     return locker.expiryDate?.timeIntervalSinceReferenceDate
-      >= NSDate.timeIntervalSinceReferenceDate() - config.minimumValidity
+      <= NSDate.timeIntervalSinceReferenceDate() - config.minimumValidity
   }
 
   // MARK: - Initialization
