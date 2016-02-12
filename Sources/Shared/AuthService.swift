@@ -12,7 +12,8 @@ import Foundation
   private var executing = false
 
   public var tokenIsExpired: Bool {
-    return locker.expiryDate?.timeIntervalSinceNow < config.minimumValidity
+    return locker.expiryDate?.timeIntervalSinceReferenceDate
+      >= NSDate.timeIntervalSinceReferenceDate() - config.minimumValidity
   }
 
   // MARK: - Initialization
