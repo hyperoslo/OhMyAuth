@@ -3,13 +3,14 @@ import Foundation
 @objc enum Error: Int, ErrorType {
   case CodeParameterNotFound = -1
   case NoConfigFound = -2
-  case NoExpirationDateFound = -3
+  case NoExpiryDateFound = -3
   case NoRefreshTokenFound = -4
   case TokenRequestFailed = -5
   case NoDataInResponse = -6
   case NoAccessTokenInResponse = -7
   case NoRefreshTokenInResponse = -8
-  case TokenRequestAlreadyStarted = -9
+  case NoExpiryDateInResponse = -9
+  case TokenRequestAlreadyStarted = -10
 
   // MARK: - Helpers
 
@@ -21,7 +22,7 @@ import Foundation
       message = "Code parameter not found"
     case NoConfigFound:
       message = "No token or login config provided"
-    case NoExpirationDateFound:
+    case NoExpiryDateFound:
       message = "No expiration date in keychain"
     case NoRefreshTokenFound:
       message = "No refresh token in keychain"
@@ -33,7 +34,8 @@ import Foundation
       message = "No access token in response"
     case NoRefreshTokenInResponse:
       message = "No refresh token in response"
-      break
+    case NoExpiryDateInResponse:
+      message = "No expiration date in response"
     case TokenRequestAlreadyStarted:
       message = "Token request has already been started"
       break

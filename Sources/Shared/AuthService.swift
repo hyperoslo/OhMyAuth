@@ -48,7 +48,7 @@ import Foundation
 
   public func accessToken(completion: Completion) {
     guard locker.expiryDate != nil else {
-      completion(nil, Error.ExpirationDateNotFound.toNSError())
+      completion(nil, Error.NoExpiryDateFound.toNSError())
       return
     }
 
@@ -115,7 +115,7 @@ import Foundation
 
     executing = true
 
-    TokenNetworkTask(locker: locker).execute(request) { [weak self] result in
+    TokenNetworkTask(locker: locker, config: config).execute(request) { [weak self] result in
       self?.executing = false
 
       switch result {
