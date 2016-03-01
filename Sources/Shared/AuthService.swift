@@ -50,7 +50,10 @@ import Foundation
   
   public func accessToken(completion: Completion) {
     dispatch_barrier_async(tokenQueue) { [weak self] in
-      guard let weakSelf = self else { return }
+      guard let weakSelf = self else {
+        completion(nil, Error.AuthServiceDeallocated.toNSError())
+        return
+      }
       
       guard weakSelf.locker.expiryDate != nil else {
         completion(nil, Error.NoExpiryDateFound.toNSError())
@@ -67,10 +70,16 @@ import Foundation
       guard !weakSelf.executing else { return }
       
       weakSelf.refreshToken() { [weak self] accessToken, error in
-        guard let weakSelf = self else { return }
+        guard let weakSelf = self else {
+          completion(nil, Error.AuthServiceDeallocated.toNSError())
+          return
+        }
         
         dispatch_barrier_async(weakSelf.tokenQueue) { [weak self] in
-          guard let weakSelf = self else { return }
+          guard let weakSelf = self else {
+            completion(nil, Error.AuthServiceDeallocated.toNSError())
+            return
+          }
           
           weakSelf.pendingTokenCompletions.forEach { completion in
             completion(accessToken, error)
@@ -126,7 +135,12 @@ import Foundation
     executing = true
     
     TokenNetworkTask(locker: locker, config: config).execute(request) { [weak self] result in
-      self?.executing = false
+      guard let weakSelf = self else {
+        completion(nil, Error.AuthServiceDeallocated.toNSError())
+        return
+      }
+      
+      weakSelf.executing = false
       
       switch result {
       case .Failure(let error):

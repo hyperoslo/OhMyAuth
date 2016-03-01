@@ -11,6 +11,7 @@ import Foundation
   case NoRefreshTokenInResponse = -8
   case NoExpiryDateInResponse = -9
   case TokenRequestAlreadyStarted = -10
+  case AuthServiceDeallocated = -11
 
   // MARK: - Helpers
 
@@ -38,7 +39,8 @@ import Foundation
       message = "No expiration date in response"
     case TokenRequestAlreadyStarted:
       message = "Token request has already been started"
-      break
+    case AuthServiceDeallocated:
+      message = "AuthService has been deallocated"
     }
 
     return message
