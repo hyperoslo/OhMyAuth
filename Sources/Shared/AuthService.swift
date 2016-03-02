@@ -13,7 +13,11 @@ import Foundation
   private let tokenQueue = dispatch_queue_create("OhMyAuth.AuthService.TokenQueue", DISPATCH_QUEUE_CONCURRENT)
 
   public var tokenIsExpired: Bool {
-    return locker.expiryDate?.timeIntervalSinceReferenceDate
+    guard let expiryDate = locker.expiryDate else {
+      return true
+    }
+
+    return expiryDate.timeIntervalSinceReferenceDate
       <= NSDate.timeIntervalSinceReferenceDate() - config.minimumValidity
   }
 
@@ -56,11 +60,6 @@ import Foundation
       }
 
       if !force {
-        guard weakSelf.locker.expiryDate != nil else {
-          completion(nil, Error.NoExpiryDateFound.toNSError())
-          return
-        }
-
         guard weakSelf.tokenIsExpired else {
           completion(weakSelf.locker.accessToken, nil)
           return
