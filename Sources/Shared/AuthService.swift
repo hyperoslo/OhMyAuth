@@ -55,14 +55,16 @@ import Foundation
         return
       }
 
-      guard weakSelf.locker.expiryDate != nil && !force else {
-        completion(nil, Error.NoExpiryDateFound.toNSError())
-        return
-      }
+      if !force {
+        guard weakSelf.locker.expiryDate != nil else {
+          completion(nil, Error.NoExpiryDateFound.toNSError())
+          return
+        }
 
-      guard weakSelf.tokenIsExpired && !force else {
-        completion(weakSelf.locker.accessToken, nil)
-        return
+        guard weakSelf.tokenIsExpired else {
+          completion(weakSelf.locker.accessToken, nil)
+          return
+        }
       }
 
       weakSelf.pendingTokenCompletions.append(completion)
