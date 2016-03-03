@@ -17,10 +17,6 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
   // MARK: - Processing
 
   func process(data: JSONDictionary) throws -> String {
-    if let error = data["error"] as? JSONDictionary {
-      throw Error.TokenRequestFailed.toNSError(data["error_description"] as? String, userInfo: error)
-    }
-
     guard let accessToken = data["access_token"] as? String else {
       locker.clear()
       NSLog("\(data)")
