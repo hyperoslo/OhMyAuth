@@ -2,24 +2,21 @@ import Foundation
 import Keychain
 import Sugar
 
+public struct Keys {
+
+  public static let service = "\(Application.name)"
+  public static let accessToken = "\(Application.name)-AccessToken"
+  public static let refreshToken = "\(Application.name)-RefreshToken"
+  public static let tokenType = "\(Application.name)-TokenType"
+  public static let expiryDate = "\(Application.name)-ExpiryDate"
+  public static let userName = "\(Application.name)-UserName"
+  public static let userUPN = "\(Application.name)-UserUPN"
+}
+
 @objc public class KeychainLocker: NSObject, Lockable {
-
-  public struct KeychainKeys {
-    public static let service = "\(Application.name)"
-    public static let accessToken = "\(Application.name)-AccessToken"
-    public static let refreshToken = "\(Application.name)-RefreshToken"
-    public static let tokenType = "\(Application.name)-TokenType"
-  }
-
-  public struct UserDefaultsKeys {
-    public static let expiryDate = "\(Application.name)-ExpiryDate"
-    public static let userName = "\(Application.name)-UserName"
-    public static let userUPN = "\(Application.name)-UserUPN"
-  }
 
   let name: String
   let userDefaults = NSUserDefaults.standardUserDefaults()
-
 
   // MARK: - Initialization
 
@@ -30,42 +27,42 @@ import Sugar
   // MARK: - Keychain
 
   public var accessToken: String? {
-    get { return getFromKeychain(KeychainKeys.accessToken) }
-    set { saveInKeychain(KeychainKeys.accessToken, newValue) }
+    get { return getFromKeychain(Keys.accessToken) }
+    set { saveInKeychain(Keys.accessToken, newValue) }
   }
 
   public var refreshToken: String? {
-    get { return getFromKeychain(KeychainKeys.refreshToken) }
-    set { saveInKeychain(KeychainKeys.refreshToken, newValue) }
+    get { return getFromKeychain(Keys.refreshToken) }
+    set { saveInKeychain(Keys.refreshToken, newValue) }
   }
 
   public var tokenType: String? {
-    get { return getFromKeychain(KeychainKeys.tokenType) }
-    set { saveInKeychain(KeychainKeys.tokenType, newValue) }
+    get { return getFromKeychain(Keys.tokenType) }
+    set { saveInKeychain(Keys.tokenType, newValue) }
   }
 
   // MARK: - UserDefaults
 
   public var expiryDate: NSDate? {
-    get { return getFromDefaults(UserDefaultsKeys.expiryDate) as NSDate? }
-    set { saveInDefaults(UserDefaultsKeys.expiryDate, newValue) }
+    get { return getFromDefaults(Keys.expiryDate) as NSDate? }
+    set { saveInDefaults(Keys.expiryDate, newValue) }
   }
 
   public var userName: String? {
-    get { return getFromDefaults(UserDefaultsKeys.userName) as String? }
-    set { saveInDefaults(UserDefaultsKeys.userName, newValue) }
+    get { return getFromDefaults(Keys.userName) as String? }
+    set { saveInDefaults(Keys.userName, newValue) }
   }
 
   public var userUPN: String? {
-    get { return getFromDefaults(UserDefaultsKeys.userUPN) as String? }
-    set { saveInDefaults(UserDefaultsKeys.userUPN, newValue) }
+    get { return getFromDefaults(Keys.userUPN) as String? }
+    set { saveInDefaults(Keys.userUPN, newValue) }
   }
 
   // MARK: - Helpers
 
   func getFromKeychain(key: String) -> String? {
     let namedKey = generateKey(key)
-    let password = Keychain.password(forAccount: namedKey, service: KeychainKeys.service)
+    let password = Keychain.password(forAccount: namedKey, service: Keys.service)
 
     return !password.isEmpty ? password : nil
   }
@@ -74,9 +71,9 @@ import Sugar
     let namedKey = generateKey(key)
 
     if let value = value {
-      Keychain.setPassword(value, forAccount: namedKey, service: KeychainKeys.service)
+      Keychain.setPassword(value, forAccount: namedKey, service: Keys.service)
     } else {
-      Keychain.deletePassword(forAccount: namedKey, service: KeychainKeys.service)
+      Keychain.deletePassword(forAccount: namedKey, service: Keys.service)
     }
   }
 
