@@ -27,7 +27,7 @@ import Foundation
     self.name = name
     self.config = config
     self.config.name = name
-    locker = Locker(name: name)
+    locker = KeychainLocker(name: name)
   }
 
   // MARK: - Authorization

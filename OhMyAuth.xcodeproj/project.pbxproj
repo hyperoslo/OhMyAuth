@@ -10,12 +10,12 @@
 		BDB798E51C89CFD2002400B0 /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB798E41C89CFD2002400B0 /* Lockable.swift */; };
 		BDB798E61C89CFD2002400B0 /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB798E41C89CFD2002400B0 /* Lockable.swift */; };
 		D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */; };
-		D51D95601C62535200D78EF3 /* Locker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* Locker.swift */; };
+		D51D95601C62535200D78EF3 /* KeychainLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* KeychainLocker.swift */; };
 		D51D95621C62536E00D78EF3 /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* AuthContainer.swift */; };
 		D51D95651C6253B200D78EF3 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* NetworkRequests.swift */; };
 		D51D956E1C62B82400D78EF3 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* NetworkRequests.swift */; };
 		D51D95701C62B82400D78EF3 /* AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */; };
-		D51D95711C62B82400D78EF3 /* Locker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* Locker.swift */; };
+		D51D95711C62B82400D78EF3 /* KeychainLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* KeychainLocker.swift */; };
 		D51D95721C62B82400D78EF3 /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* AuthContainer.swift */; };
 		D51D95751C62BAF000D78EF3 /* NetworkTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */; };
 		D51D95761C62BAF000D78EF3 /* NetworkTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */; };
@@ -74,7 +74,7 @@
 /* Begin PBXFileReference section */
 		BDB798E41C89CFD2002400B0 /* Lockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lockable.swift; sourceTree = "<group>"; };
 		D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthConfig.swift; sourceTree = "<group>"; };
-		D51D955F1C62535200D78EF3 /* Locker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locker.swift; sourceTree = "<group>"; };
+		D51D955F1C62535200D78EF3 /* KeychainLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainLocker.swift; sourceTree = "<group>"; };
 		D51D95611C62536E00D78EF3 /* AuthContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthContainer.swift; sourceTree = "<group>"; };
 		D51D95641C6253B200D78EF3 /* NetworkRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
 		D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTasks.swift; sourceTree = "<group>"; };
@@ -265,7 +265,7 @@
 				D51D95611C62536E00D78EF3 /* AuthContainer.swift */,
 				D59575AA1C63CF3C000CD22B /* AuthService.swift */,
 				BDB798E41C89CFD2002400B0 /* Lockable.swift */,
-				D51D955F1C62535200D78EF3 /* Locker.swift */,
+				D51D955F1C62535200D78EF3 /* KeychainLocker.swift */,
 				D595759D1C635384000CD22B /* Library */,
 				D51D95631C62539C00D78EF3 /* Networking */,
 				D59575DD1C641E3D000CD22B /* Protocols */,
@@ -566,7 +566,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D595759F1C63538B000CD22B /* Result.swift in Sources */,
-				D51D95601C62535200D78EF3 /* Locker.swift in Sources */,
+				D51D95601C62535200D78EF3 /* KeychainLocker.swift in Sources */,
 				D59575CD1C640C0A000CD22B /* SafariWebView.swift in Sources */,
 				D59575AB1C63CF3C000CD22B /* AuthService.swift in Sources */,
 				D51D95651C6253B200D78EF3 /* NetworkRequests.swift in Sources */,
@@ -599,7 +599,7 @@
 				D5C629851C3A893F007F7B7C /* Mac.swift in Sources */,
 				D59575E71C641E4C000CD22B /* Result.swift in Sources */,
 				D59575D31C640E50000CD22B /* BrowserWebView.swift in Sources */,
-				D51D95711C62B82400D78EF3 /* Locker.swift in Sources */,
+				D51D95711C62B82400D78EF3 /* KeychainLocker.swift in Sources */,
 				D51D95701C62B82400D78EF3 /* AuthConfig.swift in Sources */,
 				D59575AC1C63CF3C000CD22B /* AuthService.swift in Sources */,
 				D51D956E1C62B82400D78EF3 /* NetworkRequests.swift in Sources */,

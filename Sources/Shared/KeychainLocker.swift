@@ -2,7 +2,7 @@ import Foundation
 import Keychain
 import Sugar
 
-@objc public class Locker: NSObject, Lockable {
+@objc public class KeychainLocker: NSObject, Lockable {
 
   public struct KeychainKeys {
     public static let service = "\(Application.name)"
