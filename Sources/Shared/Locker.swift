@@ -2,18 +2,6 @@ import Foundation
 import Keychain
 import Sugar
 
-@objc public protocol Lockable {
-  var accessToken: String? { get set }
-  var refreshToken: String? { get set }
-  var tokenType: String? { get set }
-  var expiryDate: NSDate? { get set }
-  var userName: String? { get set }
-  var userUPN: String? { get set }
-
-  init(name: String)
-  func clear()
-}
-
 @objc public class Locker: NSObject, Lockable {
 
   public struct KeychainKeys {
