@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BDB798E51C89CFD2002400B0 /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB798E41C89CFD2002400B0 /* Lockable.swift */; };
 		BDB798E61C89CFD2002400B0 /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB798E41C89CFD2002400B0 /* Lockable.swift */; };
+		BDBF67DF1C89D87200BDAFA3 /* UserDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */; };
+		BDBF67E01C89D87200BDAFA3 /* UserDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */; };
 		D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */; };
 		D51D95601C62535200D78EF3 /* KeychainLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* KeychainLocker.swift */; };
 		D51D95621C62536E00D78EF3 /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* AuthContainer.swift */; };
@@ -73,6 +75,7 @@
 
 /* Begin PBXFileReference section */
 		BDB798E41C89CFD2002400B0 /* Lockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lockable.swift; sourceTree = "<group>"; };
+		BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsLocker.swift; sourceTree = "<group>"; };
 		D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthConfig.swift; sourceTree = "<group>"; };
 		D51D955F1C62535200D78EF3 /* KeychainLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainLocker.swift; sourceTree = "<group>"; };
 		D51D95611C62536E00D78EF3 /* AuthContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthContainer.swift; sourceTree = "<group>"; };
@@ -269,6 +272,7 @@
 				D595759D1C635384000CD22B /* Library */,
 				D51D95631C62539C00D78EF3 /* Networking */,
 				D59575DD1C641E3D000CD22B /* Protocols */,
+				BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -575,6 +579,7 @@
 				BDB798E51C89CFD2002400B0 /* Lockable.swift in Sources */,
 				D59575E21C641E3D000CD22B /* NetworkTaskable.swift in Sources */,
 				D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */,
+				BDBF67DF1C89D87200BDAFA3 /* UserDefaultsLocker.swift in Sources */,
 				D59575D21C640E4C000CD22B /* BrowserWebView.swift in Sources */,
 				D59575DB1C641DBF000CD22B /* UIApplication+OhMyAuth.swift in Sources */,
 				D51D95621C62536E00D78EF3 /* AuthContainer.swift in Sources */,
@@ -608,6 +613,7 @@
 				D59575A81C63558D000CD22B /* Error.swift in Sources */,
 				D59575E61C641E4C000CD22B /* WebViewable.swift in Sources */,
 				D59575E41C641E4C000CD22B /* NetworkRequestable.swift in Sources */,
+				BDBF67E01C89D87200BDAFA3 /* UserDefaultsLocker.swift in Sources */,
 				BDB798E61C89CFD2002400B0 /* Lockable.swift in Sources */,
 				D51D95761C62BAF000D78EF3 /* NetworkTasks.swift in Sources */,
 			);
