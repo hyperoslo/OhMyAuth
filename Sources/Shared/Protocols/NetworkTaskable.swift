@@ -1,8 +1,8 @@
 protocol NetworkQueueable {}
 
 protocol NetworkTaskable {
-  typealias Input
-  typealias Output
+  associatedtype Input
+  associatedtype Output
 
   func process(data: Input) throws -> Output
 }
