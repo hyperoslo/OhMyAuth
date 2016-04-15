@@ -13,8 +13,8 @@ import Foundation
   public var expiryDate: (data: [String : AnyObject]) -> NSDate? = { data -> NSDate? in
     var date: NSDate?
 
-    if let expiresIn = data["expires_in"] as? Double {
-      date = NSDate(timeIntervalSinceNow: expiresIn)
+    if let expiresIn = data["expires_in"] {
+      date = NSDate(timeIntervalSinceNow: expiresIn.doubleValue)
     }
 
     return date
