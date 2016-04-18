@@ -81,12 +81,16 @@ import Foundation
             completion(nil, Error.AuthServiceDeallocated.toNSError())
             return
           }
-
-          weakSelf.pendingTokenCompletions.forEach { completion in
-            completion(accessToken, error)
+          
+          if error != nil {
+            weakSelf.authorize()
+          } else {
+            weakSelf.pendingTokenCompletions.forEach { completion in
+              completion(accessToken, error)
+            }
+            
+            weakSelf.pendingTokenCompletions = []
           }
-
-          weakSelf.pendingTokenCompletions = []
         }
       }
     }
@@ -104,6 +108,12 @@ import Foundation
 
     accessToken(parameters: ["code" : code]) { [weak self] accessToken, error in
       completion(accessToken, error)
+      if error == nil {
+        self?.pendingTokenCompletions.forEach { completion in
+          completion(accessToken, error)
+        }
+        self?.pendingTokenCompletions = []
+      }
       self?.config.webView.close?()
     }
 
