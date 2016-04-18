@@ -71,5 +71,7 @@ import Foundation
     refreshToken = nil
     tokenType = nil
     expiryDate = nil
+    userName = nil
+    userUPN = nil
   }
 }
