@@ -7,6 +7,7 @@ import Foundation
   public var accessTokenUrl: NSURL
   public var authorizeURL: NSURL?
   public var changeUserURL: NSURL?
+  public var deauthorizeURL: NSURL?
   public var redirectURI: String?
   public var minimumValidity: NSTimeInterval = 5 * 60
 
