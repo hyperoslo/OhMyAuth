@@ -1,6 +1,6 @@
 import Foundation
 
-@objc enum Error: Int, ErrorType {
+@objc public enum Error: Int, ErrorType {
   case CodeParameterNotFound = -1
   case NoConfigFound = -2
   case NoRefreshTokenFound = -3
@@ -14,7 +14,7 @@ import Foundation
 
   // MARK: - Helpers
 
-  var defaultMessage: String {
+  public var defaultMessage: String {
     var message: String
 
     switch self {
@@ -43,7 +43,7 @@ import Foundation
     return message
   }
 
-  func toNSError(message: String? = nil, userInfo: [String: AnyObject] = [:]) -> NSError {
+  public func toNSError(message: String? = nil, userInfo: [String: AnyObject] = [:]) -> NSError {
     let text = message ?? defaultMessage
     let domain = "OhMyAuth"
 
