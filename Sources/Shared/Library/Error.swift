@@ -5,12 +5,8 @@ import Foundation
   case NoConfigFound = -2
   case NoRefreshTokenFound = -3
   case TokenRequestFailed = -4
-  case NoDataInResponse = -5
-  case NoAccessTokenInResponse = -6
-  case NoRefreshTokenInResponse = -7
-  case NoExpiryDateInResponse = -8
-  case TokenRequestAlreadyStarted = -9
-  case AuthServiceDeallocated = -10
+  case TokenRequestAlreadyStarted = -5
+  case AuthServiceDeallocated = -6
 
   // MARK: - Helpers
 
@@ -26,14 +22,6 @@ import Foundation
       message = "No refresh token in keychain"
     case TokenRequestFailed:
       message = "Token request error"
-    case NoDataInResponse:
-      message = "No data in response"
-    case NoAccessTokenInResponse:
-      message = "No access token in response"
-    case NoRefreshTokenInResponse:
-      message = "No refresh token in response"
-    case NoExpiryDateInResponse:
-      message = "No expiration date in response"
     case TokenRequestAlreadyStarted:
       message = "Token request has already been started"
     case AuthServiceDeallocated:

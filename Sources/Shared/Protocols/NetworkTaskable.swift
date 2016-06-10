@@ -14,7 +14,7 @@ extension NetworkTaskable {
       switch result {
       case .Success(let data):
         guard let data = data as? Input else {
-          completion(.Failure(Error.NoDataInResponse.toNSError()))
+          completion(.Failure(Error.TokenRequestFailed.toNSError()))
           return
         }
 
