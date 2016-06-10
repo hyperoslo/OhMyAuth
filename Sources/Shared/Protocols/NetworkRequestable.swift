@@ -15,21 +15,15 @@ extension NetworkRequestable {
         return
       }
 
-      guard let value = response.result.value else {
-        completion(result: .Failure(Error.NoDataInResponse.toNSError()))
-        return
-      }
+      guard response.response?.statusCode != 401 else {
+        var userInfo: [String: AnyObject] = [:]
+        if let statusCode = response.response?.statusCode {
+          userInfo = [
+            "statusCode" : statusCode
+          ]
+        }
 
-      if let JSON = value as? JSONDictionary, errorDictionary = JSON["error"] as? JSONDictionary {
-        let error = Error.TokenRequestFailed.toNSError(
-          JSON["error_description"] as? String, userInfo: errorDictionary)
-
-        completion(result: .Failure(error))
-        return
-      }
-
-      guard response.response?.statusCode == 200 else {
-        completion(result: .Failure(Error.TokenRequestFailed.toNSError()))
+        completion(result: .Failure(Error.TokenRequestFailed.toNSError(userInfo: userInfo)))
         return
       }
 
