@@ -20,19 +20,19 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
     guard let accessToken = data["access_token"] as? String else {
       locker.clear()
       NSLog("\(data)")
-      throw Error.NoAccessTokenInResponse.toNSError()
+      throw Error.TokenRequestFailed.toNSError()
     }
 
     guard let refreshToken = data["refresh_token"] as? String else {
       locker.clear()
       NSLog("\(data)")
-      throw Error.NoRefreshTokenInResponse.toNSError()
+      throw Error.TokenRequestFailed.toNSError()
     }
 
     guard let expiryDate = config.expiryDate(data: data) else {
       locker.clear()
       NSLog("\(data)")
-      throw Error.NoExpiryDateInResponse.toNSError()
+      throw Error.TokenRequestFailed.toNSError()
     }
 
     locker.accessToken = accessToken
