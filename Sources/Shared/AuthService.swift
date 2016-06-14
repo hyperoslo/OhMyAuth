@@ -23,11 +23,16 @@ import Foundation
 
   // MARK: - Initialization
 
-  public init(name: String, config: AuthConfig) {
+  public init(name: String, config: AuthConfig, locker: Lockable? = nil) {
     self.name = name
     self.config = config
     self.config.name = name
-    locker = KeychainLocker(name: name)
+
+    if let locker = locker {
+      self.locker = locker
+    } else {
+      self.locker = KeychainLocker(name: name)
+    }
   }
 
   // MARK: - Authorization
@@ -49,14 +54,14 @@ import Foundation
 
     return true
   }
-  
+
   public func deauthorize(completion: () -> ()) -> Bool {
     guard let URL = config.deauthorizeURL else { return false }
-    
+
     locker.clear()
     config.webView.open(URL)
     completion()
-    
+
     return true
   }
 
