@@ -23,7 +23,7 @@ import Foundation
 
   // MARK: - Initialization
 
-  public init(name: String, config: AuthConfig, locker: Lockable = nil) {
+  public init(name: String, config: AuthConfig, locker: Lockable? = nil) {
     self.name = name
     self.config = config
     self.config.name = name
