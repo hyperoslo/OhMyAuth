@@ -2,6 +2,9 @@ import Foundation
 
 @objc public class AuthConfig: NSObject {
 
+  // Parse network response to userInfo
+  public static var parse: ((response: [String: AnyObject]) -> [String: AnyObject]?)?
+
   public var clientId: String
   public var accessGrantType: String
   public var accessTokenUrl: NSURL
