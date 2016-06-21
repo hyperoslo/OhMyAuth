@@ -17,10 +17,14 @@ extension NetworkRequestable {
 
       guard response.response?.statusCode != 401 else {
         var userInfo: [String: AnyObject] = [:]
+
+        if let value = response.result.value as? [String: AnyObject],
+          parsedValue = AuthConfig.parse?(response: value) {
+          userInfo = parsedValue
+        }
+
         if let statusCode = response.response?.statusCode {
-          userInfo = [
-            "statusCode" : statusCode
-          ]
+          userInfo["statusCode"] = statusCode
         }
 
         completion(result: .Failure(Error.TokenRequestFailed.toNSError(userInfo: userInfo)))
