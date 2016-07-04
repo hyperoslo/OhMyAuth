@@ -32,6 +32,8 @@ import Foundation
   let refreshGrantType = "refresh_token"
   var name = "OhMyAuth"
 
+  public var headers: [String: String] = [:]
+
   var sharedParameters: [String: String] {
     var parameters = ["client_id" : clientId]
 
@@ -67,12 +69,13 @@ import Foundation
   // MARK: - Initialization
 
   public init(clientId: String, accessTokenUrl: NSURL, accessGrantType: String = "authorization_code",
-    authorizeURL: NSURL? = nil, changeUserURL: NSURL? = nil, redirectURI: String? = nil) {
+              authorizeURL: NSURL? = nil, changeUserURL: NSURL? = nil, redirectURI: String? = nil, headers: [String: String] = [:]) {
       self.clientId = clientId
       self.accessGrantType = accessGrantType
       self.accessTokenUrl = accessTokenUrl
       self.authorizeURL = authorizeURL
       self.changeUserURL = changeUserURL
       self.redirectURI = redirectURI
+      self.headers = headers
   }
 }
