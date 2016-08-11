@@ -56,8 +56,6 @@ import Foundation
     } else {
       userDefaults.removeObjectForKey(namedKey)
     }
-
-    userDefaults.synchronize()
   }
 
   func generateKey(key: String) -> String {
