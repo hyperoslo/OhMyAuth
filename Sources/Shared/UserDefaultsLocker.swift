@@ -43,6 +43,10 @@ import Foundation
 
   // MARK: - Helpers
 
+  public func synchronize() -> Bool {
+    return userDefaults.synchronize()
+  }
+
   func getFromDefaults<T>(key: String) -> T? {
     let namedKey = generateKey(key)
     return userDefaults.objectForKey(namedKey) as? T
