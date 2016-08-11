@@ -54,6 +54,8 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
       } catch {}
     }
 
+    locker.synchronize()
+
     return accessToken
   }
 }
