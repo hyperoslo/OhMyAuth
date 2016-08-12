@@ -5,12 +5,13 @@ protocol NetworkRequestable {
   var URL: NSURL { get }
   var parameters: [String: AnyObject] { get }
   var headers: [String: String] { get }
+  var manager: Alamofire.Manager { get }
 }
 
 extension NetworkRequestable {
 
   func start(completion: (result: Result<AnyObject>) -> Void) {
-    Alamofire.request(.POST, URL, parameters: parameters, encoding: .URL, headers: headers).responseJSON { response in
+    manager.request(.POST, URL, parameters: parameters, encoding: .URL, headers: headers).responseJSON { response in
       guard response.result.isSuccess else {
         completion(result: .Failure(response.result.error))
         return
