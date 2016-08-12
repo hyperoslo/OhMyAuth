@@ -1,4 +1,5 @@
 import Foundation
+import Alamofire
 
 @objc public class AuthConfig: NSObject {
 
@@ -28,6 +29,11 @@ import Foundation
   public var extraRefreshTokenParameters = [String: String]()
 
   public var webView: WebViewable = BrowserWebView()
+
+  lazy var manager: Alamofire.Manager = {
+    let manager = Alamofire.Manager()
+    return manager
+  }()
 
   let refreshGrantType = "refresh_token"
   var name = "OhMyAuth"
