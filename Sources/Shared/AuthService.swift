@@ -140,6 +140,14 @@ import Foundation
     executeRequest(request, completion: completion)
   }
 
+  public func cancel() {
+    config.manager.session.getTasksWithCompletionHandler { dataTasks, uploadTasks, downloadTasks in
+      dataTasks.forEach { $0.cancel() }
+      uploadTasks.forEach { $0.cancel() }
+      downloadTasks.forEach { $0.cancel() }
+    }
+  }
+
   // MARK: - Helpers
 
   func executeRequest(request: NetworkRequestable, completion: Completion) {
