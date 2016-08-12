@@ -5,6 +5,7 @@ protocol NetworkRequestable {
   var URL: NSURL { get }
   var parameters: [String: AnyObject] { get }
   var headers: [String: String] { get }
+  var manager: Alamofire.Manager { get }
 }
 
 extension NetworkRequestable {
