@@ -18,7 +18,7 @@ import Foundation
     }
 
     return expiryDate.timeIntervalSinceReferenceDate
-      <= NSDate.timeIntervalSinceReferenceDate() - config.minimumValidity
+      >= NSDate.timeIntervalSinceReferenceDate() - config.minimumValidity
   }
 
   // MARK: - Initialization
