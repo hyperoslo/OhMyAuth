@@ -14,6 +14,7 @@ import Alamofire
   public var deauthorizeURL: NSURL?
   public var redirectURI: String?
   public var minimumValidity: NSTimeInterval = 5 * 60
+  public var checkExpiry = true
 
   public var expiryDate: (data: [String : AnyObject]) -> NSDate? = { data -> NSDate? in
     var date: NSDate?

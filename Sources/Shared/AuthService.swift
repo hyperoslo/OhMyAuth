@@ -74,11 +74,9 @@ import Foundation
         return
       }
 
-      if !force {
-        guard weakSelf.tokenIsExpired else {
-          completion(weakSelf.locker.accessToken, nil)
-          return
-        }
+      guard force || (weakSelf.tokenIsExpired && weakSelf.config.checkExpiry) else {
+        completion(weakSelf.locker.accessToken, nil)
+        return
       }
 
       weakSelf.pendingTokenCompletions.append(completion)
