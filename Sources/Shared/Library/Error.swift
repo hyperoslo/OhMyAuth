@@ -19,7 +19,7 @@ import Foundation
     case NoConfigFound:
       message = "No token or login config provided"
     case NoRefreshTokenFound:
-      message = "No refresh token in keychain"
+      message = "No refresh token in locker"
     case TokenRequestFailed:
       message = "Token request error"
     case TokenRequestAlreadyStarted:
