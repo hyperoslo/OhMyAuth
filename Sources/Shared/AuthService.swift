@@ -17,8 +17,11 @@ import Foundation
       return true
     }
 
-    return expiryDate.timeIntervalSinceReferenceDate
-      >= NSDate.timeIntervalSinceReferenceDate() - config.minimumValidity
+    let expiredTime = expiryDate.timeIntervalSince1970
+    let timeNow = NSDate().timeIntervalSince1970 - config.minimumValidity
+    let expired = timeNow >= expiredTime
+
+    return expired
   }
 
   // MARK: - Initialization
