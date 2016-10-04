@@ -2,26 +2,26 @@ import Alamofire
 import Sugar
 
 protocol NetworkRequestable {
-  var URL: NSURL { get }
-  var parameters: [String: AnyObject] { get }
+  var url: URL { get }
+  var parameters: [String: Any] { get }
   var headers: [String: String] { get }
-  var manager: Alamofire.Manager { get }
+  var manager: Alamofire.SessionManager { get }
 }
 
 extension NetworkRequestable {
 
-  func start(completion: (result: Result<AnyObject>) -> Void) {
-    manager.request(.POST, URL, parameters: parameters, encoding: .URL, headers: headers).responseJSON { response in
+  func start(_ completion: @escaping (_ result: Result<Any>) -> Void) {
+    manager.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { response in
       guard response.result.isSuccess else {
-        completion(result: .Failure(response.result.error))
+        completion(.failure(response.result.error))
         return
       }
 
       guard response.response?.statusCode != 401 else {
-        var userInfo: [String: AnyObject] = [:]
+        var userInfo: [String: Any] = [:]
 
-        if let value = response.result.value as? [String: AnyObject],
-          parsedValue = AuthConfig.parse?(response: value) {
+        if let value = response.result.value as? [String: Any],
+          let parsedValue = AuthConfig.parse?(value) {
           userInfo = parsedValue
         }
 
@@ -29,11 +29,11 @@ extension NetworkRequestable {
           userInfo["statusCode"] = statusCode
         }
 
-        completion(result: .Failure(Error.TokenRequestFailed.toNSError(userInfo: userInfo)))
+        completion(.failure(OhMyAuthError.tokenRequestFailed.toNSError(userInfo: userInfo)))
         return
       }
 
-      completion(result: .Success(response.result.value!))
+      completion(.success(response.result.value!))
     }
   }
 }

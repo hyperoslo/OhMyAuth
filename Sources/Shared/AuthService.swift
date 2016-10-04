@@ -1,24 +1,24 @@
 import Foundation
 
-@objc public class AuthService: NSObject {
+@objc open class AuthService: NSObject {
 
   public typealias Completion = (String?, NSError?) -> Void
 
-  public let name: String
-  public let config: AuthConfig
-  public var locker: Lockable
+  open let name: String
+  open let config: AuthConfig
+  open var locker: Lockable
 
-  private var pendingTokenCompletions = [Completion]()
-  private var executing = false
-  private let tokenQueue = dispatch_queue_create("OhMyAuth.AuthService.TokenQueue", DISPATCH_QUEUE_CONCURRENT)
+  fileprivate var pendingTokenCompletions = [Completion]()
+  fileprivate var executing = false
+  fileprivate let tokenQueue = DispatchQueue(label: "OhMyAuth.AuthService.TokenQueue", attributes: DispatchQueue.Attributes.concurrent)
 
-  public var tokenIsExpired: Bool {
+  open var tokenIsExpired: Bool {
     guard let expiryDate = locker.expiryDate else {
       return true
     }
 
     let expiredTime = expiryDate.timeIntervalSince1970
-    let timeNow = NSDate().timeIntervalSince1970 - config.minimumValidity
+    let timeNow = Date().timeIntervalSince1970 - config.minimumValidity
     let expired = timeNow >= expiredTime
 
     return expired
@@ -40,7 +40,7 @@ import Foundation
 
   // MARK: - Authorization
 
-  public func authorize() -> Bool {
+  open func authorize() -> Bool {
     guard let URL = config.authorizeURL else { return false }
 
     locker.clear()
@@ -49,7 +49,7 @@ import Foundation
     return true
   }
 
-  public func changeUser() -> Bool {
+  open func changeUser() -> Bool {
     guard let URL = config.changeUserURL else { return false }
 
     locker.clear()
@@ -58,7 +58,7 @@ import Foundation
     return true
   }
 
-  public func deauthorize(completion: () -> ()) -> Bool {
+  open func deauthorize(_ completion: () -> ()) -> Bool {
     guard let URL = config.deauthorizeURL else { return false }
 
     locker.clear()
@@ -70,10 +70,10 @@ import Foundation
 
   // MARK: - Tokens
 
-  public func accessToken(force: Bool = false, completion: Completion) {
-    dispatch_barrier_async(tokenQueue) { [weak self] in
+  open func accessToken(_ force: Bool = false, completion: @escaping Completion) {
+    tokenQueue.async(flags: .barrier, execute: { [weak self] in
       guard let weakSelf = self else {
-        completion(nil, Error.AuthServiceDeallocated.toNSError())
+        completion(nil, OhMyAuthError.authServiceDeallocated.toNSError())
         return
       }
 
@@ -88,13 +88,13 @@ import Foundation
 
       weakSelf.refreshToken() { [weak self] accessToken, error in
         guard let weakSelf = self else {
-          completion(nil, Error.AuthServiceDeallocated.toNSError())
+          completion(nil, OhMyAuthError.authServiceDeallocated.toNSError())
           return
         }
 
-        dispatch_barrier_async(weakSelf.tokenQueue) { [weak self] in
+        weakSelf.tokenQueue.async(flags: .barrier, execute: { [weak self] in
           guard let weakSelf = self else {
-            completion(nil, Error.AuthServiceDeallocated.toNSError())
+            completion(nil, OhMyAuthError.authServiceDeallocated.toNSError())
             return
           }
 
@@ -103,22 +103,22 @@ import Foundation
           }
 
           weakSelf.pendingTokenCompletions = []
-        }
+        }) 
       }
-    }
+    }) 
   }
 
-  public func accessToken(URL URL: NSURL, completion: Completion) -> Bool {
+  open func accessToken(URL: Foundation.URL, completion: @escaping Completion) -> Bool {
     guard let redirectURI = config.redirectURI,
-      URLComponents = NSURLComponents(URL: URL, resolvingAgainstBaseURL: false),
-      code = URLComponents.queryItems?.filter({ $0.name == "code" }).first?.value
-      where URL.absoluteString.hasPrefix(redirectURI)
+      let URLComponents = URLComponents(url: URL, resolvingAgainstBaseURL: false),
+      let code = URLComponents.queryItems?.filter({ $0.name == "code" }).first?.value
+      , URL.absoluteString.hasPrefix(redirectURI)
       else {
-        completion(nil, Error.CodeParameterNotFound.toNSError())
+        completion(nil, OhMyAuthError.codeParameterNotFound.toNSError())
         return false
     }
 
-    accessToken(parameters: ["code" : code]) { [weak self] accessToken, error in
+    accessToken(parameters: ["code" : code as AnyObject]) { [weak self] accessToken, error in
       completion(accessToken, error)
       self?.config.webView.close?()
     }
@@ -126,14 +126,14 @@ import Foundation
     return true
   }
 
-  public func accessToken(parameters parameters: [String: AnyObject], completion: Completion) {
+  open func accessToken(parameters: [String: Any], completion: @escaping Completion) {
     let request = AccessTokenRequest(config: config, parameters: parameters)
     executeRequest(request, completion: completion)
   }
 
-  public func refreshToken(completion: Completion) {
+  open func refreshToken(_ completion: @escaping Completion) {
     guard let token = locker.refreshToken else {
-      completion(nil, Error.NoRefreshTokenFound.toNSError())
+      completion(nil, OhMyAuthError.noRefreshTokenFound.toNSError())
       return
     }
 
@@ -141,7 +141,7 @@ import Foundation
     executeRequest(request, completion: completion)
   }
 
-  public func cancel() {
+  open func cancel() {
     config.manager.session.getTasksWithCompletionHandler { dataTasks, uploadTasks, downloadTasks in
       dataTasks.forEach { $0.cancel() }
       uploadTasks.forEach { $0.cancel() }
@@ -151,9 +151,9 @@ import Foundation
 
   // MARK: - Helpers
 
-  func executeRequest(request: NetworkRequestable, completion: Completion) {
+  func executeRequest(_ request: NetworkRequestable, completion: @escaping Completion) {
     guard !executing else {
-      completion(nil, Error.TokenRequestAlreadyStarted.toNSError())
+      completion(nil, OhMyAuthError.tokenRequestAlreadyStarted.toNSError())
       return
     }
 
@@ -161,16 +161,16 @@ import Foundation
 
     TokenNetworkTask(locker: locker, config: config).execute(request) { [weak self] result in
       guard let weakSelf = self else {
-        completion(nil, Error.AuthServiceDeallocated.toNSError())
+        completion(nil, OhMyAuthError.authServiceDeallocated.toNSError())
         return
       }
 
       weakSelf.executing = false
 
       switch result {
-      case .Failure(let error):
+      case .failure(let error):
         completion(nil, error as? NSError)
-      case .Success(let accessToken):
+      case .success(let accessToken):
         completion(accessToken, nil)
       }
     }

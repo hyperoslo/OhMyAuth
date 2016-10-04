@@ -2,14 +2,14 @@ import Foundation
 import Alamofire
 
 struct AccessTokenRequest: NetworkRequestable {
-  let URL: NSURL
-  var parameters: [String: AnyObject]
+  let url: URL
+  var parameters: [String: Any]
   var headers: [String: String]
-  var manager: Alamofire.Manager
+  var manager: Alamofire.SessionManager
 
-  init(config: AuthConfig, parameters: [String: AnyObject]) {
+  init(config: AuthConfig, parameters: [String: Any]) {
     manager = config.manager
-    URL = config.accessTokenUrl
+    url = config.accessTokenUrl
 
     self.parameters = config.accessTokenParameters
     self.headers = config.headers
@@ -21,14 +21,14 @@ struct AccessTokenRequest: NetworkRequestable {
 }
 
 struct RefreshTokenRequest: NetworkRequestable {
-  let URL: NSURL
-  var parameters: [String: AnyObject]
+  let url: URL
+  var parameters: [String: Any]
   var headers: [String: String]
-  var manager: Alamofire.Manager
+  var manager: Alamofire.SessionManager
 
   init(config: AuthConfig, refreshToken: String) {
     manager = config.manager
-    URL = config.accessTokenUrl
+    url = config.accessTokenUrl
     parameters = config.refreshTokenParameters
     parameters["refresh_token"] = refreshToken
     self.headers = config.headers

@@ -4,28 +4,28 @@ protocol NetworkTaskable {
   associatedtype Input
   associatedtype Output
 
-  func process(data: Input) throws -> Output
+  func process(_ data: Input) throws -> Output
 }
 
 extension NetworkTaskable {
 
-  func execute(request: NetworkRequestable, completion: Result<Output> -> Void) {
+  func execute(_ request: NetworkRequestable, completion: @escaping (Result<Output>) -> Void) {
     request.start { result in
       switch result {
-      case .Success(let data):
+      case .success(let data):
         guard let data = data as? Input else {
-          completion(.Failure(Error.TokenRequestFailed.toNSError()))
+          completion(.failure(OhMyAuthError.tokenRequestFailed.toNSError()))
           return
         }
 
         do {
           let output = try self.process(data)
-          completion(.Success(output))
+          completion(.success(output))
         } catch {
-          completion(.Failure(error))
+          completion(.failure(error))
         }
-      case .Failure(let error):
-        completion(.Failure(error))
+      case .failure(let error):
+        completion(.failure(error))
       }
     }
   }

@@ -1,45 +1,45 @@
 import Foundation
 import Alamofire
 
-@objc public class AuthConfig: NSObject {
+@objc open class AuthConfig: NSObject {
 
   // Parse network response to userInfo
-  public static var parse: ((response: [String: AnyObject]) -> [String: AnyObject]?)?
+  open static var parse: ((_ response: [String: Any]) -> [String: Any]?)?
 
-  public var clientId: String
-  public var accessGrantType: String
-  public var accessTokenUrl: NSURL
-  public var authorizeURL: NSURL?
-  public var changeUserURL: NSURL?
-  public var deauthorizeURL: NSURL?
-  public var redirectURI: String?
-  public var minimumValidity: NSTimeInterval = 5 * 60
-  public var checkExpiry = true
+  open var clientId: String
+  open var accessGrantType: String
+  open var accessTokenUrl: URL
+  open var authorizeURL: URL?
+  open var changeUserURL: URL?
+  open var deauthorizeURL: URL?
+  open var redirectURI: String?
+  open var minimumValidity: TimeInterval = 5 * 60
+  open var checkExpiry = true
 
-  public var expiryDate: (data: [String : AnyObject]) -> NSDate? = { data -> NSDate? in
-    var date: NSDate?
+  open var expiryDate: (_ data: [String : AnyObject]) -> Date? = { data -> Date? in
+    var date: Date?
 
     if let expiresIn = data["expires_in"] as? Double {
-      date = NSDate(timeIntervalSinceNow: expiresIn)
+      date = Date(timeIntervalSinceNow: expiresIn)
     }
 
     return date
   }
 
-  public var extraAccessTokenParameters = [String: String]()
-  public var extraRefreshTokenParameters = [String: String]()
+  open var extraAccessTokenParameters = [String: String]()
+  open var extraRefreshTokenParameters = [String: String]()
 
-  public var webView: WebViewable = BrowserWebView()
+  open var webView: WebViewable = BrowserWebView()
 
-  lazy var manager: Alamofire.Manager = {
-    let manager = Alamofire.Manager()
+  lazy var manager: Alamofire.SessionManager = {
+    let manager = Alamofire.SessionManager()
     return manager
   }()
 
   let refreshGrantType = "refresh_token"
   var name = "OhMyAuth"
 
-  public var headers: [String: String] = [:]
+  open var headers: [String: String] = [:]
 
   var sharedParameters: [String: String] {
     var parameters = ["client_id" : clientId]
@@ -75,8 +75,8 @@ import Alamofire
 
   // MARK: - Initialization
 
-  public init(clientId: String, accessTokenUrl: NSURL, accessGrantType: String = "authorization_code",
-              authorizeURL: NSURL? = nil, changeUserURL: NSURL? = nil, redirectURI: String? = nil, headers: [String: String] = [:]) {
+  public init(clientId: String, accessTokenUrl: URL, accessGrantType: String = "authorization_code",
+              authorizeURL: URL? = nil, changeUserURL: URL? = nil, redirectURI: String? = nil, headers: [String: String] = [:]) {
       self.clientId = clientId
       self.accessGrantType = accessGrantType
       self.accessTokenUrl = accessTokenUrl

@@ -1,9 +1,9 @@
 import Foundation
 
-@objc public class UserDefaultsLocker: NSObject, Lockable {
+@objc open class UserDefaultsLocker: NSObject, Lockable {
 
   let name: String
-  let userDefaults = NSUserDefaults.standardUserDefaults()
+  let userDefaults = UserDefaults.standard
 
   public required init(name: String) {
     self.name = name
@@ -11,64 +11,64 @@ import Foundation
 
   // MARK: - Getters and setters
 
-  public var accessToken: String? {
+  open var accessToken: String? {
     get { return getFromDefaults(Keys.accessToken) }
-    set { saveInDefaults(Keys.accessToken, newValue) }
+    set { saveInDefaults(Keys.accessToken, newValue as AnyObject?) }
   }
 
-  public var refreshToken: String? {
+  open var refreshToken: String? {
     get { return getFromDefaults(Keys.refreshToken) }
-    set { saveInDefaults(Keys.refreshToken, newValue) }
+    set { saveInDefaults(Keys.refreshToken, newValue as AnyObject?) }
   }
 
-  public var tokenType: String? {
+  open var tokenType: String? {
     get { return getFromDefaults(Keys.tokenType) }
-    set { saveInDefaults(Keys.tokenType, newValue) }
+    set { saveInDefaults(Keys.tokenType, newValue as AnyObject?) }
   }
 
-  public var expiryDate: NSDate? {
-    get { return getFromDefaults(Keys.expiryDate) as NSDate? }
-    set { saveInDefaults(Keys.expiryDate, newValue) }
+  open var expiryDate: Date? {
+    get { return getFromDefaults(Keys.expiryDate) as Date? }
+    set { saveInDefaults(Keys.expiryDate, newValue as AnyObject?) }
   }
 
-  public var userName: String? {
+  open var userName: String? {
     get { return getFromDefaults(Keys.userName) as String? }
-    set { saveInDefaults(Keys.userName, newValue) }
+    set { saveInDefaults(Keys.userName, newValue as AnyObject?) }
   }
 
-  public var userUPN: String? {
+  open var userUPN: String? {
     get { return getFromDefaults(Keys.userUPN) as String? }
-    set { saveInDefaults(Keys.userUPN, newValue) }
+    set { saveInDefaults(Keys.userUPN, newValue as AnyObject?) }
   }
 
   // MARK: - Helpers
 
-  public func synchronize() -> Bool {
+  @discardableResult open func synchronize() -> Bool {
     return userDefaults.synchronize()
   }
 
-  func getFromDefaults<T>(key: String) -> T? {
+  func getFromDefaults<T>(_ key: String) -> T? {
     let namedKey = generateKey(key)
-    return userDefaults.objectForKey(namedKey) as? T
+    return userDefaults.object(forKey: namedKey) as? T
   }
 
-  func saveInDefaults(key: String, _ value: AnyObject?) {
+  func saveInDefaults(_ key: String, _ value: AnyObject?) {
     let namedKey = generateKey(key)
 
     if let value = value {
-      userDefaults.setObject(value, forKey: namedKey)
+      userDefaults.set(value, forKey: namedKey)
     } else {
-      userDefaults.removeObjectForKey(namedKey)
+      userDefaults.removeObject(forKey: namedKey)
     }
   }
 
-  func generateKey(key: String) -> String {
+  func generateKey(_ key: String) -> String {
     return "\(name)-\(key)"
   }
 
   // MARK: - Clear
 
-  public func clear() {
+  open func clear() {
     accessToken = nil
     refreshToken = nil
     tokenType = nil

@@ -4,7 +4,7 @@ import Foundation
   var accessToken: String? { get set }
   var refreshToken: String? { get set }
   var tokenType: String? { get set }
-  var expiryDate: NSDate? { get set }
+  var expiryDate: Date? { get set }
   var userName: String? { get set }
   var userUPN: String? { get set }
 
@@ -15,7 +15,7 @@ import Foundation
 
 public extension Lockable {
 
-  public func migrate(from: Lockable) {
+  public func migrate(_ from: Lockable) {
     accessToken = from.accessToken
     refreshToken = from.refreshToken
     tokenType = from.tokenType

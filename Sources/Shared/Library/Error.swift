@@ -1,12 +1,12 @@
 import Foundation
 
-@objc public enum Error: Int, ErrorType {
-  case CodeParameterNotFound = -1
-  case NoConfigFound = -2
-  case NoRefreshTokenFound = -3
-  case TokenRequestFailed = -4
-  case TokenRequestAlreadyStarted = -5
-  case AuthServiceDeallocated = -6
+@objc public enum OhMyAuthError: Int {
+  case codeParameterNotFound = -1
+  case noConfigFound = -2
+  case noRefreshTokenFound = -3
+  case tokenRequestFailed = -4
+  case tokenRequestAlreadyStarted = -5
+  case authServiceDeallocated = -6
 
   // MARK: - Helpers
 
@@ -14,31 +14,31 @@ import Foundation
     var message: String
 
     switch self {
-    case CodeParameterNotFound:
+    case .codeParameterNotFound:
       message = "Code parameter not found"
-    case NoConfigFound:
+    case .noConfigFound:
       message = "No token or login config provided"
-    case NoRefreshTokenFound:
+    case .noRefreshTokenFound:
       message = "No refresh token in locker"
-    case TokenRequestFailed:
+    case .tokenRequestFailed:
       message = "Token request error"
-    case TokenRequestAlreadyStarted:
+    case .tokenRequestAlreadyStarted:
       message = "Token request has already been started"
-    case AuthServiceDeallocated:
+    case .authServiceDeallocated:
       message = "AuthService has been deallocated"
     }
 
     return message
   }
 
-  public func toNSError(message: String? = nil, userInfo: [String: AnyObject] = [:]) -> NSError {
+  public func toNSError(_ message: String? = nil, userInfo: [String: Any] = [:]) -> NSError {
     let text = message ?? defaultMessage
     let domain = "OhMyAuth"
 
     NSLog("\(domain): \(text)")
 
     var dictionary = userInfo
-    dictionary[NSLocalizedDescriptionKey] = text
+    dictionary[NSLocalizedDescriptionKey] = text as AnyObject?
 
     return NSError(domain: domain,
       code: rawValue,

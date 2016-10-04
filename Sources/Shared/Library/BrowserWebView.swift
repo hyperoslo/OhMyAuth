@@ -6,13 +6,13 @@ import Foundation
   import Cocoa
 #endif
 
-@objc public class BrowserWebView: NSObject, WebViewable {
+@objc open class BrowserWebView: NSObject, WebViewable {
 
-  public func open(URL: NSURL) {
+  open func open(_ URL: Foundation.URL) {
     #if os(iOS)
       UIApplication.sharedApplication().openURL(URL)
     #elseif os(OSX)
-      NSWorkspace.sharedWorkspace().openURL(URL)
+      NSWorkspace.shared().open(URL)
     #endif
   }
 }

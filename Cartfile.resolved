@@ -1,6 +1,6 @@
 github "Alamofire/Alamofire" "4.0.1"
 github "auth0/JWTDecode.swift" "2.0.0"
-github "hyperoslo/Keychain" "ca9e15eb1ac0c8ed3ddd5a56bc53f5a7ffc650f0"
+github "hyperoslo/Keychain" "c5f3406fed825570bf42b75c498531f86abbb256"
 github "Quick/Nimble" "v5.0.0"
 github "Quick/Quick" "v0.10.0"
 github "hyperoslo/Sugar" "bff8fdde3499f5d40ef0725d120f45dea3f102ce"
