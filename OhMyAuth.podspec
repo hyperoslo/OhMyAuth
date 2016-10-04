@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "OhMyAuth"
   s.summary          = "A short description of OhMyAuth."
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.homepage         = "https://github.com/hyperoslo/OhMyAuth"
   s.license          = 'MIT'
   s.author           = { "Hyper Interaktiv AS" => "ios@hyper.no" }
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/hyperoslo'
 
   s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.10'
+  s.osx.deployment_target = '10.11'
 
   s.requires_arc = true
   s.ios.source_files = 'Sources/{iOS,Shared}/**/*'
