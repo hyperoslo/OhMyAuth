@@ -25,4 +25,6 @@ Pod::Spec.new do |s|
   s.dependency 'Keychain'
   s.dependency 'Alamofire'
   s.dependency 'JWTDecode'
+
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
 end
