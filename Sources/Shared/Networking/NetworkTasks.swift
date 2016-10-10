@@ -16,7 +16,7 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
 
   // MARK: - Processing
 
-  func process(_ data: JSONDictionary) throws -> String {
+  func process(_ data: [String : AnyObject]) throws -> String {
     guard let accessToken = data["access_token"] as? String else {
       locker.clear()
       NSLog("\(data)")
