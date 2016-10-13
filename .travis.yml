@@ -8,6 +8,7 @@ before_install:
 
 script:
 - xcodebuild clean build -project OhMyAuth.xcodeproj -scheme OhMyAuth-iOS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0'
-- xcodebuild test -project OhMyAuth.xcodeproj -scheme OhMyAuth-iOS -sdk iphonesimulator
 - xcodebuild clean build -project OhMyAuth.xcodeproj -scheme OhMyAuth-Mac -sdk macosx
-- xcodebuild test -project OhMyAuth.xcodeproj -scheme OhMyAuth-Mac -sdk macosx
+
+notifications:
+  email: false
