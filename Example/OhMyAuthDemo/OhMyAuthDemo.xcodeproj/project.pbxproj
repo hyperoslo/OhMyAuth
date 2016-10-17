@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C52C4450F89B6D7C2BB0E8C4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FD06562CFE3A8EE67E8372 /* Pods.framework */; };
+		37B6B38BA8CD858EA61616FA /* Pods_OhMyAuthDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F6F47DABBCBD65397EBF87 /* Pods_OhMyAuthDemo.framework */; };
 		D5ED739B1C64B82B003772EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5ED73931C64B82B003772EF /* LaunchScreen.storyboard */; };
 		D5ED739D1C64B82B003772EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5ED73971C64B82B003772EF /* Assets.xcassets */; };
 		D5ED739E1C64B82B003772EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED73991C64B82B003772EF /* AppDelegate.swift */; };
@@ -15,7 +15,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		26FEE489C2DA3009A07CE997 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		23434E81791780719B85759A /* Pods-OhMyAuthDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyAuthDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyAuthDemo/Pods-OhMyAuthDemo.release.xcconfig"; sourceTree = "<group>"; };
+		ACED75C531255E80DE0146C9 /* Pods-OhMyAuthDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhMyAuthDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OhMyAuthDemo/Pods-OhMyAuthDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D0FD06562CFE3A8EE67E8372 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C7F7401C3BC9CE008CDDBA /* OhMyAuthDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OhMyAuthDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5ED73941C64B82B003772EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -23,7 +24,7 @@
 		D5ED73971C64B82B003772EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5ED73991C64B82B003772EF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5ED739A1C64B82B003772EF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FEF8360606AA9A085B1FF7A3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D7F6F47DABBCBD65397EBF87 /* Pods_OhMyAuthDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhMyAuthDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,28 +32,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C52C4450F89B6D7C2BB0E8C4 /* Pods.framework in Frameworks */,
+				37B6B38BA8CD858EA61616FA /* Pods_OhMyAuthDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		94D64F6D6B1BB0FB4769EF0B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FEF8360606AA9A085B1FF7A3 /* Pods.debug.xcconfig */,
-				26FEE489C2DA3009A07CE997 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		A20DF62A54EB3D2C4543E8F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				D0FD06562CFE3A8EE67E8372 /* Pods.framework */,
+				D7F6F47DABBCBD65397EBF87 /* Pods_OhMyAuthDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5778A46BE86F79C3770C401 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACED75C531255E80DE0146C9 /* Pods-OhMyAuthDemo.debug.xcconfig */,
+				23434E81791780719B85759A /* Pods-OhMyAuthDemo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		D5C7F7371C3BC9CE008CDDBA = {
@@ -60,8 +62,8 @@
 			children = (
 				D5ED73921C64B82B003772EF /* OhMyAuthDemo */,
 				D5C7F7411C3BC9CE008CDDBA /* Products */,
-				94D64F6D6B1BB0FB4769EF0B /* Pods */,
 				A20DF62A54EB3D2C4543E8F2 /* Frameworks */,
+				C5778A46BE86F79C3770C401 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,12 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5C7F7521C3BC9CE008CDDBA /* Build configuration list for PBXNativeTarget "OhMyAuthDemo" */;
 			buildPhases = (
-				FB45C2BB1C5D2B5E1FAC7BD9 /* Check Pods Manifest.lock */,
+				80ED7AD7213D26F81A472768 /* [CP] Check Pods Manifest.lock */,
 				D5C7F73C1C3BC9CE008CDDBA /* Sources */,
 				D5C7F73D1C3BC9CE008CDDBA /* Frameworks */,
 				D5C7F73E1C3BC9CE008CDDBA /* Resources */,
-				14852800234A676D9F29E22F /* Embed Pods Frameworks */,
-				DA6B05F26633E96FD8040DBA /* Copy Pods Resources */,
+				E81402D4C73B0395FCB08142 /* [CP] Embed Pods Frameworks */,
+				6F431A4B96DC7A966075E08C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +138,7 @@
 				TargetAttributes = {
 					D5C7F73F1C3BC9CE008CDDBA = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -170,49 +173,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14852800234A676D9F29E22F /* Embed Pods Frameworks */ = {
+		6F431A4B96DC7A966075E08C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OhMyAuthDemo/Pods-OhMyAuthDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DA6B05F26633E96FD8040DBA /* Copy Pods Resources */ = {
+		80ED7AD7213D26F81A472768 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		FB45C2BB1C5D2B5E1FAC7BD9 /* Check Pods Manifest.lock */ = {
+		E81402D4C73B0395FCB08142 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OhMyAuthDemo/Pods-OhMyAuthDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -277,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -315,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -324,25 +327,29 @@
 		};
 		D5C7F7531C3BC9CE008CDDBA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEF8360606AA9A085B1FF7A3 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = ACED75C531255E80DE0146C9 /* Pods-OhMyAuthDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OhMyAuthDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.OhMyAuthDemo;
 				PRODUCT_NAME = OhMyAuthDemo;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		D5C7F7541C3BC9CE008CDDBA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26FEE489C2DA3009A07CE997 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 23434E81791780719B85759A /* Pods-OhMyAuthDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OhMyAuthDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.OhMyAuthDemo;
 				PRODUCT_NAME = OhMyAuthDemo;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
