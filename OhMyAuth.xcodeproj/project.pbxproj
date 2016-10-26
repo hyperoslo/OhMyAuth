@@ -21,10 +21,8 @@
 		D51D95721C62B82400D78EF3 /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* AuthContainer.swift */; };
 		D51D95751C62BAF000D78EF3 /* NetworkTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */; };
 		D51D95761C62BAF000D78EF3 /* NetworkTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */; };
-		D529C2CC1C620B1900B6FA6B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C81C620B1900B6FA6B /* Alamofire.framework */; };
 		D529C2CD1C620B1900B6FA6B /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C91C620B1900B6FA6B /* JWTDecode.framework */; };
 		D529C2CE1C620B1900B6FA6B /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CA1C620B1900B6FA6B /* Keychain.framework */; };
-		D529C2CF1C620B1900B6FA6B /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CB1C620B1900B6FA6B /* Sugar.framework */; };
 		D595759F1C63538B000CD22B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595759E1C63538B000CD22B /* Result.swift */; };
 		D59575A71C63558D000CD22B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A61C63558D000CD22B /* Error.swift */; };
 		D59575A81C63558D000CD22B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A61C63558D000CD22B /* Error.swift */; };
@@ -41,10 +39,8 @@
 		D59575E51C641E4C000CD22B /* NetworkTaskable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575DF1C641E3D000CD22B /* NetworkTaskable.swift */; };
 		D59575E61C641E4C000CD22B /* WebViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575E01C641E3D000CD22B /* WebViewable.swift */; };
 		D59575E71C641E4C000CD22B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595759E1C63538B000CD22B /* Result.swift */; };
-		D59575ED1C641F14000CD22B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575E91C641F14000CD22B /* Alamofire.framework */; };
 		D59575EE1C641F14000CD22B /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575EA1C641F14000CD22B /* JWTDecode.framework */; };
 		D59575EF1C641F14000CD22B /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575EB1C641F14000CD22B /* Keychain.framework */; };
-		D59575F01C641F14000CD22B /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575EC1C641F14000CD22B /* Sugar.framework */; };
 		D5B2E8AA1C3A780C00C0327D /* OhMyAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* OhMyAuth.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* OhMyAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* OhMyAuth.framework */; };
 		D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629751C3A878E007F7B7C /* Quick.framework */; };
@@ -119,10 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D529C2CC1C620B1900B6FA6B /* Alamofire.framework in Frameworks */,
 				D529C2CD1C620B1900B6FA6B /* JWTDecode.framework in Frameworks */,
 				D529C2CE1C620B1900B6FA6B /* Keychain.framework in Frameworks */,
-				D529C2CF1C620B1900B6FA6B /* Sugar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,10 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D59575ED1C641F14000CD22B /* Alamofire.framework in Frameworks */,
 				D59575EE1C641F14000CD22B /* JWTDecode.framework in Frameworks */,
 				D59575EF1C641F14000CD22B /* Keychain.framework in Frameworks */,
-				D59575F01C641F14000CD22B /* Sugar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,9 +493,7 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Sugar.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Keychain.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/JWTDecode.framework",
 			);
 			name = "Copy frameworks with Carthage";
@@ -519,9 +509,7 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Sugar.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Keychain.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/JWTDecode.framework",
 			);
 			name = "Copy frameworks with Carthage";

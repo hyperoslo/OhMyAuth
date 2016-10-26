@@ -21,9 +21,7 @@ Pod::Spec.new do |s|
   s.ios.frameworks = 'UIKit', 'Foundation'
   s.osx.frameworks = 'Cocoa', 'Foundation'
 
-  s.dependency 'Sugar'
   s.dependency 'Keychain'
-  s.dependency 'Alamofire'
   s.dependency 'JWTDecode'
 
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
