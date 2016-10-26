@@ -1,36 +1,33 @@
 import Foundation
-import Alamofire
+import Malibu
 
-struct AccessTokenRequest: NetworkRequestable {
-  let url: URL
-  var parameters: [String: Any]
-  var headers: [String: String]
-  var manager: Alamofire.SessionManager
+struct AccessTokenRequest: NetworkRequestable, POSTRequestable {
+  var networking: Networking
+  var message: Message
 
   init(config: AuthConfig, parameters: [String: Any]) {
-    manager = config.manager
-    url = config.accessTokenUrl
+    networking = config.networking
+    
+    var allParameters: [String: Any] = config.accessTokenParameters
 
-    self.parameters = config.accessTokenParameters
-    self.headers = config.headers
-
-    parameters.forEach { key, value in
-      self.parameters[key] = value
+    parameters.forEach { (key, value) in
+      allParameters[key] = value
     }
+    
+    message = Message(resource: config.accessTokenUrl, parameters: allParameters, headers: config.headers)
   }
 }
 
-struct RefreshTokenRequest: NetworkRequestable {
-  let url: URL
-  var parameters: [String: Any]
-  var headers: [String: String]
-  var manager: Alamofire.SessionManager
+struct RefreshTokenRequest: NetworkRequestable, POSTRequestable {
+  var networking: Networking
+  var message: Message
 
   init(config: AuthConfig, refreshToken: String) {
-    manager = config.manager
-    url = config.accessTokenUrl
-    parameters = config.refreshTokenParameters
+    networking = config.networking
+
+    var parameters = config.refreshTokenParameters
     parameters["refresh_token"] = refreshToken
-    self.headers = config.headers
+    
+    message = Message(resource: config.accessTokenUrl, parameters: parameters, headers: config.headers)
   }
 }

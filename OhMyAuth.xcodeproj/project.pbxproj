@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		923CA22C1DC144290016B791 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923CA22B1DC144290016B791 /* Utils.swift */; };
 		923CA22D1DC144290016B791 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923CA22B1DC144290016B791 /* Utils.swift */; };
+		923CA2341DC14DA80016B791 /* Malibu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CA2321DC14DA80016B791 /* Malibu.framework */; };
+		923CA2351DC14DA80016B791 /* When.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CA2331DC14DA80016B791 /* When.framework */; };
 		BDB798E51C89CFD2002400B0 /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB798E41C89CFD2002400B0 /* Lockable.swift */; };
 		BDB798E61C89CFD2002400B0 /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB798E41C89CFD2002400B0 /* Lockable.swift */; };
 		BDBF67DF1C89D87200BDAFA3 /* UserDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */; };
@@ -73,6 +75,8 @@
 
 /* Begin PBXFileReference section */
 		923CA22B1DC144290016B791 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		923CA2321DC14DA80016B791 /* Malibu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Malibu.framework; path = Carthage/Build/iOS/Malibu.framework; sourceTree = "<group>"; };
+		923CA2331DC14DA80016B791 /* When.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = When.framework; path = Carthage/Build/iOS/When.framework; sourceTree = "<group>"; };
 		BDB798E41C89CFD2002400B0 /* Lockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lockable.swift; sourceTree = "<group>"; };
 		BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsLocker.swift; sourceTree = "<group>"; };
 		D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthConfig.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923CA2341DC14DA80016B791 /* Malibu.framework in Frameworks */,
+				923CA2351DC14DA80016B791 /* When.framework in Frameworks */,
 				D529C2CD1C620B1900B6FA6B /* JWTDecode.framework in Frameworks */,
 				D529C2CE1C620B1900B6FA6B /* Keychain.framework in Frameworks */,
 			);
@@ -153,6 +159,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		923CA2311DC14DA80016B791 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				923CA2321DC14DA80016B791 /* Malibu.framework */,
+				923CA2331DC14DA80016B791 /* When.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D51D95631C62539C00D78EF3 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +230,7 @@
 				D5B2E8A01C3A780C00C0327D /* Products */,
 				D529C2D01C620B2E00B6FA6B /* Frameworks-iOS */,
 				D59575F11C641F1E000CD22B /* Frameworks-Mac */,
+				923CA2311DC14DA80016B791 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -499,6 +515,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Keychain.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/JWTDecode.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/When.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Malibu.framework",
 			);
 			name = "Copy frameworks with Carthage";
 			outputPaths = (

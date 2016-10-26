@@ -1,5 +1,5 @@
 import Foundation
-import Alamofire
+import Malibu
 
 @objc open class AuthConfig: NSObject {
 
@@ -31,10 +31,7 @@ import Alamofire
 
   open var webView: WebViewable = BrowserWebView()
 
-  lazy var manager: Alamofire.SessionManager = {
-    let manager = Alamofire.SessionManager()
-    return manager
-  }()
+  public var networking: Networking = Networking()
 
   let refreshGrantType = "refresh_token"
   var name = "OhMyAuth"
