@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		923CA22C1DC144290016B791 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923CA22B1DC144290016B791 /* Utils.swift */; };
+		923CA22D1DC144290016B791 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923CA22B1DC144290016B791 /* Utils.swift */; };
 		BDB798E51C89CFD2002400B0 /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB798E41C89CFD2002400B0 /* Lockable.swift */; };
 		BDB798E61C89CFD2002400B0 /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB798E41C89CFD2002400B0 /* Lockable.swift */; };
 		BDBF67DF1C89D87200BDAFA3 /* UserDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */; };
@@ -70,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		923CA22B1DC144290016B791 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		BDB798E41C89CFD2002400B0 /* Lockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lockable.swift; sourceTree = "<group>"; };
 		BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsLocker.swift; sourceTree = "<group>"; };
 		D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthConfig.swift; sourceTree = "<group>"; };
@@ -265,6 +268,7 @@
 				D51D95631C62539C00D78EF3 /* Networking */,
 				D59575DD1C641E3D000CD22B /* Protocols */,
 				BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */,
+				923CA22B1DC144290016B791 /* Utils.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -567,6 +571,7 @@
 				D59575A71C63558D000CD22B /* Error.swift in Sources */,
 				BDB798E51C89CFD2002400B0 /* Lockable.swift in Sources */,
 				D59575E21C641E3D000CD22B /* NetworkTaskable.swift in Sources */,
+				923CA22C1DC144290016B791 /* Utils.swift in Sources */,
 				D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */,
 				BDBF67DF1C89D87200BDAFA3 /* UserDefaultsLocker.swift in Sources */,
 				D59575D21C640E4C000CD22B /* BrowserWebView.swift in Sources */,
@@ -597,6 +602,7 @@
 				D51D95701C62B82400D78EF3 /* AuthConfig.swift in Sources */,
 				D59575AC1C63CF3C000CD22B /* AuthService.swift in Sources */,
 				D51D956E1C62B82400D78EF3 /* NetworkRequests.swift in Sources */,
+				923CA22D1DC144290016B791 /* Utils.swift in Sources */,
 				D51D95721C62B82400D78EF3 /* AuthContainer.swift in Sources */,
 				D59575E51C641E4C000CD22B /* NetworkTaskable.swift in Sources */,
 				D59575A81C63558D000CD22B /* Error.swift in Sources */,

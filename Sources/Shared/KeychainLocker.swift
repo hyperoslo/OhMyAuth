@@ -1,6 +1,5 @@
 import Foundation
 import Keychain
-import Sugar
 
 struct Keys {
 

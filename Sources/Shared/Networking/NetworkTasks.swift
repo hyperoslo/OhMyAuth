@@ -1,5 +1,4 @@
 import Foundation
-import Sugar
 import JWTDecode
 
 struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
@@ -54,7 +53,7 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
       } catch {}
     }
 
-    locker.synchronize()
+    let _ = locker.synchronize()
 
     return accessToken
   }

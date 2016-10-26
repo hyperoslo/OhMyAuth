@@ -1,5 +1,4 @@
 import Alamofire
-import Sugar
 
 protocol NetworkRequestable {
   var url: URL { get }
