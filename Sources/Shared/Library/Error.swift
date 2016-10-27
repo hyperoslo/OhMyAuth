@@ -7,6 +7,7 @@ import Foundation
   case tokenRequestFailed = -4
   case tokenRequestAlreadyStarted = -5
   case authServiceDeallocated = -6
+  case internalError = -7
 
   // MARK: - Helpers
 
@@ -26,6 +27,8 @@ import Foundation
       message = "Token request has already been started"
     case .authServiceDeallocated:
       message = "AuthService has been deallocated"
+    case .internalError:
+      message = "Internal error"
     }
 
     return message

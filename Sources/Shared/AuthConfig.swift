@@ -1,10 +1,10 @@
 import Foundation
-import Alamofire
 
 @objc open class AuthConfig: NSObject {
 
   // Parse network response to userInfo
   open static var parse: ((_ response: [String: Any]) -> [String: Any]?)?
+  open static var networking: Networking = Networking(configuration: URLSessionConfiguration.default)
 
   open var clientId: String
   open var accessGrantType: String
@@ -30,11 +30,6 @@ import Alamofire
   open var extraRefreshTokenParameters = [String: String]()
 
   open var webView: WebViewable = BrowserWebView()
-
-  lazy var manager: Alamofire.SessionManager = {
-    let manager = Alamofire.SessionManager()
-    return manager
-  }()
 
   let refreshGrantType = "refresh_token"
   var name = "OhMyAuth"

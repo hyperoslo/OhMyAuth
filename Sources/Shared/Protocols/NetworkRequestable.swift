@@ -1,38 +1,26 @@
-import Alamofire
-
 protocol NetworkRequestable {
   var url: URL { get }
   var parameters: [String: Any] { get }
   var headers: [String: String] { get }
-  var manager: Alamofire.SessionManager { get }
 }
 
 extension NetworkRequestable {
 
   func start(_ completion: @escaping (_ result: Result<Any>) -> Void) {
-    manager.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { response in
-      guard response.result.isSuccess else {
-        completion(.failure(response.result.error))
+    AuthConfig.networking.post(url: url, parameters: parameters, headers: headers) { (data, response, error) in
+      guard let response = response as? HTTPURLResponse else {
+        completion(Result.failure(OhMyAuthError.internalError.toNSError()))
         return
       }
-
-      guard response.response?.statusCode != 401 else {
-        var userInfo: [String: Any] = [:]
-
-        if let value = response.result.value as? [String: Any],
-          let parsedValue = AuthConfig.parse?(value) {
-          userInfo = parsedValue
-        }
-
-        if let statusCode = response.response?.statusCode {
-          userInfo["statusCode"] = statusCode
-        }
-
-        completion(.failure(OhMyAuthError.tokenRequestFailed.toNSError(userInfo: userInfo)))
+      
+      guard let data = data,
+        let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
+      else {
+        completion(Result.failure(OhMyAuthError.internalError.toNSError()))
         return
       }
-
-      completion(.success(response.result.value!))
+      
+      completion(Result.success(json))
     }
   }
 }

@@ -142,7 +142,7 @@ import Foundation
   }
 
   open func cancel() {
-    config.manager.session.getTasksWithCompletionHandler { dataTasks, uploadTasks, downloadTasks in
+    AuthConfig.networking.session.getTasksWithCompletionHandler { dataTasks, uploadTasks, downloadTasks in
       dataTasks.forEach { $0.cancel() }
       uploadTasks.forEach { $0.cancel() }
       downloadTasks.forEach { $0.cancel() }
