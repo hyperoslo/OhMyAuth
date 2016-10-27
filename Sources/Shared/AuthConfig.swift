@@ -2,8 +2,6 @@ import Foundation
 
 @objc open class AuthConfig: NSObject {
 
-  // Parse network response to userInfo
-  open static var parse: ((_ response: [String: Any]) -> [String: Any]?)?
   open static var networking: Networking = Networking(configuration: URLSessionConfiguration.default)
 
   open var clientId: String

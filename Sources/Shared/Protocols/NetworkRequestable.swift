@@ -13,14 +13,33 @@ extension NetworkRequestable {
         return
       }
       
+      guard error == nil
+      else {
+        if let error = error as? NSError {
+          completion(Result.failure(error))
+        } else {
+          completion(Result.failure(OhMyAuthError.internalError.toNSError()))
+        }
+        
+        return
+      }
+      
       guard let data = data,
-        let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
+        let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .allowFragments),
+        let json = jsonObject as? [String: Any]
       else {
         completion(Result.failure(OhMyAuthError.internalError.toNSError()))
         return
       }
       
-      completion(Result.success(json))
+      if response.statusCode != 401 {
+        completion(Result.success(json))
+      } else {
+        var userInfo: [String: Any] = json
+        userInfo["statusCode"] = response.statusCode
+        
+        completion(.failure(OhMyAuthError.tokenRequestFailed.toNSError(userInfo: userInfo)))
+      }
     }
   }
 }
