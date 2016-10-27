@@ -1,5 +1,4 @@
 import Foundation
-import Malibu
 
 @objc open class AuthService: NSObject {
 
@@ -143,7 +142,11 @@ import Malibu
   }
 
   open func cancel() {
-    config.networking.cancelAllRequests()
+    config.manager.session.getTasksWithCompletionHandler { dataTasks, uploadTasks, downloadTasks in
+      dataTasks.forEach { $0.cancel() }
+      uploadTasks.forEach { $0.cancel() }
+      downloadTasks.forEach { $0.cancel() }
+    }
   }
 
   // MARK: - Helpers

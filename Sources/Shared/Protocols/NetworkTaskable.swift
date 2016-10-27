@@ -1,5 +1,3 @@
-import Malibu
-
 protocol NetworkQueueable {}
 
 protocol NetworkTaskable {
