@@ -1,3 +1,5 @@
+import Foundation
+
 protocol NetworkRequestable {
   var url: URL { get }
   var parameters: [String: Any] { get }
