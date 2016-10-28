@@ -53,7 +53,7 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
       } catch {}
     }
 
-    let _ = locker.synchronize()
+    locker.synchronize()
 
     return accessToken
   }

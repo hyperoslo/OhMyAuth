@@ -10,7 +10,7 @@ import Foundation
 
   init(name: String)
   func clear()
-  func synchronize() -> Bool
+  @discardableResult  func synchronize() -> Bool
 }
 
 public extension Lockable {
