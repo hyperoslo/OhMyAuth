@@ -43,7 +43,7 @@ import Foundation
 
   // MARK: - Helpers
 
-  @discardableResult open func synchronize() -> Bool {
+  open func synchronize() -> Bool {
     return userDefaults.synchronize()
   }
 

@@ -1,5 +1,4 @@
 import Foundation
-import Sugar
 import JWTDecode
 
 struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {

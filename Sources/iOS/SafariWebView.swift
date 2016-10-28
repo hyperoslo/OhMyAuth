@@ -1,6 +1,5 @@
 import UIKit
 import SafariServices
-import Sugar
 
 @available(iOS 9, *)
 @objc public class SafariWebView: NSObject, WebViewable {
@@ -19,7 +18,7 @@ import Sugar
   }
 
   public func close() {
-    dispatch {
+    DispatchQueue.main.async {
       UIApplication.presentedViewController()?.dismiss(animated: true, completion: nil)
     }
   }

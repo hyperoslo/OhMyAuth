@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   }
   s.social_media_url = 'https://twitter.com/hyperoslo'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.11'
 
   s.requires_arc = true
@@ -21,9 +21,7 @@ Pod::Spec.new do |s|
   s.ios.frameworks = 'UIKit', 'Foundation'
   s.osx.frameworks = 'Cocoa', 'Foundation'
 
-  s.dependency 'Sugar'
   s.dependency 'Keychain'
-  s.dependency 'Alamofire'
   s.dependency 'JWTDecode'
 
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
