@@ -4,7 +4,7 @@ open class Networking {
   public let session: URLSession
   
   public init(configuration: URLSessionConfiguration) {
-    self.session = URLSession(configuration: configuration)
+    session = URLSession(configuration: configuration)
   }
   
   public func post(url: URL, parameters: [String: Any], headers: [String: String], completion: @escaping ((Data?, URLResponse?, Error?) -> Void)) {
