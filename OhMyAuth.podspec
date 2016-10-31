@@ -23,6 +23,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'Keychain'
   s.dependency 'JWTDecode'
+  s.dependency 'Malibu'
 
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
 end
