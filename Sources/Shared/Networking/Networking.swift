@@ -16,7 +16,7 @@ open class Networking {
     }
     
     if request.value(forHTTPHeaderField: "Content-Type") == nil {
-      request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+      request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
     }
     
     request.httpMethod = "POST"
@@ -24,7 +24,7 @@ open class Networking {
     request.httpBody = QueryBuilder()
       .buildQuery(from: parameters)
       .data(using: String.Encoding.utf8, allowLossyConversion: false)
-        
+
     let task = session.dataTask(with: request) { (data, response, error) in
       completion(data, response, error)
     }
