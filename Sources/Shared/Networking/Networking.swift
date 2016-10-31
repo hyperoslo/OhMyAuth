@@ -1,4 +1,5 @@
 import Foundation
+import Malibu
 
 open class Networking {
   public let session: URLSession
@@ -19,7 +20,10 @@ open class Networking {
     }
     
     request.httpMethod = "POST"
-    request.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: JSONSerialization.WritingOptions())
+
+    request.httpBody = QueryBuilder()
+      .buildQuery(from: parameters)
+      .data(using: String.Encoding.utf8, allowLossyConversion: false)
         
     let task = session.dataTask(with: request) { (data, response, error) in
       completion(data, response, error)
