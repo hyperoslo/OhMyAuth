@@ -21,6 +21,8 @@
 		D20D5C4B1DEEF474000CEAAB /* UserDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C431DEEF474000CEAAB /* UserDefaultsLocker.swift */; };
 		D20D5C4D1DEEF4AE000CEAAB /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C4C1DEEF4AE000CEAAB /* Keys.swift */; };
 		D20D5C4E1DEEF4AE000CEAAB /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C4C1DEEF4AE000CEAAB /* Keys.swift */; };
+		D20D5C4F1DEEF939000CEAAB /* SharedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED73831C64B1E4003772EF /* SharedSpec.swift */; };
+		D20D5C501DEEF93A000CEAAB /* SharedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED73831C64B1E4003772EF /* SharedSpec.swift */; };
 		D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */; };
 		D51D95621C62536E00D78EF3 /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* AuthContainer.swift */; };
 		D51D95651C6253B200D78EF3 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* NetworkRequests.swift */; };
@@ -54,8 +56,6 @@
 		D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629751C3A878E007F7B7C /* Quick.framework */; };
 		D5C629781C3A878E007F7B7C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629761C3A878E007F7B7C /* Nimble.framework */; };
 		D5C629851C3A893F007F7B7C /* Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629841C3A893F007F7B7C /* Mac.swift */; };
-		D5ED738E1C64B206003772EF /* SharedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED73831C64B1E4003772EF /* SharedSpec.swift */; };
-		D5ED738F1C64B206003772EF /* SharedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED73831C64B1E4003772EF /* SharedSpec.swift */; };
 		D5ED73901C64B20C003772EF /* MacSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED73811C64B1E4003772EF /* MacSpec.swift */; };
 		D5ED73911C64B210003772EF /* iOSSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED737F1C64B1E4003772EF /* iOSSpec.swift */; };
 /* End PBXBuildFile section */
@@ -105,9 +105,9 @@
 		D59575EB1C641F14000CD22B /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = Carthage/Build/Mac/Keychain.framework; sourceTree = "<group>"; };
 		D59575EC1C641F14000CD22B /* Sugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sugar.framework; path = Carthage/Build/Mac/Sugar.framework; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* OhMyAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OhMyAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5B2E8A91C3A780C00C0327D /* OhMyAuth.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OhMyAuth.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B2E8A91C3A780C00C0327D /* OhMyAuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OhMyAuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629401C3A7FAA007F7B7C /* OhMyAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OhMyAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C629491C3A7FAA007F7B7C /* OhMyAuth.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OhMyAuth.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5C629491C3A7FAA007F7B7C /* OhMyAuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OhMyAuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629751C3A878E007F7B7C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		D5C629761C3A878E007F7B7C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		D5C629841C3A893F007F7B7C /* Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mac.swift; sourceTree = "<group>"; };
@@ -240,9 +240,9 @@
 			isa = PBXGroup;
 			children = (
 				D5B2E89F1C3A780C00C0327D /* OhMyAuth.framework */,
-				D5B2E8A91C3A780C00C0327D /* OhMyAuth.xctest */,
+				D5B2E8A91C3A780C00C0327D /* OhMyAuthTests.xctest */,
 				D5C629401C3A7FAA007F7B7C /* OhMyAuth.framework */,
-				D5C629491C3A7FAA007F7B7C /* OhMyAuth.xctest */,
+				D5C629491C3A7FAA007F7B7C /* OhMyAuthTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -389,7 +389,7 @@
 			);
 			name = "OhMyAuth-iOS-Tests";
 			productName = OhMyAuthTests;
-			productReference = D5B2E8A91C3A780C00C0327D /* OhMyAuth.xctest */;
+			productReference = D5B2E8A91C3A780C00C0327D /* OhMyAuthTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D5C6293F1C3A7FAA007F7B7C /* OhMyAuth-Mac */ = {
@@ -427,7 +427,7 @@
 			);
 			name = "OhMyAuth-Mac-Tests";
 			productName = "OhMyAuth-MacTests";
-			productReference = D5C629491C3A7FAA007F7B7C /* OhMyAuth.xctest */;
+			productReference = D5C629491C3A7FAA007F7B7C /* OhMyAuthTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -606,7 +606,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5ED73911C64B210003772EF /* iOSSpec.swift in Sources */,
-				D5ED738E1C64B206003772EF /* SharedSpec.swift in Sources */,
+				D20D5C4F1DEEF939000CEAAB /* SharedSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,7 +641,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5ED73901C64B20C003772EF /* MacSpec.swift in Sources */,
-				D5ED738F1C64B206003772EF /* SharedSpec.swift in Sources */,
+				D20D5C501DEEF93A000CEAAB /* SharedSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,7 +815,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuthTests/Info-iOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.OhMyAuthTests;
-				PRODUCT_NAME = OhMyAuth;
+				PRODUCT_NAME = OhMyAuthTests;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -831,7 +831,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuthTests/Info-iOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.OhMyAuthTests;
-				PRODUCT_NAME = OhMyAuth;
+				PRODUCT_NAME = OhMyAuthTests;
 			};
 			name = Release;
 		};
@@ -903,7 +903,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.OhMyAuth-MacTests";
-				PRODUCT_NAME = OhMyAuth;
+				PRODUCT_NAME = OhMyAuthTests;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -921,7 +921,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.OhMyAuth-MacTests";
-				PRODUCT_NAME = OhMyAuth;
+				PRODUCT_NAME = OhMyAuthTests;
 				SDKROOT = macosx;
 			};
 			name = Release;
