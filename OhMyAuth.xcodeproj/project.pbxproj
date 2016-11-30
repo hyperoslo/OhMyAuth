@@ -19,6 +19,8 @@
 		D20D5C491DEEF474000CEAAB /* SuiteDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C421DEEF474000CEAAB /* SuiteDefaultsLocker.swift */; };
 		D20D5C4A1DEEF474000CEAAB /* UserDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C431DEEF474000CEAAB /* UserDefaultsLocker.swift */; };
 		D20D5C4B1DEEF474000CEAAB /* UserDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C431DEEF474000CEAAB /* UserDefaultsLocker.swift */; };
+		D20D5C4D1DEEF4AE000CEAAB /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C4C1DEEF4AE000CEAAB /* Keys.swift */; };
+		D20D5C4E1DEEF4AE000CEAAB /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C4C1DEEF4AE000CEAAB /* Keys.swift */; };
 		D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */; };
 		D51D95621C62536E00D78EF3 /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* AuthContainer.swift */; };
 		D51D95651C6253B200D78EF3 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* NetworkRequests.swift */; };
@@ -82,6 +84,7 @@
 		D20D5C411DEEF474000CEAAB /* Lockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lockable.swift; sourceTree = "<group>"; };
 		D20D5C421DEEF474000CEAAB /* SuiteDefaultsLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuiteDefaultsLocker.swift; sourceTree = "<group>"; };
 		D20D5C431DEEF474000CEAAB /* UserDefaultsLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsLocker.swift; sourceTree = "<group>"; };
+		D20D5C4C1DEEF4AE000CEAAB /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthConfig.swift; sourceTree = "<group>"; };
 		D51D95611C62536E00D78EF3 /* AuthContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthContainer.swift; sourceTree = "<group>"; };
 		D51D95641C6253B200D78EF3 /* NetworkRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
@@ -164,6 +167,7 @@
 				D20D5C411DEEF474000CEAAB /* Lockable.swift */,
 				D20D5C421DEEF474000CEAAB /* SuiteDefaultsLocker.swift */,
 				D20D5C431DEEF474000CEAAB /* UserDefaultsLocker.swift */,
+				D20D5C4C1DEEF4AE000CEAAB /* Keys.swift */,
 			);
 			path = Locker;
 			sourceTree = "<group>";
@@ -583,6 +587,7 @@
 				D51D95651C6253B200D78EF3 /* NetworkRequests.swift in Sources */,
 				D59575E31C641E3D000CD22B /* WebViewable.swift in Sources */,
 				D59575A71C63558D000CD22B /* Error.swift in Sources */,
+				D20D5C4D1DEEF4AE000CEAAB /* Keys.swift in Sources */,
 				D59575E21C641E3D000CD22B /* NetworkTaskable.swift in Sources */,
 				923CA22C1DC144290016B791 /* Utils.swift in Sources */,
 				D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */,
@@ -615,6 +620,7 @@
 				D59575D31C640E50000CD22B /* BrowserWebView.swift in Sources */,
 				D51D95701C62B82400D78EF3 /* AuthConfig.swift in Sources */,
 				D59575AC1C63CF3C000CD22B /* AuthService.swift in Sources */,
+				D20D5C4E1DEEF4AE000CEAAB /* Keys.swift in Sources */,
 				D20D5C471DEEF474000CEAAB /* Lockable.swift in Sources */,
 				D51D956E1C62B82400D78EF3 /* NetworkRequests.swift in Sources */,
 				923CA22D1DC144290016B791 /* Utils.swift in Sources */,

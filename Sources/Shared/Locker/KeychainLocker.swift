@@ -1,17 +1,6 @@
 import Foundation
 import Keychain
 
-struct Keys {
-
-  static let service = "\(Application.name)"
-  static let accessToken = "\(Application.name)-AccessToken"
-  static let refreshToken = "\(Application.name)-RefreshToken"
-  static let tokenType = "\(Application.name)-TokenType"
-  static let expiryDate = "\(Application.name)-ExpiryDate"
-  static let userName = "\(Application.name)-UserName"
-  static let userUPN = "\(Application.name)-UserUPN"
-}
-
 @objc open class KeychainLocker: UserDefaultsLocker {
 
   public required init(name: String) {
