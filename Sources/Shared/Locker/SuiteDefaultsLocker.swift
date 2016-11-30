@@ -56,12 +56,12 @@ import Foundation
     return userDefaults.synchronize()
   }
 
-  func getFromDefaults<T>(_ key: String) -> T? {
+  public func getFromDefaults<T>(_ key: String) -> T? {
     let namedKey = generateKey(key)
     return userDefaults.object(forKey: namedKey) as? T
   }
 
-  func saveInDefaults(_ key: String, _ value: AnyObject?) {
+  public func saveInDefaults(_ key: String, _ value: AnyObject?) {
     let namedKey = generateKey(key)
 
     if let value = value {
