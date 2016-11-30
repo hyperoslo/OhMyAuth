@@ -11,17 +11,19 @@
 		922A1E5A1DC28A680088A7E7 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A1E581DC28A680088A7E7 /* Networking.swift */; };
 		923CA22C1DC144290016B791 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923CA22B1DC144290016B791 /* Utils.swift */; };
 		923CA22D1DC144290016B791 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923CA22B1DC144290016B791 /* Utils.swift */; };
-		BDB798E51C89CFD2002400B0 /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB798E41C89CFD2002400B0 /* Lockable.swift */; };
-		BDB798E61C89CFD2002400B0 /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB798E41C89CFD2002400B0 /* Lockable.swift */; };
-		BDBF67DF1C89D87200BDAFA3 /* UserDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */; };
-		BDBF67E01C89D87200BDAFA3 /* UserDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */; };
+		D20D5C441DEEF474000CEAAB /* KeychainLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C401DEEF474000CEAAB /* KeychainLocker.swift */; };
+		D20D5C451DEEF474000CEAAB /* KeychainLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C401DEEF474000CEAAB /* KeychainLocker.swift */; };
+		D20D5C461DEEF474000CEAAB /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C411DEEF474000CEAAB /* Lockable.swift */; };
+		D20D5C471DEEF474000CEAAB /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C411DEEF474000CEAAB /* Lockable.swift */; };
+		D20D5C481DEEF474000CEAAB /* SharedDefaultLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C421DEEF474000CEAAB /* SharedDefaultLocker.swift */; };
+		D20D5C491DEEF474000CEAAB /* SharedDefaultLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C421DEEF474000CEAAB /* SharedDefaultLocker.swift */; };
+		D20D5C4A1DEEF474000CEAAB /* UserDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C431DEEF474000CEAAB /* UserDefaultsLocker.swift */; };
+		D20D5C4B1DEEF474000CEAAB /* UserDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C431DEEF474000CEAAB /* UserDefaultsLocker.swift */; };
 		D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */; };
-		D51D95601C62535200D78EF3 /* KeychainLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* KeychainLocker.swift */; };
 		D51D95621C62536E00D78EF3 /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* AuthContainer.swift */; };
 		D51D95651C6253B200D78EF3 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* NetworkRequests.swift */; };
 		D51D956E1C62B82400D78EF3 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* NetworkRequests.swift */; };
 		D51D95701C62B82400D78EF3 /* AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */; };
-		D51D95711C62B82400D78EF3 /* KeychainLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* KeychainLocker.swift */; };
 		D51D95721C62B82400D78EF3 /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* AuthContainer.swift */; };
 		D51D95751C62BAF000D78EF3 /* NetworkTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */; };
 		D51D95761C62BAF000D78EF3 /* NetworkTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */; };
@@ -76,10 +78,11 @@
 /* Begin PBXFileReference section */
 		922A1E581DC28A680088A7E7 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		923CA22B1DC144290016B791 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		BDB798E41C89CFD2002400B0 /* Lockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lockable.swift; sourceTree = "<group>"; };
-		BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsLocker.swift; sourceTree = "<group>"; };
+		D20D5C401DEEF474000CEAAB /* KeychainLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainLocker.swift; sourceTree = "<group>"; };
+		D20D5C411DEEF474000CEAAB /* Lockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lockable.swift; sourceTree = "<group>"; };
+		D20D5C421DEEF474000CEAAB /* SharedDefaultLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedDefaultLocker.swift; sourceTree = "<group>"; };
+		D20D5C431DEEF474000CEAAB /* UserDefaultsLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsLocker.swift; sourceTree = "<group>"; };
 		D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthConfig.swift; sourceTree = "<group>"; };
-		D51D955F1C62535200D78EF3 /* KeychainLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainLocker.swift; sourceTree = "<group>"; };
 		D51D95611C62536E00D78EF3 /* AuthContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthContainer.swift; sourceTree = "<group>"; };
 		D51D95641C6253B200D78EF3 /* NetworkRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
 		D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTasks.swift; sourceTree = "<group>"; };
@@ -154,6 +157,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D20D5C3F1DEEF474000CEAAB /* Locker */ = {
+			isa = PBXGroup;
+			children = (
+				D20D5C401DEEF474000CEAAB /* KeychainLocker.swift */,
+				D20D5C411DEEF474000CEAAB /* Lockable.swift */,
+				D20D5C421DEEF474000CEAAB /* SharedDefaultLocker.swift */,
+				D20D5C431DEEF474000CEAAB /* UserDefaultsLocker.swift */,
+			);
+			path = Locker;
+			sourceTree = "<group>";
+		};
 		D51D95631C62539C00D78EF3 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,15 +273,13 @@
 		D5C6296E1C3A809D007F7B7C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				D20D5C3F1DEEF474000CEAAB /* Locker */,
 				D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */,
 				D51D95611C62536E00D78EF3 /* AuthContainer.swift */,
 				D59575AA1C63CF3C000CD22B /* AuthService.swift */,
-				BDB798E41C89CFD2002400B0 /* Lockable.swift */,
-				D51D955F1C62535200D78EF3 /* KeychainLocker.swift */,
 				D595759D1C635384000CD22B /* Library */,
 				D51D95631C62539C00D78EF3 /* Networking */,
 				D59575DD1C641E3D000CD22B /* Protocols */,
-				BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */,
 				923CA22B1DC144290016B791 /* Utils.swift */,
 			);
 			path = Shared;
@@ -563,19 +575,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				D595759F1C63538B000CD22B /* Result.swift in Sources */,
-				D51D95601C62535200D78EF3 /* KeychainLocker.swift in Sources */,
 				D59575CD1C640C0A000CD22B /* SafariWebView.swift in Sources */,
 				922A1E591DC28A680088A7E7 /* Networking.swift in Sources */,
 				D59575AB1C63CF3C000CD22B /* AuthService.swift in Sources */,
+				D20D5C4A1DEEF474000CEAAB /* UserDefaultsLocker.swift in Sources */,
+				D20D5C481DEEF474000CEAAB /* SharedDefaultLocker.swift in Sources */,
 				D51D95651C6253B200D78EF3 /* NetworkRequests.swift in Sources */,
 				D59575E31C641E3D000CD22B /* WebViewable.swift in Sources */,
 				D59575A71C63558D000CD22B /* Error.swift in Sources */,
-				BDB798E51C89CFD2002400B0 /* Lockable.swift in Sources */,
 				D59575E21C641E3D000CD22B /* NetworkTaskable.swift in Sources */,
 				923CA22C1DC144290016B791 /* Utils.swift in Sources */,
 				D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */,
-				BDBF67DF1C89D87200BDAFA3 /* UserDefaultsLocker.swift in Sources */,
+				D20D5C461DEEF474000CEAAB /* Lockable.swift in Sources */,
 				D59575D21C640E4C000CD22B /* BrowserWebView.swift in Sources */,
+				D20D5C441DEEF474000CEAAB /* KeychainLocker.swift in Sources */,
 				D59575DB1C641DBF000CD22B /* UIApplication+OhMyAuth.swift in Sources */,
 				D51D95621C62536E00D78EF3 /* AuthContainer.swift in Sources */,
 				D59575E11C641E3D000CD22B /* NetworkRequestable.swift in Sources */,
@@ -600,18 +613,19 @@
 				D59575E71C641E4C000CD22B /* Result.swift in Sources */,
 				922A1E5A1DC28A680088A7E7 /* Networking.swift in Sources */,
 				D59575D31C640E50000CD22B /* BrowserWebView.swift in Sources */,
-				D51D95711C62B82400D78EF3 /* KeychainLocker.swift in Sources */,
 				D51D95701C62B82400D78EF3 /* AuthConfig.swift in Sources */,
 				D59575AC1C63CF3C000CD22B /* AuthService.swift in Sources */,
+				D20D5C471DEEF474000CEAAB /* Lockable.swift in Sources */,
 				D51D956E1C62B82400D78EF3 /* NetworkRequests.swift in Sources */,
 				923CA22D1DC144290016B791 /* Utils.swift in Sources */,
 				D51D95721C62B82400D78EF3 /* AuthContainer.swift in Sources */,
 				D59575E51C641E4C000CD22B /* NetworkTaskable.swift in Sources */,
 				D59575A81C63558D000CD22B /* Error.swift in Sources */,
+				D20D5C4B1DEEF474000CEAAB /* UserDefaultsLocker.swift in Sources */,
 				D59575E61C641E4C000CD22B /* WebViewable.swift in Sources */,
 				D59575E41C641E4C000CD22B /* NetworkRequestable.swift in Sources */,
-				BDBF67E01C89D87200BDAFA3 /* UserDefaultsLocker.swift in Sources */,
-				BDB798E61C89CFD2002400B0 /* Lockable.swift in Sources */,
+				D20D5C491DEEF474000CEAAB /* SharedDefaultLocker.swift in Sources */,
+				D20D5C451DEEF474000CEAAB /* KeychainLocker.swift in Sources */,
 				D51D95761C62BAF000D78EF3 /* NetworkTasks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
