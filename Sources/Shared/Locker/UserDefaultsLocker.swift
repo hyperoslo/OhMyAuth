@@ -62,7 +62,7 @@ import Foundation
     }
   }
 
-  func generateKey(_ key: String) -> String {
+  public func generateKey(_ key: String) -> String {
     return "\(name)-\(key)"
   }
 
