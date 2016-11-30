@@ -2,7 +2,6 @@ import Foundation
 
 public struct Keys {
 
-  public static let service = "\(Application.name)"
   public static let accessToken = "\(Application.name)-AccessToken"
   public static let refreshToken = "\(Application.name)-RefreshToken"
   public static let tokenType = "\(Application.name)-TokenType"

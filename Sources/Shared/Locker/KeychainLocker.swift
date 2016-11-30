@@ -3,6 +3,13 @@ import Keychain
 
 @objc open class KeychainLocker: UserDefaultsLocker {
 
+  public var service: String = Application.name
+
+  public required init(name: String, service: String) {
+    self.service = service
+    super.init(name: name)
+  }
+
   public required init(name: String) {
     super.init(name: name)
   }
@@ -28,7 +35,7 @@ import Keychain
 
   func getFromKeychain(_ key: String) -> String? {
     let namedKey = generateKey(key)
-    let password = Keychain.password(forAccount: namedKey, service: Keys.service)
+    let password = Keychain.password(forAccount: namedKey, service: service)
 
     return !password.isEmpty ? password : nil
   }
@@ -37,9 +44,9 @@ import Keychain
     let namedKey = generateKey(key)
 
     if let value = value {
-      Keychain.setPassword(value, forAccount: namedKey, service: Keys.service)
+      Keychain.setPassword(value, forAccount: namedKey, service: service)
     } else {
-      Keychain.deletePassword(forAccount: namedKey, service: Keys.service)
+      Keychain.deletePassword(forAccount: namedKey, service: service)
     }
   }
 }
