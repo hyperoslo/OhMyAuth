@@ -15,13 +15,14 @@ import Foundation
 
 public extension Lockable {
 
-  public func migrate(_ from: Lockable) {
-    accessToken = from.accessToken
-    refreshToken = from.refreshToken
-    tokenType = from.tokenType
-    expiryDate = from.expiryDate
-    userName = from.userName
-    userUPN = from.userUPN
-    from.clear()
+  public func migrate(from locker: Lockable) {
+    accessToken = locker.accessToken
+    refreshToken = locker.refreshToken
+    tokenType = locker.tokenType
+    expiryDate = locker.expiryDate
+    userName = locker.userName
+    userUPN = locker.userUPN
+    
+    locker.clear()
   }
 }

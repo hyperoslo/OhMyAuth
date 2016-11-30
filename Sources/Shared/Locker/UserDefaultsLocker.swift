@@ -1,21 +1,13 @@
 import Foundation
 
-@objc open class SuiteDefaultsLocker: NSObject, Lockable {
+@objc open class UserDefaultsLocker: NSObject, Lockable {
 
-  let name: String
-  let suiteName: String
-  public let userDefaults: UserDefaults!
-
-  public init(name: String, suiteName: String) {
-    self.name = name
-    self.suiteName = suiteName
-    self.userDefaults = UserDefaults(suiteName: suiteName)
-  }
+  public let name: String
+  public var service: String = Application.name
+  public let userDefaults = UserDefaults.standard
 
   public required init(name: String) {
     self.name = name
-    self.suiteName = name
-    self.userDefaults = UserDefaults(suiteName: suiteName)
   }
 
   // MARK: - Getters and setters
@@ -71,8 +63,8 @@ import Foundation
     }
   }
 
-  func generateKey(_ key: String) -> String {
-    return "\(name)-\(key)"
+  public func generateKey(_ key: String) -> String {
+    return "\(name)-\(service)-\(key)"
   }
 
   // MARK: - Clear
