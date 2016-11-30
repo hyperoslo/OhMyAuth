@@ -2,8 +2,8 @@ import Foundation
 
 @objc open class SuiteDefaultsLocker: NSObject, Lockable {
 
-  let name: String
-  let suiteName: String
+  public let name: String
+  public let suiteName: String
   public let userDefaults: UserDefaults!
 
   public init(name: String, suiteName: String) {
@@ -71,8 +71,8 @@ import Foundation
     }
   }
 
-  func generateKey(_ key: String) -> String {
-    return "\(name)-\(key)"
+  public func generateKey(_ key: String) -> String {
+    return "\(name)-\(suiteName)-\(key)"
   }
 
   // MARK: - Clear

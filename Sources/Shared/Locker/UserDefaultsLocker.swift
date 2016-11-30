@@ -2,8 +2,9 @@ import Foundation
 
 @objc open class UserDefaultsLocker: NSObject, Lockable {
 
-  let name: String
-  let userDefaults = UserDefaults.standard
+  public let name: String
+  public var service: String = Application.name
+  public let userDefaults = UserDefaults.standard
 
   public required init(name: String) {
     self.name = name
@@ -63,7 +64,7 @@ import Foundation
   }
 
   public func generateKey(_ key: String) -> String {
-    return "\(name)-\(key)"
+    return "\(name)-\(service)-\(key)"
   }
 
   // MARK: - Clear

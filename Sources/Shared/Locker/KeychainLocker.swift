@@ -3,17 +3,6 @@ import Keychain
 
 @objc open class KeychainLocker: UserDefaultsLocker {
 
-  public var service: String = Application.name
-
-  public required init(name: String, service: String) {
-    self.service = service
-    super.init(name: name)
-  }
-
-  public required init(name: String) {
-    super.init(name: name)
-  }
-
   // MARK: - Keychain
 
   open override var accessToken: String? {
