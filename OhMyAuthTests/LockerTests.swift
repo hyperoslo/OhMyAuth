@@ -37,5 +37,21 @@ class LockerTests: XCTestCase {
     XCTAssertEqual(locker.generateKey(Keys.accessToken), "app-\(suiteName)-\(Keys.accessToken)")
     XCTAssertEqual(locker.generateKey(Keys.expiryDate), "app-\(suiteName)-\(Keys.expiryDate)")
     XCTAssertEqual(locker.generateKey("custom-key"), "app-\(suiteName)-custom-key")
+
+    locker.saveInDefaults("custom-key", "custom-value" as AnyObject)
+    XCTAssertEqual(locker.getFromDefaults("custom-key"), "custom-value")
+  }
+
+  func testMigration() {
+    let locker1 = UserDefaultsLocker(name: "app")
+    let locker2 = SuiteDefaultsLocker(name: "app", suiteName: "group.com.hyper.OhMyAuth")
+
+    let uuid = NSUUID().uuidString
+    locker1.accessToken = uuid
+
+    locker2.migrate(from: locker1)
+
+    XCTAssertNil(locker1.accessToken)
+    XCTAssertEqual(locker2.accessToken, uuid)
   }
 }
