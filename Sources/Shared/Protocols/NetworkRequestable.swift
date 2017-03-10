@@ -1,39 +1,47 @@
-import Alamofire
-import Sugar
+import Foundation
 
 protocol NetworkRequestable {
-  var URL: NSURL { get }
-  var parameters: [String: AnyObject] { get }
+  var url: URL { get }
+  var parameters: [String: Any] { get }
   var headers: [String: String] { get }
-  var manager: Alamofire.Manager { get }
 }
 
 extension NetworkRequestable {
 
-  func start(completion: (result: Result<AnyObject>) -> Void) {
-    manager.request(.POST, URL, parameters: parameters, encoding: .URL, headers: headers).responseJSON { response in
-      guard response.result.isSuccess else {
-        completion(result: .Failure(response.result.error))
+  func start(_ completion: @escaping (_ result: Result<Any>) -> Void) {
+    AuthConfig.networking.post(url: url, parameters: parameters, headers: headers) { (data, response, error) in
+      guard let response = response as? HTTPURLResponse else {
+        completion(Result.failure(OhMyAuthError.internalError.toNSError()))
         return
       }
-
-      guard response.response?.statusCode != 401 else {
-        var userInfo: [String: AnyObject] = [:]
-
-        if let value = response.result.value as? [String: AnyObject],
-          parsedValue = AuthConfig.parse?(response: value) {
-          userInfo = parsedValue
+      
+      guard error == nil
+      else {
+        if let error = error as? NSError {
+          completion(Result.failure(error))
+        } else {
+          completion(Result.failure(OhMyAuthError.internalError.toNSError()))
         }
-
-        if let statusCode = response.response?.statusCode {
-          userInfo["statusCode"] = statusCode
-        }
-
-        completion(result: .Failure(Error.TokenRequestFailed.toNSError(userInfo: userInfo)))
+        
         return
       }
-
-      completion(result: .Success(response.result.value!))
+      
+      guard let data = data,
+        let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .allowFragments),
+        let json = jsonObject as? [String: Any]
+      else {
+        completion(Result.failure(OhMyAuthError.internalError.toNSError()))
+        return
+      }
+      
+      if response.statusCode != 401 {
+        completion(Result.success(json))
+      } else {
+        var userInfo: [String: Any] = json
+        userInfo["statusCode"] = response.statusCode
+        
+        completion(.failure(OhMyAuthError.tokenRequestFailed.toNSError(userInfo: userInfo)))
+      }
     }
   }
 }

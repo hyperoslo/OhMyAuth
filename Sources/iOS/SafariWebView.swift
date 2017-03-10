@@ -1,6 +1,5 @@
 import UIKit
 import SafariServices
-import Sugar
 
 @available(iOS 9, *)
 @objc public class SafariWebView: NSObject, WebViewable {
@@ -13,14 +12,14 @@ import Sugar
     self.animated = animated
   }
 
-  public func open(URL: NSURL) {
-    let webViewController = SFSafariViewController(URL: URL)
-    viewController.presentViewController(webViewController, animated: animated, completion: nil)
+  public func open(_ url: URL) {
+    let webViewController = SFSafariViewController(url: url)
+    viewController.present(webViewController, animated: animated, completion: nil)
   }
 
   public func close() {
-    dispatch {
-      UIApplication.presentedViewController()?.dismissViewControllerAnimated(true, completion: nil)
+    DispatchQueue.main.async {
+      UIApplication.presentedViewController()?.dismiss(animated: true, completion: nil)
     }
   }
 }

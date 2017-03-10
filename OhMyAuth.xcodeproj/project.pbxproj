@@ -7,24 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BDB798E51C89CFD2002400B0 /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB798E41C89CFD2002400B0 /* Lockable.swift */; };
-		BDB798E61C89CFD2002400B0 /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB798E41C89CFD2002400B0 /* Lockable.swift */; };
-		BDBF67DF1C89D87200BDAFA3 /* UserDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */; };
-		BDBF67E01C89D87200BDAFA3 /* UserDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */; };
+		922A1E591DC28A680088A7E7 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A1E581DC28A680088A7E7 /* Networking.swift */; };
+		922A1E5A1DC28A680088A7E7 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A1E581DC28A680088A7E7 /* Networking.swift */; };
+		923CA22C1DC144290016B791 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923CA22B1DC144290016B791 /* Utils.swift */; };
+		923CA22D1DC144290016B791 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923CA22B1DC144290016B791 /* Utils.swift */; };
+		D20D5C441DEEF474000CEAAB /* KeychainLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C401DEEF474000CEAAB /* KeychainLocker.swift */; };
+		D20D5C451DEEF474000CEAAB /* KeychainLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C401DEEF474000CEAAB /* KeychainLocker.swift */; };
+		D20D5C461DEEF474000CEAAB /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C411DEEF474000CEAAB /* Lockable.swift */; };
+		D20D5C471DEEF474000CEAAB /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C411DEEF474000CEAAB /* Lockable.swift */; };
+		D20D5C481DEEF474000CEAAB /* SuiteDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C421DEEF474000CEAAB /* SuiteDefaultsLocker.swift */; };
+		D20D5C491DEEF474000CEAAB /* SuiteDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C421DEEF474000CEAAB /* SuiteDefaultsLocker.swift */; };
+		D20D5C4A1DEEF474000CEAAB /* UserDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C431DEEF474000CEAAB /* UserDefaultsLocker.swift */; };
+		D20D5C4B1DEEF474000CEAAB /* UserDefaultsLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C431DEEF474000CEAAB /* UserDefaultsLocker.swift */; };
+		D20D5C4D1DEEF4AE000CEAAB /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C4C1DEEF4AE000CEAAB /* Keys.swift */; };
+		D20D5C4E1DEEF4AE000CEAAB /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C4C1DEEF4AE000CEAAB /* Keys.swift */; };
+		D2DD2AB41DEEFF2900AFF5BA /* LockerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DD2AB31DEEFF2900AFF5BA /* LockerTests.swift */; };
+		D2DD2AB51DEEFF2900AFF5BA /* LockerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DD2AB31DEEFF2900AFF5BA /* LockerTests.swift */; };
 		D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */; };
-		D51D95601C62535200D78EF3 /* KeychainLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* KeychainLocker.swift */; };
 		D51D95621C62536E00D78EF3 /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* AuthContainer.swift */; };
 		D51D95651C6253B200D78EF3 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* NetworkRequests.swift */; };
 		D51D956E1C62B82400D78EF3 /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95641C6253B200D78EF3 /* NetworkRequests.swift */; };
 		D51D95701C62B82400D78EF3 /* AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */; };
-		D51D95711C62B82400D78EF3 /* KeychainLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D955F1C62535200D78EF3 /* KeychainLocker.swift */; };
 		D51D95721C62B82400D78EF3 /* AuthContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95611C62536E00D78EF3 /* AuthContainer.swift */; };
 		D51D95751C62BAF000D78EF3 /* NetworkTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */; };
 		D51D95761C62BAF000D78EF3 /* NetworkTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */; };
-		D529C2CC1C620B1900B6FA6B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C81C620B1900B6FA6B /* Alamofire.framework */; };
 		D529C2CD1C620B1900B6FA6B /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C91C620B1900B6FA6B /* JWTDecode.framework */; };
 		D529C2CE1C620B1900B6FA6B /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CA1C620B1900B6FA6B /* Keychain.framework */; };
-		D529C2CF1C620B1900B6FA6B /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CB1C620B1900B6FA6B /* Sugar.framework */; };
 		D595759F1C63538B000CD22B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595759E1C63538B000CD22B /* Result.swift */; };
 		D59575A71C63558D000CD22B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A61C63558D000CD22B /* Error.swift */; };
 		D59575A81C63558D000CD22B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A61C63558D000CD22B /* Error.swift */; };
@@ -41,19 +49,11 @@
 		D59575E51C641E4C000CD22B /* NetworkTaskable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575DF1C641E3D000CD22B /* NetworkTaskable.swift */; };
 		D59575E61C641E4C000CD22B /* WebViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575E01C641E3D000CD22B /* WebViewable.swift */; };
 		D59575E71C641E4C000CD22B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595759E1C63538B000CD22B /* Result.swift */; };
-		D59575ED1C641F14000CD22B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575E91C641F14000CD22B /* Alamofire.framework */; };
 		D59575EE1C641F14000CD22B /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575EA1C641F14000CD22B /* JWTDecode.framework */; };
 		D59575EF1C641F14000CD22B /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575EB1C641F14000CD22B /* Keychain.framework */; };
-		D59575F01C641F14000CD22B /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575EC1C641F14000CD22B /* Sugar.framework */; };
 		D5B2E8AA1C3A780C00C0327D /* OhMyAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* OhMyAuth.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* OhMyAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* OhMyAuth.framework */; };
-		D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629751C3A878E007F7B7C /* Quick.framework */; };
-		D5C629781C3A878E007F7B7C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629761C3A878E007F7B7C /* Nimble.framework */; };
 		D5C629851C3A893F007F7B7C /* Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629841C3A893F007F7B7C /* Mac.swift */; };
-		D5ED738E1C64B206003772EF /* SharedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED73831C64B1E4003772EF /* SharedSpec.swift */; };
-		D5ED738F1C64B206003772EF /* SharedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED73831C64B1E4003772EF /* SharedSpec.swift */; };
-		D5ED73901C64B20C003772EF /* MacSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED73811C64B1E4003772EF /* MacSpec.swift */; };
-		D5ED73911C64B210003772EF /* iOSSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED737F1C64B1E4003772EF /* iOSSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,17 +74,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BDB798E41C89CFD2002400B0 /* Lockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lockable.swift; sourceTree = "<group>"; };
-		BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsLocker.swift; sourceTree = "<group>"; };
+		922A1E581DC28A680088A7E7 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		923CA22B1DC144290016B791 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D20D5C401DEEF474000CEAAB /* KeychainLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainLocker.swift; sourceTree = "<group>"; };
+		D20D5C411DEEF474000CEAAB /* Lockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lockable.swift; sourceTree = "<group>"; };
+		D20D5C421DEEF474000CEAAB /* SuiteDefaultsLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuiteDefaultsLocker.swift; sourceTree = "<group>"; };
+		D20D5C431DEEF474000CEAAB /* UserDefaultsLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsLocker.swift; sourceTree = "<group>"; };
+		D20D5C4C1DEEF4AE000CEAAB /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		D2DD2AB31DEEFF2900AFF5BA /* LockerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockerTests.swift; sourceTree = "<group>"; };
 		D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthConfig.swift; sourceTree = "<group>"; };
-		D51D955F1C62535200D78EF3 /* KeychainLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainLocker.swift; sourceTree = "<group>"; };
 		D51D95611C62536E00D78EF3 /* AuthContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthContainer.swift; sourceTree = "<group>"; };
 		D51D95641C6253B200D78EF3 /* NetworkRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
 		D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTasks.swift; sourceTree = "<group>"; };
-		D529C2C81C620B1900B6FA6B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		D529C2C91C620B1900B6FA6B /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = Carthage/Build/iOS/JWTDecode.framework; sourceTree = "<group>"; };
 		D529C2CA1C620B1900B6FA6B /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = Carthage/Build/iOS/Keychain.framework; sourceTree = "<group>"; };
-		D529C2CB1C620B1900B6FA6B /* Sugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sugar.framework; path = Carthage/Build/iOS/Sugar.framework; sourceTree = "<group>"; };
 		D595759E1C63538B000CD22B /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		D59575A61C63558D000CD22B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		D59575AA1C63CF3C000CD22B /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -99,19 +102,14 @@
 		D59575EB1C641F14000CD22B /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = Carthage/Build/Mac/Keychain.framework; sourceTree = "<group>"; };
 		D59575EC1C641F14000CD22B /* Sugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sugar.framework; path = Carthage/Build/Mac/Sugar.framework; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* OhMyAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OhMyAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5B2E8A91C3A780C00C0327D /* OhMyAuth.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OhMyAuth.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B2E8A91C3A780C00C0327D /* OhMyAuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OhMyAuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629401C3A7FAA007F7B7C /* OhMyAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OhMyAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C629491C3A7FAA007F7B7C /* OhMyAuth.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OhMyAuth.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C629751C3A878E007F7B7C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		D5C629761C3A878E007F7B7C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		D5C629491C3A7FAA007F7B7C /* OhMyAuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OhMyAuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629841C3A893F007F7B7C /* Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mac.swift; sourceTree = "<group>"; };
 		D5ED73791C64B1E4003772EF /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		D5ED737A1C64B1E4003772EF /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
 		D5ED737C1C64B1E4003772EF /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		D5ED737D1C64B1E4003772EF /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
-		D5ED737F1C64B1E4003772EF /* iOSSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSSpec.swift; sourceTree = "<group>"; };
-		D5ED73811C64B1E4003772EF /* MacSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacSpec.swift; sourceTree = "<group>"; };
-		D5ED73831C64B1E4003772EF /* SharedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D529C2CC1C620B1900B6FA6B /* Alamofire.framework in Frameworks */,
 				D529C2CD1C620B1900B6FA6B /* JWTDecode.framework in Frameworks */,
 				D529C2CE1C620B1900B6FA6B /* Keychain.framework in Frameworks */,
-				D529C2CF1C620B1900B6FA6B /* Sugar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,8 +126,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */,
-				D5C629781C3A878E007F7B7C /* Nimble.framework in Frameworks */,
 				D5B2E8AA1C3A780C00C0327D /* OhMyAuth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,10 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D59575ED1C641F14000CD22B /* Alamofire.framework in Frameworks */,
 				D59575EE1C641F14000CD22B /* JWTDecode.framework in Frameworks */,
 				D59575EF1C641F14000CD22B /* Keychain.framework in Frameworks */,
-				D59575F01C641F14000CD22B /* Sugar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,9 +150,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D20D5C3F1DEEF474000CEAAB /* Locker */ = {
+			isa = PBXGroup;
+			children = (
+				D20D5C401DEEF474000CEAAB /* KeychainLocker.swift */,
+				D20D5C411DEEF474000CEAAB /* Lockable.swift */,
+				D20D5C421DEEF474000CEAAB /* SuiteDefaultsLocker.swift */,
+				D20D5C431DEEF474000CEAAB /* UserDefaultsLocker.swift */,
+				D20D5C4C1DEEF4AE000CEAAB /* Keys.swift */,
+			);
+			path = Locker;
+			sourceTree = "<group>";
+		};
 		D51D95631C62539C00D78EF3 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				922A1E581DC28A680088A7E7 /* Networking.swift */,
 				D51D95641C6253B200D78EF3 /* NetworkRequests.swift */,
 				D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */,
 			);
@@ -170,12 +175,8 @@
 		D529C2D01C620B2E00B6FA6B /* Frameworks-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D529C2C81C620B1900B6FA6B /* Alamofire.framework */,
 				D529C2C91C620B1900B6FA6B /* JWTDecode.framework */,
 				D529C2CA1C620B1900B6FA6B /* Keychain.framework */,
-				D529C2CB1C620B1900B6FA6B /* Sugar.framework */,
-				D5C629751C3A878E007F7B7C /* Quick.framework */,
-				D5C629761C3A878E007F7B7C /* Nimble.framework */,
 			);
 			name = "Frameworks-iOS";
 			sourceTree = "<group>";
@@ -227,9 +228,9 @@
 			isa = PBXGroup;
 			children = (
 				D5B2E89F1C3A780C00C0327D /* OhMyAuth.framework */,
-				D5B2E8A91C3A780C00C0327D /* OhMyAuth.xctest */,
+				D5B2E8A91C3A780C00C0327D /* OhMyAuthTests.xctest */,
 				D5C629401C3A7FAA007F7B7C /* OhMyAuth.framework */,
-				D5C629491C3A7FAA007F7B7C /* OhMyAuth.xctest */,
+				D5C629491C3A7FAA007F7B7C /* OhMyAuthTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,15 +265,14 @@
 		D5C6296E1C3A809D007F7B7C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				D20D5C3F1DEEF474000CEAAB /* Locker */,
 				D51D955C1C6252DD00D78EF3 /* AuthConfig.swift */,
 				D51D95611C62536E00D78EF3 /* AuthContainer.swift */,
 				D59575AA1C63CF3C000CD22B /* AuthService.swift */,
-				BDB798E41C89CFD2002400B0 /* Lockable.swift */,
-				D51D955F1C62535200D78EF3 /* KeychainLocker.swift */,
 				D595759D1C635384000CD22B /* Library */,
 				D51D95631C62539C00D78EF3 /* Networking */,
 				D59575DD1C641E3D000CD22B /* Protocols */,
-				BDBF67DE1C89D87200BDAFA3 /* UserDefaultsLocker.swift */,
+				923CA22B1DC144290016B791 /* Utils.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -291,35 +291,9 @@
 			children = (
 				D5ED737C1C64B1E4003772EF /* Info-iOS.plist */,
 				D5ED737D1C64B1E4003772EF /* Info-Mac.plist */,
-				D5ED737E1C64B1E4003772EF /* iOS */,
-				D5ED73801C64B1E4003772EF /* Mac */,
-				D5ED73821C64B1E4003772EF /* Shared */,
+				D2DD2AB31DEEFF2900AFF5BA /* LockerTests.swift */,
 			);
 			path = OhMyAuthTests;
-			sourceTree = "<group>";
-		};
-		D5ED737E1C64B1E4003772EF /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D5ED737F1C64B1E4003772EF /* iOSSpec.swift */,
-			);
-			path = iOS;
-			sourceTree = "<group>";
-		};
-		D5ED73801C64B1E4003772EF /* Mac */ = {
-			isa = PBXGroup;
-			children = (
-				D5ED73811C64B1E4003772EF /* MacSpec.swift */,
-			);
-			path = Mac;
-			sourceTree = "<group>";
-		};
-		D5ED73821C64B1E4003772EF /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				D5ED73831C64B1E4003772EF /* SharedSpec.swift */,
-			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,7 +342,6 @@
 				D5B2E8A51C3A780C00C0327D /* Sources */,
 				D5B2E8A61C3A780C00C0327D /* Frameworks */,
 				D5B2E8A71C3A780C00C0327D /* Resources */,
-				D5C629731C3A86E3007F7B7C /* Copy frameworks with Carthage */,
 			);
 			buildRules = (
 			);
@@ -377,7 +350,7 @@
 			);
 			name = "OhMyAuth-iOS-Tests";
 			productName = OhMyAuthTests;
-			productReference = D5B2E8A91C3A780C00C0327D /* OhMyAuth.xctest */;
+			productReference = D5B2E8A91C3A780C00C0327D /* OhMyAuthTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D5C6293F1C3A7FAA007F7B7C /* OhMyAuth-Mac */ = {
@@ -406,7 +379,6 @@
 				D5C629451C3A7FAA007F7B7C /* Sources */,
 				D5C629461C3A7FAA007F7B7C /* Frameworks */,
 				D5C629471C3A7FAA007F7B7C /* Resources */,
-				D5C629741C3A8717007F7B7C /* Copy frameworks with Carthage */,
 			);
 			buildRules = (
 			);
@@ -415,7 +387,7 @@
 			);
 			name = "OhMyAuth-Mac-Tests";
 			productName = "OhMyAuth-MacTests";
-			productReference = D5C629491C3A7FAA007F7B7C /* OhMyAuth.xctest */;
+			productReference = D5C629491C3A7FAA007F7B7C /* OhMyAuthTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -425,7 +397,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Hyper Interaktiv AS";
 				TargetAttributes = {
 					D5B2E89E1C3A780C00C0327D = {
@@ -433,12 +405,15 @@
 					};
 					D5B2E8A81C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0810;
 					};
 					D5C6293F1C3A7FAA007F7B7C = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					D5C629481C3A7FAA007F7B7C = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -500,9 +475,7 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Sugar.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Keychain.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/JWTDecode.framework",
 			);
 			name = "Copy frameworks with Carthage";
@@ -518,42 +491,8 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Sugar.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Keychain.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/JWTDecode.framework",
-			);
-			name = "Copy frameworks with Carthage";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		D5C629731C3A86E3007F7B7C /* Copy frameworks with Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
-			);
-			name = "Copy frameworks with Carthage";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		D5C629741C3A8717007F7B7C /* Copy frameworks with Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Quick.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/Nimble.framework",
 			);
 			name = "Copy frameworks with Carthage";
 			outputPaths = (
@@ -570,17 +509,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				D595759F1C63538B000CD22B /* Result.swift in Sources */,
-				D51D95601C62535200D78EF3 /* KeychainLocker.swift in Sources */,
 				D59575CD1C640C0A000CD22B /* SafariWebView.swift in Sources */,
+				922A1E591DC28A680088A7E7 /* Networking.swift in Sources */,
 				D59575AB1C63CF3C000CD22B /* AuthService.swift in Sources */,
+				D20D5C4A1DEEF474000CEAAB /* UserDefaultsLocker.swift in Sources */,
+				D20D5C481DEEF474000CEAAB /* SuiteDefaultsLocker.swift in Sources */,
 				D51D95651C6253B200D78EF3 /* NetworkRequests.swift in Sources */,
 				D59575E31C641E3D000CD22B /* WebViewable.swift in Sources */,
 				D59575A71C63558D000CD22B /* Error.swift in Sources */,
-				BDB798E51C89CFD2002400B0 /* Lockable.swift in Sources */,
+				D20D5C4D1DEEF4AE000CEAAB /* Keys.swift in Sources */,
 				D59575E21C641E3D000CD22B /* NetworkTaskable.swift in Sources */,
+				923CA22C1DC144290016B791 /* Utils.swift in Sources */,
 				D51D955D1C6252DD00D78EF3 /* AuthConfig.swift in Sources */,
-				BDBF67DF1C89D87200BDAFA3 /* UserDefaultsLocker.swift in Sources */,
+				D20D5C461DEEF474000CEAAB /* Lockable.swift in Sources */,
 				D59575D21C640E4C000CD22B /* BrowserWebView.swift in Sources */,
+				D20D5C441DEEF474000CEAAB /* KeychainLocker.swift in Sources */,
 				D59575DB1C641DBF000CD22B /* UIApplication+OhMyAuth.swift in Sources */,
 				D51D95621C62536E00D78EF3 /* AuthContainer.swift in Sources */,
 				D59575E11C641E3D000CD22B /* NetworkRequestable.swift in Sources */,
@@ -592,8 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5ED73911C64B210003772EF /* iOSSpec.swift in Sources */,
-				D5ED738E1C64B206003772EF /* SharedSpec.swift in Sources */,
+				D2DD2AB41DEEFF2900AFF5BA /* LockerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,18 +545,22 @@
 			files = (
 				D5C629851C3A893F007F7B7C /* Mac.swift in Sources */,
 				D59575E71C641E4C000CD22B /* Result.swift in Sources */,
+				922A1E5A1DC28A680088A7E7 /* Networking.swift in Sources */,
 				D59575D31C640E50000CD22B /* BrowserWebView.swift in Sources */,
-				D51D95711C62B82400D78EF3 /* KeychainLocker.swift in Sources */,
 				D51D95701C62B82400D78EF3 /* AuthConfig.swift in Sources */,
 				D59575AC1C63CF3C000CD22B /* AuthService.swift in Sources */,
+				D20D5C4E1DEEF4AE000CEAAB /* Keys.swift in Sources */,
+				D20D5C471DEEF474000CEAAB /* Lockable.swift in Sources */,
 				D51D956E1C62B82400D78EF3 /* NetworkRequests.swift in Sources */,
+				923CA22D1DC144290016B791 /* Utils.swift in Sources */,
 				D51D95721C62B82400D78EF3 /* AuthContainer.swift in Sources */,
 				D59575E51C641E4C000CD22B /* NetworkTaskable.swift in Sources */,
 				D59575A81C63558D000CD22B /* Error.swift in Sources */,
+				D20D5C4B1DEEF474000CEAAB /* UserDefaultsLocker.swift in Sources */,
 				D59575E61C641E4C000CD22B /* WebViewable.swift in Sources */,
 				D59575E41C641E4C000CD22B /* NetworkRequestable.swift in Sources */,
-				BDBF67E01C89D87200BDAFA3 /* UserDefaultsLocker.swift in Sources */,
-				BDB798E61C89CFD2002400B0 /* Lockable.swift in Sources */,
+				D20D5C491DEEF474000CEAAB /* SuiteDefaultsLocker.swift in Sources */,
+				D20D5C451DEEF474000CEAAB /* KeychainLocker.swift in Sources */,
 				D51D95761C62BAF000D78EF3 /* NetworkTasks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -623,8 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5ED73901C64B20C003772EF /* MacSpec.swift in Sources */,
-				D5ED738F1C64B206003772EF /* SharedSpec.swift in Sources */,
+				D2DD2AB51DEEFF2900AFF5BA /* LockerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,8 +602,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -686,6 +633,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -705,8 +653,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -726,6 +676,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -737,6 +689,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -747,7 +700,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuth/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.OhMyAuth-iOS";
 				PRODUCT_NAME = OhMyAuth;
@@ -760,6 +713,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -770,7 +724,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuth/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.OhMyAuth-iOS";
 				PRODUCT_NAME = OhMyAuth;
@@ -787,10 +741,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuthTests/Info-iOS.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.OhMyAuthTests;
-				PRODUCT_NAME = OhMyAuth;
+				PRODUCT_NAME = OhMyAuthTests;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -803,9 +758,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuthTests/Info-iOS.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.OhMyAuthTests;
-				PRODUCT_NAME = OhMyAuth;
+				PRODUCT_NAME = OhMyAuthTests;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -813,7 +769,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -833,6 +789,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -840,7 +797,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -859,12 +816,14 @@
 				PRODUCT_NAME = OhMyAuth;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		D5C629551C3A7FAA007F7B7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -872,17 +831,20 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuthTests/Info-Mac.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.OhMyAuth-MacTests";
-				PRODUCT_NAME = OhMyAuth;
+				PRODUCT_NAME = OhMyAuthTests;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		D5C629561C3A7FAA007F7B7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -890,11 +852,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/OhMyAuthTests/Info-Mac.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.OhMyAuth-MacTests";
-				PRODUCT_NAME = OhMyAuth;
+				PRODUCT_NAME = OhMyAuthTests;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -1,18 +1,18 @@
 import Foundation
 
-#if os(iOS) || os(tvOS)
-  import UIKit
-#elseif os(OSX)
+#if os(OSX)
   import Cocoa
+#else
+  import UIKit
 #endif
 
-@objc public class BrowserWebView: NSObject, WebViewable {
+@objc open class BrowserWebView: NSObject, WebViewable {
 
-  public func open(URL: NSURL) {
+  open func open(_ URL: Foundation.URL) {
     #if os(iOS)
-      UIApplication.sharedApplication().openURL(URL)
+      UIApplication.shared.openURL(URL)
     #elseif os(OSX)
-      NSWorkspace.sharedWorkspace().openURL(URL)
+      NSWorkspace.shared().open(URL)
     #endif
   }
 }

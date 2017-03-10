@@ -1,5 +1,4 @@
 import Foundation
-import Sugar
 import JWTDecode
 
 struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
@@ -16,23 +15,23 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
 
   // MARK: - Processing
 
-  func process(data: JSONDictionary) throws -> String {
+  func process(_ data: [String : AnyObject]) throws -> String {
     guard let accessToken = data["access_token"] as? String else {
       locker.clear()
       NSLog("\(data)")
-      throw Error.TokenRequestFailed.toNSError(userInfo: data)
+      throw OhMyAuthError.tokenRequestFailed.toNSError(userInfo: data)
     }
 
     guard let refreshToken = data["refresh_token"] as? String else {
       locker.clear()
       NSLog("\(data)")
-      throw Error.TokenRequestFailed.toNSError(userInfo: data)
+      throw OhMyAuthError.tokenRequestFailed.toNSError(userInfo: data)
     }
 
-    guard let expiryDate = config.expiryDate(data: data) else {
+    guard let expiryDate = config.expiryDate(data) else {
       locker.clear()
       NSLog("\(data)")
-      throw Error.TokenRequestFailed.toNSError()
+      throw OhMyAuthError.tokenRequestFailed.toNSError()
     }
 
     locker.accessToken = accessToken
@@ -42,7 +41,7 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
 
     if let jwtString = data["id_token"] as? String {
       do {
-        let payload = try decode(jwtString)
+        let payload = try decode(jwt: jwtString)
 
         if let name = payload.body["name"] as? String {
           locker.userName = name

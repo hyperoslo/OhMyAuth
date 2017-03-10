@@ -1,4 +1,3 @@
-github "hyperoslo/Sugar"
-github "hyperoslo/Keychain" "master"
-github "Alamofire/Alamofire"
-github "auth0/JWTDecode.swift" "master"
+github "hyperoslo/Keychain" "swift-3"
+github "auth0/JWTDecode.swift" "2.0.0"
+github "hyperoslo/Malibu"
