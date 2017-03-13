@@ -18,7 +18,7 @@ import Foundation
     }
 
     let expiredTime = expiryDate.timeIntervalSince1970
-    let timeNow = Date().timeIntervalSince1970 - config.minimumValidity
+    let timeNow = Date().timeIntervalSince1970 + config.minimumValidity
     let expired = timeNow >= expiredTime
 
     return expired
