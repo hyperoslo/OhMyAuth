@@ -11,6 +11,8 @@
 		922A1E5A1DC28A680088A7E7 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A1E581DC28A680088A7E7 /* Networking.swift */; };
 		923CA22C1DC144290016B791 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923CA22B1DC144290016B791 /* Utils.swift */; };
 		923CA22D1DC144290016B791 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923CA22B1DC144290016B791 /* Utils.swift */; };
+		D20A12A51E769648000DB14C /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20A12A41E769648000DB14C /* ServiceTests.swift */; };
+		D20A12A61E769648000DB14C /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20A12A41E769648000DB14C /* ServiceTests.swift */; };
 		D20D5C441DEEF474000CEAAB /* KeychainLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C401DEEF474000CEAAB /* KeychainLocker.swift */; };
 		D20D5C451DEEF474000CEAAB /* KeychainLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C401DEEF474000CEAAB /* KeychainLocker.swift */; };
 		D20D5C461DEEF474000CEAAB /* Lockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C411DEEF474000CEAAB /* Lockable.swift */; };
@@ -76,6 +78,7 @@
 /* Begin PBXFileReference section */
 		922A1E581DC28A680088A7E7 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		923CA22B1DC144290016B791 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D20A12A41E769648000DB14C /* ServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
 		D20D5C401DEEF474000CEAAB /* KeychainLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainLocker.swift; sourceTree = "<group>"; };
 		D20D5C411DEEF474000CEAAB /* Lockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lockable.swift; sourceTree = "<group>"; };
 		D20D5C421DEEF474000CEAAB /* SuiteDefaultsLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuiteDefaultsLocker.swift; sourceTree = "<group>"; };
@@ -292,6 +295,7 @@
 				D5ED737C1C64B1E4003772EF /* Info-iOS.plist */,
 				D5ED737D1C64B1E4003772EF /* Info-Mac.plist */,
 				D2DD2AB31DEEFF2900AFF5BA /* LockerTests.swift */,
+				D20A12A41E769648000DB14C /* ServiceTests.swift */,
 			);
 			path = OhMyAuthTests;
 			sourceTree = "<group>";
@@ -536,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2DD2AB41DEEFF2900AFF5BA /* LockerTests.swift in Sources */,
+				D20A12A51E769648000DB14C /* ServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2DD2AB51DEEFF2900AFF5BA /* LockerTests.swift in Sources */,
+				D20A12A61E769648000DB14C /* ServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
