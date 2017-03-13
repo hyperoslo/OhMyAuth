@@ -33,7 +33,7 @@ class ServiceTests: XCTestCase {
 
     locker = LockerMock(name: "locker")
     config = AuthConfig(clientId: "", accessTokenUrl: URL(string: "http://testservice.no")!)
-    config.minimumValidity = 1
+    config.minimumValidity = 5
     service = AuthService(name: "service", config: config, locker: locker)
   }
 
@@ -42,6 +42,12 @@ class ServiceTests: XCTestCase {
     XCTAssertTrue(service.tokenIsExpired)
 
     locker.expiryDate = Date(timeIntervalSinceNow: 2)
+    XCTAssertTrue(service.tokenIsExpired)
+
+    locker.expiryDate = Date(timeIntervalSinceNow: 5)
+    XCTAssertTrue(service.tokenIsExpired)
+
+    locker.expiryDate = Date(timeIntervalSinceNow: 6)
     XCTAssertFalse(service.tokenIsExpired)
   }
 
