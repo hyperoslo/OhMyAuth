@@ -1,4 +1,5 @@
 github "auth0/JWTDecode.swift" "2.0.0"
-github "hyperoslo/Keychain" "aba620997062a2082a9d1a57fb5c81e4e0fe79df"
-github "vadymmarkov/When" "2.0.0"
-github "hyperoslo/Malibu" "2.0.1"
+github "hyperoslo/Keychain" "1c53e133802bd043d830500db3066561d17f7aba"
+github "ReactiveX/RxSwift" "3.3.0"
+github "vadymmarkov/When" "2.1.1"
+github "hyperoslo/Malibu" "4.0.0"
