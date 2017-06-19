@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "OhMyAuth"
   s.summary          = "Simple OAuth2 library with a support of multiple services."
-  s.version          = "1.0.0"
+  s.version          = "1.2.0"
   s.homepage         = "https://github.com/hyperoslo/OhMyAuth"
   s.license          = 'MIT'
   s.author           = { "Hyper Interaktiv AS" => "ios@hyper.no" }
