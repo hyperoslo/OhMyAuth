@@ -479,7 +479,7 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Keychain.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Keychains.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/JWTDecode.framework",
 			);
 			name = "Copy frameworks with Carthage";
@@ -495,7 +495,7 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Keychain.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Keychains.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/JWTDecode.framework",
 			);
 			name = "Copy frameworks with Carthage";

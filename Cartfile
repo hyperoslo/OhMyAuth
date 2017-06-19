@@ -1,2 +1,2 @@
-github "hyperoslo/Keychain" "master"
+github "hyperoslo/Keychains" "1.0.0"
 github "auth0/JWTDecode.swift" "2.0.0"

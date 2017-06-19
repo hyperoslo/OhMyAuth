@@ -1,5 +1,5 @@
 import Foundation
-import Keychain
+import Keychains
 
 @objc open class KeychainLocker: UserDefaultsLocker {
 
