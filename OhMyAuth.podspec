@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "OhMyAuth"
-  s.summary          = "A short description of OhMyAuth."
+  s.summary          = "Simple OAuth2 library with a support of multiple services."
   s.version          = "1.0.0"
   s.homepage         = "https://github.com/hyperoslo/OhMyAuth"
   s.license          = 'MIT'
@@ -21,9 +21,8 @@ Pod::Spec.new do |s|
   s.ios.frameworks = 'UIKit', 'Foundation'
   s.osx.frameworks = 'Cocoa', 'Foundation'
 
-  s.dependency 'Keychain'
-  s.dependency 'JWTDecode'
-  s.dependency 'Malibu'
+  s.dependency 'Keychains', '~> 1.0.0'
+  s.dependency 'JWTDecode', '~> 2.0.0'
 
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
 end
