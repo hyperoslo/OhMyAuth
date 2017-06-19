@@ -11,6 +11,9 @@
 		922A1E5A1DC28A680088A7E7 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A1E581DC28A680088A7E7 /* Networking.swift */; };
 		923CA22C1DC144290016B791 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923CA22B1DC144290016B791 /* Utils.swift */; };
 		923CA22D1DC144290016B791 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923CA22B1DC144290016B791 /* Utils.swift */; };
+		D20836171EF7D0A8004ED8E0 /* Keychains.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20836161EF7D0A8004ED8E0 /* Keychains.framework */; };
+		D20836181EF7D0FB004ED8E0 /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575EA1C641F14000CD22B /* JWTDecode.framework */; };
+		D208361A1EF7D0FB004ED8E0 /* Keychains.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20836191EF7D0FB004ED8E0 /* Keychains.framework */; };
 		D20A12A51E769648000DB14C /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20A12A41E769648000DB14C /* ServiceTests.swift */; };
 		D20A12A61E769648000DB14C /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20A12A41E769648000DB14C /* ServiceTests.swift */; };
 		D20D5C441DEEF474000CEAAB /* KeychainLocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D5C401DEEF474000CEAAB /* KeychainLocker.swift */; };
@@ -34,7 +37,6 @@
 		D51D95751C62BAF000D78EF3 /* NetworkTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */; };
 		D51D95761C62BAF000D78EF3 /* NetworkTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51D95741C62BAF000D78EF3 /* NetworkTasks.swift */; };
 		D529C2CD1C620B1900B6FA6B /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2C91C620B1900B6FA6B /* JWTDecode.framework */; };
-		D529C2CE1C620B1900B6FA6B /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529C2CA1C620B1900B6FA6B /* Keychain.framework */; };
 		D595759F1C63538B000CD22B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595759E1C63538B000CD22B /* Result.swift */; };
 		D59575A71C63558D000CD22B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A61C63558D000CD22B /* Error.swift */; };
 		D59575A81C63558D000CD22B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575A61C63558D000CD22B /* Error.swift */; };
@@ -51,8 +53,6 @@
 		D59575E51C641E4C000CD22B /* NetworkTaskable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575DF1C641E3D000CD22B /* NetworkTaskable.swift */; };
 		D59575E61C641E4C000CD22B /* WebViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59575E01C641E3D000CD22B /* WebViewable.swift */; };
 		D59575E71C641E4C000CD22B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595759E1C63538B000CD22B /* Result.swift */; };
-		D59575EE1C641F14000CD22B /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575EA1C641F14000CD22B /* JWTDecode.framework */; };
-		D59575EF1C641F14000CD22B /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59575EB1C641F14000CD22B /* Keychain.framework */; };
 		D5B2E8AA1C3A780C00C0327D /* OhMyAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* OhMyAuth.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* OhMyAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* OhMyAuth.framework */; };
 		D5C629851C3A893F007F7B7C /* Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629841C3A893F007F7B7C /* Mac.swift */; };
@@ -78,6 +78,8 @@
 /* Begin PBXFileReference section */
 		922A1E581DC28A680088A7E7 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		923CA22B1DC144290016B791 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D20836161EF7D0A8004ED8E0 /* Keychains.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychains.framework; path = Carthage/Build/iOS/Keychains.framework; sourceTree = "<group>"; };
+		D20836191EF7D0FB004ED8E0 /* Keychains.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychains.framework; path = Carthage/Build/Mac/Keychains.framework; sourceTree = "<group>"; };
 		D20A12A41E769648000DB14C /* ServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
 		D20D5C401DEEF474000CEAAB /* KeychainLocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainLocker.swift; sourceTree = "<group>"; };
 		D20D5C411DEEF474000CEAAB /* Lockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lockable.swift; sourceTree = "<group>"; };
@@ -120,8 +122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D20836171EF7D0A8004ED8E0 /* Keychains.framework in Frameworks */,
 				D529C2CD1C620B1900B6FA6B /* JWTDecode.framework in Frameworks */,
-				D529C2CE1C620B1900B6FA6B /* Keychain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +139,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D59575EE1C641F14000CD22B /* JWTDecode.framework in Frameworks */,
-				D59575EF1C641F14000CD22B /* Keychain.framework in Frameworks */,
+				D208361A1EF7D0FB004ED8E0 /* Keychains.framework in Frameworks */,
+				D20836181EF7D0FB004ED8E0 /* JWTDecode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +155,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D20836151EF7D0A8004ED8E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D20836191EF7D0FB004ED8E0 /* Keychains.framework */,
+				D20836161EF7D0A8004ED8E0 /* Keychains.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D20D5C3F1DEEF474000CEAAB /* Locker */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +235,7 @@
 				D5B2E8A01C3A780C00C0327D /* Products */,
 				D529C2D01C620B2E00B6FA6B /* Frameworks-iOS */,
 				D59575F11C641F1E000CD22B /* Frameworks-Mac */,
+				D20836151EF7D0A8004ED8E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
