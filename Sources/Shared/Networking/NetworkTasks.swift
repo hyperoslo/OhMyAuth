@@ -22,10 +22,8 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
       throw OhMyAuthError.tokenRequestFailed.toNSError(userInfo: data)
     }
 
-    guard let refreshToken = data["refresh_token"] as? String else {
-      locker.clear()
-      NSLog("\(data)")
-      throw OhMyAuthError.tokenRequestFailed.toNSError(userInfo: data)
+    if let refreshToken = data["refresh_token"] as? String {
+      locker.refreshToken = refreshToken
     }
 
     guard let expiryDate = config.expiryDate(data) else {
@@ -35,7 +33,6 @@ struct TokenNetworkTask: NetworkTaskable, NetworkQueueable {
     }
 
     locker.accessToken = accessToken
-    locker.refreshToken = refreshToken
     locker.expiryDate = expiryDate
     locker.tokenType = data["token_type"] as? String
 
