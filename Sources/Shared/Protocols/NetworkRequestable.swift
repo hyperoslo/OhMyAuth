@@ -17,7 +17,7 @@ extension NetworkRequestable {
       
       guard error == nil
       else {
-        if let error = error as? NSError {
+        if let error = error {
           completion(Result.failure(error))
         } else {
           completion(Result.failure(OhMyAuthError.internalError.toNSError()))
