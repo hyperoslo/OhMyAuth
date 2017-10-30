@@ -12,7 +12,7 @@ import Foundation
     #if os(iOS)
       UIApplication.shared.openURL(URL)
     #elseif os(OSX)
-      NSWorkspace.shared().open(URL)
+      NSWorkspace.shared.open(URL)
     #endif
   }
 }
