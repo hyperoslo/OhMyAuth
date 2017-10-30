@@ -1,2 +1,2 @@
-github "auth0/JWTDecode.swift" "2.0.0"
-github "hyperoslo/Keychain" "1.0.0"
+github "auth0/JWTDecode.swift" "2.1.1"
+github "hyperoslo/Keychains" "2.0.0"

@@ -26,7 +26,11 @@ import Keychains
     let namedKey = generateKey(key)
     let password = Keychain.password(forAccount: namedKey, service: service)
 
-    return !password.isEmpty ? password : nil
+    if let password = password, !password.isEmpty {
+      return password
+    }
+
+    return nil
   }
 
   func saveInKeychain(_ key: String, _ value: String?) {

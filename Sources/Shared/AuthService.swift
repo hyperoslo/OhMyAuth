@@ -2,7 +2,7 @@ import Foundation
 
 @objc open class AuthService: NSObject {
 
-  public typealias Completion = (String?, NSError?) -> Void
+  public typealias Completion = (String?, Error?) -> Void
 
   open let name: String
   open let config: AuthConfig
@@ -169,7 +169,7 @@ import Foundation
 
       switch result {
       case .failure(let error):
-        completion(nil, error as? NSError)
+        completion(nil, error)
       case .success(let accessToken):
         completion(accessToken, nil)
       }
