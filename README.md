@@ -1,6 +1,6 @@
 # OhMyAuth
 
-[![CI Status](http://img.shields.io/travis/hyperoslo/OhMyAuth.svg?style=flat)](https://travis-ci.org/hyperoslo/OhMyAuth)
+[![CI Status](https://circleci.com/gh/hyperoslo/OhMyAuth.png)](https://circleci.com/gh/hyperoslo/OhMyAuth)
 [![Version](https://img.shields.io/cocoapods/v/OhMyAuth.svg?style=flat)](http://cocoadocs.org/docsets/OhMyAuth)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/OhMyAuth.svg?style=flat)](http://cocoadocs.org/docsets/OhMyAuth)
