@@ -7,7 +7,7 @@ open class Networking {
     session = URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
   }
   
-  public func post(url: URL, parameters: [String: Any], headers: [String: String], completion: @escaping ((Data?, URLResponse?, Error?) -> Void)) {
+  open func post(url: URL, parameters: [String: Any], headers: [String: String], completion: @escaping ((Data?, URLResponse?, Error?) -> Void)) {
     var request = URLRequest(url: url)
     
     headers.forEach { (key, value) in
