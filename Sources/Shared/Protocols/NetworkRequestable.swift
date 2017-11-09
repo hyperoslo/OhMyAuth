@@ -8,13 +8,8 @@ protocol NetworkRequestable {
 
 extension NetworkRequestable {
 
-  func start(_ completion: @escaping (_ result: Result<Any>) -> Void) {
-    AuthConfig.networking.post(url: url, parameters: parameters, headers: headers) { (data, response, error) in
-      guard let response = response as? HTTPURLResponse else {
-        completion(Result.failure(OhMyAuthError.internalError.toNSError()))
-        return
-      }
-      
+  func start(using networking: Networking = AuthConfig.networking, completion: @escaping (_ result: Result<Any>) -> Void) {
+    networking.post(url: url, parameters: parameters, headers: headers) { (data, response, error) in
       guard error == nil
       else {
         if let error = error {
@@ -23,6 +18,11 @@ extension NetworkRequestable {
           completion(Result.failure(OhMyAuthError.internalError.toNSError()))
         }
         
+        return
+      }
+
+      guard let response = response as? HTTPURLResponse else {
+        completion(Result.failure(OhMyAuthError.internalError.toNSError()))
         return
       }
       

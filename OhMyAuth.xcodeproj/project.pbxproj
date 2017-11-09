@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5255FEBC1FB457FA004D012B /* NetworkRequestableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255FEBB1FB457FA004D012B /* NetworkRequestableTests.swift */; };
+		5255FEBD1FB457FA004D012B /* NetworkRequestableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255FEBB1FB457FA004D012B /* NetworkRequestableTests.swift */; };
 		922A1E591DC28A680088A7E7 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A1E581DC28A680088A7E7 /* Networking.swift */; };
 		922A1E5A1DC28A680088A7E7 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A1E581DC28A680088A7E7 /* Networking.swift */; };
 		923CA22C1DC144290016B791 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923CA22B1DC144290016B791 /* Utils.swift */; };
@@ -76,6 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5255FEBB1FB457FA004D012B /* NetworkRequestableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestableTests.swift; sourceTree = "<group>"; };
 		922A1E581DC28A680088A7E7 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		923CA22B1DC144290016B791 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D20836161EF7D0A8004ED8E0 /* Keychains.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychains.framework; path = Carthage/Build/iOS/Keychains.framework; sourceTree = "<group>"; };
@@ -308,6 +311,7 @@
 				D5ED737D1C64B1E4003772EF /* Info-Mac.plist */,
 				D2DD2AB31DEEFF2900AFF5BA /* LockerTests.swift */,
 				D20A12A41E769648000DB14C /* ServiceTests.swift */,
+				5255FEBB1FB457FA004D012B /* NetworkRequestableTests.swift */,
 			);
 			path = OhMyAuthTests;
 			sourceTree = "<group>";
@@ -553,6 +557,7 @@
 			files = (
 				D2DD2AB41DEEFF2900AFF5BA /* LockerTests.swift in Sources */,
 				D20A12A51E769648000DB14C /* ServiceTests.swift in Sources */,
+				5255FEBC1FB457FA004D012B /* NetworkRequestableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +593,7 @@
 			files = (
 				D2DD2AB51DEEFF2900AFF5BA /* LockerTests.swift in Sources */,
 				D20A12A61E769648000DB14C /* ServiceTests.swift in Sources */,
+				5255FEBD1FB457FA004D012B /* NetworkRequestableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
