@@ -10,7 +10,7 @@ import Foundation
 
   fileprivate var pendingTokenCompletions = [Completion]()
   fileprivate var executing = false
-  fileprivate let tokenQueue = DispatchQueue(label: "OhMyAuth.AuthService.TokenQueue", attributes: DispatchQueue.Attributes.concurrent)
+  fileprivate let tokenQueue = DispatchQueue(label: "OhMyAuth.AuthService.TokenQueue")
 
   open var tokenIsExpired: Bool {
     guard let expiryDate = locker.expiryDate else {
