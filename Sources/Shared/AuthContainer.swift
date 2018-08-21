@@ -6,17 +6,17 @@ import Foundation
 
   // MARK: - Services
 
-  open static func addService(_ service: AuthService) {
+  public static func addService(_ service: AuthService) {
     services[service.name] = service
   }
 
-  open static func serviceNamed(_ name: String) -> AuthService? {
+  public static func serviceNamed(_ name: String) -> AuthService? {
     return services[name]
   }
 
   // MARK: - Helpers
 
-  open static func locker(_ serviceName: String) -> Lockable? {
+  public static func locker(_ serviceName: String) -> Lockable? {
     return serviceNamed(serviceName)?.locker
   }
 }

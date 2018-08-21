@@ -2,7 +2,7 @@ import Foundation
 
 @objc open class AuthConfig: NSObject {
 
-  open static var networking: Networking = Networking(configuration: URLSessionConfiguration.default)
+  public static var networking: Networking = Networking(configuration: URLSessionConfiguration.default)
 
   open var clientId: String
   open var accessGrantType: String

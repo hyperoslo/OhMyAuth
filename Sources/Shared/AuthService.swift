@@ -4,9 +4,9 @@ import Foundation
 
   public typealias Completion = (String?, Error?) -> Void
 
-  open let name: String
-  open let config: AuthConfig
-  open var locker: Lockable
+  public let name: String
+  public let config: AuthConfig
+  public var locker: Lockable
 
   fileprivate var pendingTokenCompletions = [Completion]()
   fileprivate var executing = false
