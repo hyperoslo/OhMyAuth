@@ -4,13 +4,13 @@ import Foundation
 
   public typealias Completion = (String?, Error?) -> Void
 
-  open let name: String
-  open let config: AuthConfig
-  open var locker: Lockable
+  public let name: String
+  public let config: AuthConfig
+  public var locker: Lockable
 
   fileprivate var pendingTokenCompletions = [Completion]()
   fileprivate var executing = false
-  fileprivate let tokenQueue = DispatchQueue(label: "OhMyAuth.AuthService.TokenQueue", attributes: DispatchQueue.Attributes.concurrent)
+  fileprivate let tokenQueue = DispatchQueue(label: "OhMyAuth.AuthService.TokenQueue")
 
   open var tokenIsExpired: Bool {
     guard let expiryDate = locker.expiryDate else {

@@ -86,27 +86,8 @@ fileprivate struct QueryBuilder {
 
     allowedCharacters.removeCharacters(in: escapingCharacters)
 
-    var escapedString = ""
-
-    if #available(iOS 8.3, *) {
-      escapedString = string.addingPercentEncoding(
+    return string.addingPercentEncoding(
         withAllowedCharacters: allowedCharacters as CharacterSet) ?? string
-    } else {
-      var index = string.startIndex
-
-      while index != string.endIndex {
-        let endIndex = string.index(index, offsetBy: 50, limitedBy: string.endIndex) ?? string.endIndex
-        let range = Range(index..<endIndex)
-        let substring = string.substring(with: range)
-
-        escapedString += substring.addingPercentEncoding(
-          withAllowedCharacters: allowedCharacters as CharacterSet) ?? substring
-
-        index = endIndex
-      }
-    }
-    
-    return escapedString
   }
 }
 
